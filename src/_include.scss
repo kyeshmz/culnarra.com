@@ -1,0 +1,224 @@
+
+/// @access public
+/// @author Willis Shek
+////
+
+
+$mediaBreakpoints: (
+	"phone": 320px,
+	"tablet": 768px,
+	"desktop": 1024px
+) !default;
+
+@function mediaAddBreakpoints($newBreakpoints) {
+	@return map-merge($mediaBreakpoints, $newBreakpoints);
+}
+
+$mediaExpressions: (
+	"landscape": "(orientation: landscape)",
+	"portrait": "(orientation: portrait)",
+	"!": "not all and",
+	// and
+	"&": "and",
+	"&&": "and",
+	// or
+	"or": ",",
+	"|": ",",
+	"||": ",",
+) !default;
+
+@function mediaAddExpressions($newExpressions) {
+	@return map-merge($mediaExpressions, $newExpressions);
+}
+
+$mediaUnitSteps: (
+	"px": 1,
+	"em": 0.01,
+	"rem": 0.01,
+	"none": 0.001 // for value with no unit, aspect ratio mainly
+) !default;
+
+@function toNumber( $string ) {
+	// Matrices
+	$strings: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+	$numbers: 0 1 2 3 4 5 6 7 8 9;
+	// Result
+	$result: 0;
+	$minus: false;
+	$divider: 0;
+	// Looping through all characters
+	@for $i from 1 through str-length($string) {
+		$character: str-slice($string, $i, $i);
+		@if $character == "-" { $minus: true; }
+		@else if $character == "." { $divider: 1; }
+		@else {
+			$index: index($strings, $character);
+			// add unit
+			@if not $index {
+				$result: if($minus, $result * -1, $result);
+				@return addUnit($result, str-slice($string, $i));
+			}
+			$number: nth($numbers, $index);
+			// no decimal
+			@if $divider == 0 {
+				$result: $result * 10;
+			} @else { // have decimal
+				$divider: $divider * 10;
+				$number: $number / $divider;
+			}
+			$result: $result + $number;
+		}
+	}
+	@return if($minus, $result * -1, $result);
+}
+
+/// add unit to value
+/// @access private
+@function addUnit( $number, $unit ) {
+	$strings: "px" "cm" "mm" "%" "ch" "pica" "in" "em" "rem" "pt" "pc" "ex" "vw" "vh" "vmin" "vmax";
+	$units: 1px 1cm 1mm 1% 1ch 1pica 1in 1em 1rem 1pt 1pc 1ex 1vw 1vh 1vmin 1vmax;
+	$index: index($strings, $unit);
+	// Unknow unit
+	@if not $index {
+		@error "Unknown unit "#{$unit}".";
+		@return false;
+	}
+	@return $number * nth($units, $index);
+}
+
+/// split the string into array
+/// @access private
+@function strSplit( $string, $separator ) {
+	// empty array/list
+	$splitArr: ();
+	// first index of separator in string
+	$index: str-index($string, $separator);
+	// loop through string
+	@while $index != null {
+		// get the substring from the first character to the separator
+		$item: str-slice($string, 1, $index - 1);
+		// push item to array
+		$splitArr: append($splitArr, $item);
+		// remove item and separator from string
+		$string: str-slice($string, $index + 1);
+		// find new index of separator
+		$index: str-index($string, $separator);
+	}
+	// add the remaining string to list (the last item)
+	$splitArr: append($splitArr, $string);
+
+	@return $splitArr;
+}
+
+/// Operators
+/// @access private
+$sMediaOperators: (">=", ">", "<=", "<", "=");
+
+/// get index of operator within a string
+/// @access private
+@function sMediaGetOperatorAndIndex( $expression ) {
+	@each $operator in $sMediaOperators {
+		$operatorIndex: str-index($expression, $operator);
+		@if $operatorIndex { @return $operator, $operatorIndex; }
+	}
+	@return null;
+}
+
+/// get prefix ("min-", "max-", "")
+/// @access private
+@function sMediaGetPrefix( $operator ) {
+	@if $operator == "=" {
+		@return "";
+	} @else {
+		@return if(index($sMediaOperators, $operator)<3, "min-", "max-");
+	}
+}
+
+/// get dimension, such as "width", "height" or "aspect-ratio"
+/// @access private
+@function sMediaGetDimension( $expression, $operator, $operatorIndex ) {
+	$slicedStr: str-slice($expression, 0, $operatorIndex - 1);
+	$dimension: "width";
+	@if str-length($slicedStr) > 0 {
+		@if ($slicedStr == "w") {
+			$dimension: "width";
+		} @else if ($slicedStr == "h") {
+			$dimension: "height";
+		} @else if ($slicedStr == "a" or $slicedStr == "aspect") {
+			$dimension: "aspect-ratio";
+		} @else {
+			$dimension: $slicedStr;
+		}
+	}
+	@return $dimension;
+}
+
+/// get numerical value for breakpoint
+/// @access private
+@function sMediaGetBreakpointValue( $expression, $operator, $operatorIndex ) {
+	$value: str-slice($expression, $operatorIndex + str-length($operator));
+	// get value from breakpoints
+	@if map-has-key($mediaBreakpoints, $value) {
+		$value: map-get($mediaBreakpoints, $value);
+	} @else {
+		$value: toNumber($value);
+	}
+	// get unit step
+	$theUnit: unit($value);
+	$theUnit: if($theUnit=="", "none", $theUnit);
+	@if map-has-key($mediaUnitSteps, $theUnit) {
+		@if ($operator == ">" or $operator == "<") {
+			$step: map-get($mediaUnitSteps, $theUnit);
+			$value: if($operator == ">", $value + $step, $value - $step);
+		}
+	} @else {
+		@error "Please provide a valid unit or add the corresponding unit "#{$theUnit}" to $mediaUnitSteps";
+		@return false;
+	}
+	@return $value;
+}
+
+/// parse expression
+/// @access private
+@function sMediaParseExpression( $expression ) {
+	// if there is expression
+	@if map-has-key($mediaExpressions, $expression) {
+		$expression: map-get($mediaExpressions, $expression);
+		$expressions: strSplit($expression, " ");
+		@if $expressions != $expression {
+			$expression: quote(sMediaGetCondition( $expression ));
+		}
+	}
+	$operatorAndIndex: sMediaGetOperatorAndIndex($expression);
+	// return the original string if no operator found.
+	@if ($operatorAndIndex == null) { @return $expression; }
+	// parse condition
+	$operator: nth($operatorAndIndex, 1);
+	$operatorIndex: nth($operatorAndIndex, 2);
+	$prefix: sMediaGetPrefix( $operator );
+	$dimension: sMediaGetDimension( $expression, $operator, $operatorIndex );
+	$value: sMediaGetBreakpointValue( $expression, $operator, $operatorIndex );
+	@return "(#{$prefix}#{$dimension}: #{$value})";
+}
+
+/// return condition
+/// @access private
+@function sMediaGetCondition( $expressionString ) {
+	$expressions: strSplit($expressionString, " ");
+	$result: "";
+	@each $expression in $expressions {
+		$str: unquote(sMediaParseExpression( $expression ));
+		@if $result == "" {
+			$result: $str;
+		} @else {
+			$result: append($result, $str, space);
+		}
+	}
+	@return $result;
+}
+
+/// mixin for create media query
+/// @param {String} $expressionString - Input string for creating media query
+@mixin media($expressionString) {
+	@media #{sMediaGetCondition( $expressionString )} { @content; };
+}

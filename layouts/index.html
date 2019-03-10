@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
+
+    <meta property="og:site_name" content="Hugo Discussion" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:url" content="" />
+    <meta property="og:title" content="" />
+    <meta name="twitter:title" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:description" content="" />
+
+    {{ with .Site.Params.name }}
+    <meta name="author" content="{{ . }}">{{ end }}
+
+    {{ .Hugo.Generator }}
+    <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
+    {{ with .Site.Params.description }}
+    <meta name="description" content="{{ . }}">{{ end }}
+</head>
+
+<body>
+    <div class="body-wrap">
+        <header>
+            <div class="row between-xs">
+                <div class="col-xs-2">
+                    <p>Cultural Narrative of a City</p>
+                </div>
+                <div class="col-xs-2 languages">
+                    <ul class="row">
+                        <li><a src="{{ .Site.BaseURL }}">English</a></li>
+                        <li><a src="{{ .Site.BaseURL }}jp/">Japanese</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="title-logo">
+            <img src="{{ .Site.BaseURL }}img/logo/culnarra-logo.svg">
+        </div>
+        <div class="row around-xs info-wrap">
+            <div class="col-xs-2 about">
+                <h3 class="info-title">概要｜ABOUT</h3>
+                <p>現代文化の発信地、国際都市として知られる港区は、同時に、多くの寺社仏閣や史跡、そして歴史ある企業が所在する歴史文化都市でもあります。このダイナミックな時間軸をもつ都市文化の眺望を、一層明らかにするためのプロジェクトが、「都市のカルチュラル・ナラティヴ」です。
+                </p>
+                <p>Drawing connections between the old and new cultural resources of the city and the research
+                    activities that surround these resources, we hope to support current and future artistic and
+                    cultural activities, and at the same time to deepen the cultural tourism of the city. </p>
+            </div>
+            <div class="col-xs-2 recipe">
+                <h3 class="info-title">レシピ｜RECIPE</h3>
+                <p>現代文化の発信地、国際都市として知られる港区は、同時に、多くの寺社仏閣や史跡、そして歴史ある企業が所在する歴史文化都市でもあります。このダイナミックな時間軸をもつ都市文化の眺望を。</p>
+                <p>現代文化の発信地、国際都市として知られる港区は、同時に、多くの寺社仏閣や史跡、そして歴史ある企業が所在する歴史文化都市でもあります。このダイナミックな時間軸をもつ都市文化の眺望を、一層明らかにするためのプロジェクトが、「都市のカルチュラル・ナラティヴ」です。
+                </p>
+                aboutadfafda
+            </div>
+            <div class="col-xs-2 event">
+                <h3 class="info-title">催事｜EVENT</h3>
+                aboutadfafda
+            </div>
+            <div class="col-xs-2 news">
+                <h3 class="info-title">お知らせ｜NEWS</h3>
+                <p></p>
+                aboutadfafda
+            </div>
+        </div>
+        <div class="row around-xs card-list">
+            <div class="col-xs-3 card-item">
+                aaaaa
+                <img src="{{ .Site.BaseURL }}img/dummy.jpg">
+            </div>
+            <div class="col-xs-3">
+                <h3>催事｜EVENT</h3>
+                aboutadfafda
+            </div>
+            <div class="col-xs-3">
+                <h3>催事｜EVENT</h3>
+                aboutadfafda
+            </div>
+            <div class="col-xs-3">
+                    <h3>催事｜EVENT</h3>
+                    aboutadfafda
+                </div>
+        </div>
+        <div class="row around-xs">
+            <div class="col-xs-2">
+                <h3>催事｜EVENT</h3>
+                aboutadfafda
+            </div>
+            <div class="col-xs-2">
+                <h3>催事｜EVENT</h3>
+                aboutadfafda
+            </div>
+            <div class="col-xs-5">
+                <h3>催事｜EVENT</h3>
+                aboutadfafda
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
