@@ -1,11 +1,11 @@
 ---
-label: Project Single
+label: Recipe Single
 hide_body: false
 fields:
 - type: text
   name: title
   label: Title
-  description: Title of the project
+  description: Title of the Recipe
   config:
     required: true
 - name: date
@@ -30,10 +30,19 @@ fields:
 - type: image_gallery
   name: project_images
   label: Project Images
-  description: Images about the project
+  description: Images about the recipe
 - type: textarea
   name: abstract
   label: Project Abstract
+  description: Abstract of the project MD 表記
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: reference
+  label: Recipe Reference
   description: Abstract of the project MD 表記
   config:
     required: true
@@ -68,12 +77,3 @@ fields:
   name: type
   hidden: true
   default: project
-- type: textarea
-  name: reference
-  label: Recipe Reference
-  description: Abstract of the project MD 表記
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
