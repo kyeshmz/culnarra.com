@@ -1,0 +1,5 @@
+{{ range .Params.work_carousel }}
+<ul class="img-slider">
+        <li class="img-item"><img src="{{ . | relURL }}" alt="image"></li>
+</ul>
+{{ end }}
