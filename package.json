@@ -13,5 +13,9 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-loader": "^2.4.0"
+  }
 }

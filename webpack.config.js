@@ -1,11 +1,16 @@
+const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: ['./src/style.scss', './src/index.js'],
+  entry: ['./src/style.scss', './src/index.js', './src/index.html'],
   watch: true,
   mode: 'production',
   module: {
     rules: [
+      // {
+      //   test: /\.pug$/,
+      //   loader: 'pug-loader'
+      // },
       {
         test: /\.scss$/,
         use: [

@@ -2,102 +2,25 @@
 @import "include.scss";
 @import "fonts.scss";
 @import "flexbox.scss";
-@import "gridmain.scss";
 
-ul{
-    list-style: none;
-    
-    li{
-        list-style: none;
-    }
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  margin: 0;
+  padding: 0;
+  /* つまり16px */
 }
 
-.info-wrap {
-    background-color: #EDF1F1;
-    .info-title {
-        align-items: center;
-        text-align: center;
-    }
+::-webkit-scrollbar {
+  display: none;
 }
-.about, .recipe, .event, .news {
-    content: "";
-    width: 100%;
+html {
+    background-color: #f3f3f3;
 }
-.about {
-    border-top: 5px solid black;
-} 
-.recipe{
-    border-top: 5px solid blue;
-    p:before {
-        content:""; 
-        background: black; 
-        position: absolute; 
-        bottom: 0; 
-        left: 0; 
-        height: 50%; 
-        width: 1px;
-    }
-}
-.event{
-    border-top: 5px solid orange;
-}
-.news {
-    border-top: 5px solid green;
-}
-header {
-    background-repeat: no-repeat;
-    .row {
-        .col-xs-2 {
-            margin: 0rem 4vw;
-            padding: 0;     
-            text-align: left;
-            p {
-                padding-left: 1rem;
-                margin: 0;
-                color: white;
-            }
-            ul{
-                max-width: 10vw;
-                margin: 0;
-                @include flexbox();
-                li {
-                    @include flex(2);
-                    display: inline-flexbox;
-                
-                }
-                li:first-of-type:after{
-                    padding-left: 5px;
-                    content: " / "
-                }
-            }
-        }
-        .col-xs-2:first-of-type {
-            background-color: black;
-        }
-    }
-    .languagees {
-        padding: 10vw auto;
-    }
-}
-.title-logo {
-    // padding: 2vw 5vw;
-    margin: 5vw auto;
-    align-items: center;
-    text-align: center;
-    img {
-       align-items: center;
-       text-align: center;
-        max-width: 70vw;
-        // padding: auto 5vw;
-        // padding: 2vw 5vw;
-    }
-}
-.card-list {
-    .card-item {
-        padding: auto;
-        img {
-            align-items: center;
-            text-align: center;
-        }
-    }
+.body-wrap {
+  max-width: 1376px;
 }
