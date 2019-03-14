@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
-
 module.exports = {
-  entry: ['./src/style.scss', './src/index.js', './src/index.html'],
+  entry: ['./src/style.scss', './src/index.js'],
   watch: true,
   mode: 'production',
   module: {

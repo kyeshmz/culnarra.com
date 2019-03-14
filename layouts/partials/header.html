@@ -1,24 +1,20 @@
 <header>
-        <div class="row between-xs">
-            <div class="bl-btm col-xs-2">
-                <p>Cultural Narrative of a City</p>
-            </div>
-            <nav>
-                <ul>
-                       <li><a src="{{ .Site.BaseURL }}">カード</a></li>
-                       <li><a src="{{ .Site.BaseURL }}">プロジェクト</a></li>
-                       <li><a src="{{ .Site.BaseURL }}">ノート</a></li>
-                       <li><a src="{{ .Site.BaseURL }}">イベント</a></li>
-                </ul>
-            </nav>
-
-
-            <div class="col-xs-2 languages">
-                <ul class="row">
-                        <li><a src="{{ .Site.BaseURL }}">このサイトについて</a></li>
-                    <li><a src="{{ .Site.BaseURL }}">English</a></li>
-                    <li><a src="{{ .Site.BaseURL }}jp/">Japanese</a></li>
-                </ul>
-            </div>
+    <div class="nav-menu row">
+        <div class="row black-btm row-item nav-grow" id="nav-title">
+            <h1 class="title"><a href="{{ .Site.BaseURL }}">Cultural Narrative of a City</a></h1>
         </div>
-    </header>
+        <nav>
+            <ul class="row-item row">
+                <li class="brdr-btm card-btm"><a src="{{ .Site.BaseURL }}">カード</a></li>
+                <li class="brdr-btm project-btm"><a src="{{ .Site.BaseURL }}">プロジェクト</a></li>
+                <li class="brdr-btm note-btm"><a src="{{ .Site.BaseURL }}">ノート</a></li>
+                <li class="brdr-btm event-btm"><a src="{{ .Site.BaseURL }}">イベント</a></li>
+            </ul>
+        </nav>
+
+        <ul class="row-item row languages">
+            <li class=""><a src="{{ .Site.BaseURL }}">このサイトについて</a></li>
+            <li class=""><a src="{{ .Site.BaseURL }}">English</a> / <a src="{{ .Site.BaseURL }}jp/">Japanese</a></li>
+        </ul>
+    </div>
+</header>
