@@ -1,11 +1,17 @@
 ---
-label: Recipe Single
+label: Note Single
 hide_body: false
 fields:
 - type: text
-  name: title
-  label: Title
-  description: Title of the Recipe
+  name: title_en
+  label: Title ENGLISH
+  description: Title of the Note ENGLISH
+  config:
+    required: true
+- type: text
+  name: title_jp
+  label: TITLE JAPANESE
+  description: Title of the Note Japanese
   config:
     required: true
 - name: date
