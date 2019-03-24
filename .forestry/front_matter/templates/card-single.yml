@@ -4,16 +4,16 @@ hide_body: false
 fields:
 - type: text
   name: title_jp
-  label: Title Japanese
+  label: "【アブストラクト】Title Japanese"
   description: Title of the Card
   config:
     required: true
 - type: text
   name: title_eng
-  label: Title English
+  label: "【アブストラクト】Title English"
   description: Title English
 - name: date
-  label: Date
+  label: "【アブストラクト】Date"
   type: datetime
   hidden: false
   default: ''
@@ -52,6 +52,26 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+- type: text
+  label: "【メタデータ】場所"
+  name: meta_place
+  description: メタデータ　場所
+- type: tag_list
+  name: tag
+  label: "【メタデータ】Card Tag"
+  description: Tag about the card
+- type: text
+  label: "【メタデータ】カード作成者"
+  name: meta_author
+  description: Metadata for author
+- type: text
+  label: "【メタデータ】所管"
+  name: meta_jurisdiction
+  description: 'Jurisdiction of project '
+- type: tag_list
+  name: meta_topic_category
+  label: "【メタデータ】トピックカテゴリー"
+  description: トピックカテゴリー
 - type: select
   name: card_category
   config:
@@ -60,13 +80,9 @@ fields:
     required: true
     options:
     - 文化機関
-  label: カードの種類
+  label: "【メタデータ】カードの種類"
   description: Category of the card
-  default: Approach
-- type: tag_list
-  name: tag
-  label: "【メタデータ】Card Tag"
-  description: Tag about the card
+  default: 文化機関
 - type: text
   name: layout
   label: layout
@@ -88,22 +104,6 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-- type: text
-  label: "【メタデータ】場所"
-  name: meta_place
-  description: メタデータ　場所
-- type: text
-  label: "【メタデータ】カード作成者"
-  name: meta_author
-  description: Metadata for author
-- type: text
-  label: "【メタデータ】所管"
-  name: meta_jurisdiction
-  description: 'Jurisdiction of project '
-- type: tag_list
-  name: meta_topic_category
-  label: "【メタデータ】トピックカテゴリー"
-  description: トピックカテゴリー
 - type: tag_list
   label: "【メタデータ】アプローチカテゴリー"
   name: meta_approachcategory
