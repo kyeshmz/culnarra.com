@@ -5,15 +5,15 @@
         </div>
         <nav>
             <ul class="row-item row">
-                <li class="brdr-btm card-btm"><a src="{{ .Site.BaseURL }}">カード</a></li>
-                <li class="brdr-btm project-btm"><a src="{{ .Site.BaseURL }}">プロジェクト</a></li>
-                <li class="brdr-btm note-btm"><a src="{{ .Site.BaseURL }}">ノート</a></li>
-                <li class="brdr-btm event-btm"><a src="{{ .Site.BaseURL }}">イベント</a></li>
+                    <a href="{{ "/card/" | relURL }}"><li class="brdr-btm card-btm">カード</li></a>
+                    <a href="{{ "/project/" | relURL }}"><li class="brdr-btm project-btm">プロジェクト</li></a>
+                    <a href="{{ "/note/" | relURL }}"><li class="brdr-btm note-btm">ノート</li></a>
+                    <a href="{{ "/event/" | relURL }}"><li class="brdr-btm event-btm">イベント</li></a>
             </ul>
         </nav>
 
         <ul class="row-item row languages">
-            <li class=""><a src="{{ .Site.BaseURL }}">このサイトについて</a></li>
+                <a href="{{ "//" | relURL }}"><li class="">このサイトについて</a></li>
             <li class=""><a src="{{ .Site.BaseURL }}">English</a> / <a src="{{ .Site.BaseURL }}jp/">Japanese</a></li>
         </ul>
     </div>

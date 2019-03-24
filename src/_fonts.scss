@@ -1,89 +1,27 @@
 @font-face {
-    font-family: 'FutoGoB101Pro-Bold-AlphaNum';
-    src: local('FutoGoB101Pro-Bold-AlphaNum'),
-        url('/fonts/FutoGoB101Pro-Bold-AlphaNum.woff2') format('woff2'),
-        url('/fonts/FutoGoB101Pro-Bold-AlphaNum.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Univers LT Pro';
-    src: local('Univers LT Pro 75 Black'), local('UniversLTPro-75Black'),
-        url('/fonts/UniversLTPro-75Black.woff2') format('woff2'),
-        url('/fonts/UniversLTPro-75Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Univers LT Pro';
-    src: local('Univers LT Pro 65 Bold'), local('UniversLTPro-65Bold'),
-        url('/fonts/UniversLTPro-65Bold.woff2') format('woff2'),
-        url('/fonts/UniversLTPro-65Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'GothicBBBPr6N-Medium-AlphaNum';
-    src: local('GothicBBBPr6N-Medium-AlphaNum'),
-        url('/fonts/GothicBBBPr6N-Medium-AlphaNum.woff2') format('woff2'),
-        url('/fonts/GothicBBBPr6N-Medium-AlphaNum.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Univers LT Pro';
-    src: local('Univers LT Pro 45 Light'), local('UniversLTPro-45Light'),
-        url('/fonts/UniversLTPro-45Light.woff2') format('woff2'),
-        url('/fonts/UniversLTPro-45Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'GothicBBBPr6N-Medium-AlphaNum';
-    src: local('GothicBBBPr6N-Medium-AlphaNum'),
-        url('/fonts/GothicBBBPr6N-Medium-AlphaNum.woff2') format('woff2'),
-        url('/fonts/GothicBBBPr6N-Medium-AlphaNum.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Univers LT Pro 45';
-    src: local('UniversLTPro-65Bold'),
-        url('/fonts/UniversLTPro-65Bold.woff2') format('woff2'),
-        url('/fonts/UniversLTPro-65Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Univers LT Pro 45';
-    src: local('UniversLTPro-45Light'),
-        url('/fonts/UniversLTPro-45Light.woff2') format('woff2'),
-        url('/fonts/UniversLTPro-45Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Univers LT Pro 55';
-    src: local('UniversLTPro-75Black'),
-        url('/fonts/UniversLTPro-75Black.woff2') format('woff2'),
-        url('/fonts/UniversLTPro-75Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'FutoGoB101Pro-Bold-AlphaNum';
-    src: local('FutoGoB101Pro-Bold-AlphaNum'),
-        url('/fonts/FutoGoB101Pro-Bold-AlphaNum.woff2') format('woff2'),
-        url('/fonts/FutoGoB101Pro-Bold-AlphaNum.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-  }
+  font-family: "Yu Mincho Medium";
+  font-weight: normal;
+  src: local("YuMincho-Medium"), local("Yu Mincho Medium"), local("YuMincho-Regular");
+  unicode-range: U+4E00 –9FEF, U+3040 –309F, 30a0–30ff;
+}
+@font-face {
+  font-family: "Yu Mincho DemiBold";
+  font-weight: normal;
+  src: local("YuMincho DemiBold");
+  unicode-range: U+4E00 –9FEF, U+3040 –309F, 30a0–30ff;
+}
+@font-face {
+  font-family: "MinionPro-Regular";
+  font-weight: normal;
+  src: local('Minion Pro Bold'), local('MinionPro-Bold'),
+  url('/fonts/MinionPro-Regular.woff2') format('woff2'),
+  url('/fonts/MinionPro-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: "MinionPro-Regular";
+  font-weight: normal;
+  src: local('Minion Pro Bold'), local('MinionPro-Bold'),
+  url('/fonts/MinionPro-Regular.woff2') format('woff2'),
+  url('/fonts/MinionPro-Regular.woff') format('woff');
+}
+
