@@ -81,11 +81,19 @@ fields:
   hidden: true
   default: card
 - type: textarea
-  name: reference
-  label: Recipe Reference
-  description: Abstract of the card MD 表記
+  name: card_reference
+  label: Card Reference
+  description: カード自体のレファレンス欄
   config:
     required: true
     wysiwyg: true
     schema:
       format: markdown
+- type: text
+  label: "【メタデータ】場所"
+  name: meta_place
+  description: メタデータ　場所
+- type: text
+  label: "【メタデータ】カード作成者"
+  name: meta_author
+  description: Metadata for author
