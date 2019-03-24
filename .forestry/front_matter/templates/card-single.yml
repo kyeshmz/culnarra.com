@@ -100,6 +100,14 @@ fields:
   hidden: true
   default: card
 - type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: "【メインコンテンツ】コンテンツ本文"
+  name: main_content
+  description: コンテンツとなる部分
+- type: textarea
   name: card_reference
   label: "【メインコンテンツ】Card Reference"
   description: カード自体のレファレンス欄
@@ -108,14 +116,6 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-- type: textarea
-  config:
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: "【メインコンテンツ】コンテンツ"
-  name: main_content
-  description: コンテンツとなる部分
 - type: text
   label: "【関連コンテンツ】関連キーワード"
   name: related_keyword
