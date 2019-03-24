@@ -99,6 +99,10 @@ fields:
   name: type
   hidden: true
   default: card
+- type: text
+  label: "【メインコンテンツ】コンテンツタイトル"
+  name: main_title
+  description: Main content title
 - type: textarea
   config:
     wysiwyg: true

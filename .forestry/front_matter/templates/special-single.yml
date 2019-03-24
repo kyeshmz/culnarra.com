@@ -1,5 +1,5 @@
 ---
-label: Project Single
+label: special Single
 hide_body: false
 fields:
 - type: text
@@ -24,9 +24,9 @@ fields:
   config:
     maxSize: '250'
 - type: image_gallery
-  name: project_images
-  label: "【アブストラクト】Project Images"
-  description: Images about the project
+  name: special_images
+  label: "【アブストラクト】special Images"
+  description: Images about the special
 - type: textarea
   label: "【アブストラクト】画像のクレジット"
   name: image_abstract
@@ -56,37 +56,18 @@ fields:
   label: "【メタデータ】場所"
   name: meta_place
   description: メタデータ　場所
-- type: text
-  label: "【メタデータ】連絡"
-  name: meta_contact
-  description: メタデータ　連絡
 - type: tag_list
   name: tag
-  label: "【メタデータ】Project Tag"
+  label: "【メタデータ】special Tag"
   description: Tag about the card
 - type: text
   label: "【メタデータ】カード作成者"
   name: meta_author
   description: Metadata for author
-- type: text
-  label: "【メタデータ】所管"
-  name: meta_jurisdiction
-  description: 'Jurisdiction of project '
 - type: tag_list
   name: meta_topic_category
   label: "【メタデータ】トピックカテゴリー"
   description: トピックカテゴリー
-- type: select
-  name: card_category
-  config:
-    source:
-      type: simple
-    required: true
-    options:
-    - 文化機関
-  label: "【メタデータ】カードの種類"
-  description: Category of the card
-  default: 文化機関
 - type: tag_list
   label: "【メタデータ】アプローチカテゴリー"
   name: meta_approachcategory
