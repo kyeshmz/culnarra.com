@@ -83,6 +83,10 @@ fields:
   label: "【メタデータ】カードの種類"
   description: Category of the card
   default: 文化機関
+- type: tag_list
+  label: "【メタデータ】アプローチカテゴリー"
+  name: meta_approachcategory
+  description: アプローチカテゴリー
 - type: text
   name: layout
   label: layout
@@ -97,14 +101,22 @@ fields:
   default: card
 - type: textarea
   name: card_reference
-  label: Card Reference
+  label: "【メインコンテンツ】Card Reference"
   description: カード自体のレファレンス欄
   config:
     required: true
     wysiwyg: true
     schema:
       format: markdown
-- type: tag_list
-  label: "【メタデータ】アプローチカテゴリー"
-  name: meta_approachcategory
-  description: アプローチカテゴリー
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: "【メインコンテンツ】コンテンツ"
+  name: main_content
+  description: コンテンツとなる部分
+- type: text
+  label: "【関連コンテンツ】関連キーワード"
+  name: related_keyword
+  description: 関連コンテンツのキーワード
