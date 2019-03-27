@@ -1,4 +1,4 @@
-baseURL = "http://kkshmz.github.io/culnarra"
+baseURL = "http://kkshmz.github.io/culnarra/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 canonifyURLs = "true"
