@@ -1,15 +1,19 @@
 {{ partial "head.html" . }}
-{{ partial "header.html" . }}
-{{ partial "card-logo.html" . }}
-<div class="bar-wrap">
-    <hr class="card-bar">
-    <hr class="abstract-bar">
-</div>
-{{ partial "card-abstract.html" . }}
-{{ partial "card-content.html" . }}
-<hr>
-{{ partial "card-relatedtag.html" . }}
-{{ partial "card-relatedproject.html" . }}
-{{ partial "card-relatednote.html" . }}
-{{ partial "card-relatedcard.html" . }}
-{{ partial "footer.html" . }}
+
+<body>
+    <div class="body-wrap">
+        {{ partial "header.html" . }}
+        {{ partial "card-logo.html" . }}
+        <div class="bar-wrap">
+            <hr class="card-bar">
+            <hr class="abstract-bar">
+        </div>
+        {{ partial "card-abstract.html" . }}
+        {{ partial "card-content.html" . }}
+        <hr>
+        {{ partial "card-relatedtag.html" . }}
+        {{ partial "card-relatedproject.html" . }}
+        {{ partial "card-relatednote.html" . }}
+        {{ partial "card-relatedcard.html" . }}
+    </div>
+    {{ partial "footer.html" . }}
