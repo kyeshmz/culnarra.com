@@ -124,5 +124,3 @@ fields:
   label: "【関連コンテンツ】関連キーワード"
   name: related_keyword
   description: 関連コンテンツのキーワード
-pages:
-- content/jp/card/sengakuji.md
