@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/jp/event
+  path: content/jp
   label: JP
   create: all
   match: "**/*"
