@@ -51,14 +51,6 @@ fields:
   name: project_images
   label: "【アブストラクト】Project Images"
   description: Images about the project
-- type: textarea
-  label: "【アブストラクト】画像のクレジット"
-  name: image_abstract
-  description: Abstract text of image
-  config:
-    wysiwyg: true
-    schema:
-      format: markdown
 - type: text
   name: yt_videourl
   label: "【アブストラクト】Youtube Video URL"
@@ -149,5 +141,29 @@ fields:
   name: image_caption_3
   label: image caption 3
   description: Caption of image 3
+- type: textarea
+  name: event_place
+  label: event place
+  description: Event Place
+- type: textarea
+  name: event_audience
+  label: event audience
+  description: event audience
+- type: text
+  label: Event Fee
+  name: event_fee
+  description: Event Fee
+- type: textarea
+  label: Event Participate
+  name: event_participate
+  description: How to participate in the event
+- type: textarea
+  name: event_contact
+  label: Event Contact
+  description: Event contact
+- type: textarea
+  name: event_organizer
+  label: Event Organizer
+  description: Who is organizing the event
 pages:
 - content/jp/event/sengakuji.md
