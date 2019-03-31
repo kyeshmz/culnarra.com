@@ -24,10 +24,12 @@ if (abstractSlider.length > 0) {
       nav: false,
       controlsText: ['＜', '＞'],
       autoplay: true,
+      speed: 2400,
       autoplayHoverPause: true,
       autoplayButtonOutput: false,
       lazyload: false,
-      nested: 'inner'
+      nested: 'inner',
+      fixedWidth: 550
     });
   }
 

@@ -3,14 +3,14 @@ title: Sengakuji
 date: 2019-03-31 09:00:51 +0000
 card_category: 文化機関
 layout: single
-type: card
+type: event
 title_jp: 学問・文化プラットフォームとしての寺院：泉岳寺と禅の文化　
 title_eng: 'Temple as a Scholarship and Cultural Platform: Sengakuji and Zen in Japanese
   Culture'
-ogp_image: "/public/event/event1-1.jpg"
+ogp_image: "/img/event/event1-1.jpg"
 project_images:
-- "/public/event/event1-2.jpg"
-- "/public/event/event1-1.jpg"
+- "/img/event/event1-2.jpg"
+- "/img/event/event1-1.jpg"
 abstract_content: |-
   都市とともに歴史を重ね、現代に活動する寺院は、都市が蓄積する歴史的・文化的地層を見通す窓であり、過去から現在へと繋がる都市の物語の証言者でもあります。
 

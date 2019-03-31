@@ -62,6 +62,11 @@ $toppan: "toppanBunkyuMincho", serif;
   .abstract-carousel {
     grid-row-start: 2;
     grid-row-end: 3;
+    .img-item {
+      img {
+        width: 100%;
+      }
+    }
   }
   .abstract-caption {
     grid-row-start: 3;
@@ -70,11 +75,12 @@ $toppan: "toppanBunkyuMincho", serif;
     font-size: 14px;
     line-height: 20px;
     font-family: $culnarra-go;
+    text-align: left;
   }
   .tns-outer {
-    width: 300px;
+    max-width: 550px;
     margin: 0 auto;
-    position:relative;
+    position: relative;
     text-align: center;
   }
   .tns-inner {
@@ -89,7 +95,7 @@ $toppan: "toppanBunkyuMincho", serif;
     margin: 0 5px;
     padding: 0;
   }
-  
+
   [data-controls="prev"],
   [data-controls="next"] {
     position: absolute;
@@ -100,7 +106,7 @@ $toppan: "toppanBunkyuMincho", serif;
     margin-top: -15px;
     padding: 0;
     border: none;
-    
+
     background: none;
     font-size: 30px;
     color: #ffffff;

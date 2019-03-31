@@ -22,8 +22,8 @@
     <meta name="twitter:card" content="summary" />
     {{ with .Site.Params.ogp_image }}
     <meta name="twitter:image" content="{{ . }}" /> {{ end }}
-    {{ with .Site.Params.ogp_image }}
-    <meta property="og:image" content="{{ . }}" />{{ end }}
+    {{ with .Params.ogp_image }}<meta property="og:image" content="{{ . }}" />{{ end }} 
+
     <meta property="og:url" content="" />
     <meta name="twitter:url" content="" />
     <meta property="og:title" content="{{ .Title }}" />
