@@ -1,0 +1,134 @@
+---
+label: Event Single
+hide_body: false
+fields:
+- type: text
+  name: title_jp
+  label: "【アブストラクト】Title Japanese"
+  description: Title of the Card
+  config:
+    required: true
+- type: text
+  name: title_eng
+  label: "【アブストラクト】Title English"
+  description: Title English
+- name: date
+  label: "【アブストラクト】Date"
+  type: datetime
+  hidden: false
+  default: ''
+- type: file
+  name: ogp_image
+  label: "【アブストラクト】Main Image"
+  description: Main image used in social media sites
+  config:
+    maxSize: '250'
+- type: image_gallery
+  name: project_images
+  label: "【アブストラクト】Project Images"
+  description: Images about the project
+- type: textarea
+  label: "【アブストラクト】画像のクレジット"
+  name: image_abstract
+  description: Abstract text of image
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: yt_videourl
+  label: "【アブストラクト】Youtube Video URL"
+  description: 'Enter in end part of  www.youtube.com/watch?v=******** '
+- type: text
+  label: "【アブストラクト】Vimeo Video URL"
+  name: vimeo_videourl
+  description: Enter in www.//player.vimeo.com/video/****
+- type: textarea
+  name: abstract_content
+  label: "【アブストラクト】Card Abstract Long "
+  description: Abstract of the card MD 表記
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: abstract_content
+  label: "【アブストラクト】Card Abstract Short"
+  description: Abstract of the card MD 表記
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  label: "【メタデータ】場所"
+  name: meta_place
+  description: メタデータ　場所
+- type: tag_list
+  name: tag
+  label: "【メタデータ】Card Tag"
+  description: Tag about the card
+- type: text
+  label: "【メタデータ】カード作成者"
+  name: meta_author
+  description: Metadata for author
+- type: text
+  label: "【メタデータ】所管"
+  name: meta_jurisdiction
+  description: 'Jurisdiction of project '
+- type: tag_list
+  name: meta_topic_category
+  label: "【メタデータ】トピックカテゴリー"
+  description: トピックカテゴリー
+- type: select
+  name: card_category
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - 文化機関
+  label: "【メタデータ】カードの種類"
+  description: Category of the card
+  default: 文化機関
+- type: tag_list
+  label: "【メタデータ】アプローチカテゴリー"
+  name: meta_approachcategory
+  description: アプローチカテゴリー
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: single
+- type: text
+  config:
+    required: false
+  label: type
+  name: type
+  hidden: true
+  default: card
+- type: text
+  label: "【メインコンテンツ】コンテンツタイトル"
+  name: main_title
+  description: Main content title
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: "【メインコンテンツ】コンテンツ本文"
+  name: main_content
+  description: コンテンツとなる部分
+- type: textarea
+  name: card_reference
+  label: "【メインコンテンツ】Card Reference"
+  description: カード自体のレファレンス欄
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  label: "【関連コンテンツ】関連キーワード"
+  name: related_keyword
+  description: 関連コンテンツのキーワード
