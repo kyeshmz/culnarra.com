@@ -8,10 +8,10 @@
             <hr class="card-bar">
             <hr class="abstract-bar">
         </div>
-        {{ partial "card-relatedtag.html" . }}
+        {{ partial "card/card-relatedtag.html" .}}
         <div class="cardlist-wrap">
             <div class="cardlist-item">
-                <a href="">
+                <a href=""></a>
                     <div class="cardlist-image">
                         <img src="{{ "/img/dummy2.jpg" | relURL }}">
                     </div>
@@ -32,8 +32,7 @@
                         <h5 class="cardlist-title">「泉岳寺と禅の文化」レポート</h5>
                         <p class="cardlist-abs">堀川貴司は、日本の国文学者、慶應義塾大学教授。大阪府生まれ。東京学芸大学教育学部附属高等学校卒、</p>
                         <div class="itemtag-row">
-                            <p>#禅</p>
-                            <p>#曹洞宗</p>
+                            <a href=" {{ .Permalink }}"><p class="item-tag">#曹洞宗</p></a>
                             <p>#禅</p>
                             <p>#曹洞宗</p>
                             <p>#曹洞宗</p>

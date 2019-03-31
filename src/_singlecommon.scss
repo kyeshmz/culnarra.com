@@ -1,0 +1,300 @@
+$purple: #6846ff;
+$green: #22b473;
+$orange: #ff921e;
+$grey: #878787;
+$gray: #878787;
+$black: black;
+$background: #f3f3f3;
+
+$culnarra-go: "a-otf-futo-go-b101-pr6n", "AktivGrotesk Medium", sans-serif;
+$yu-min: "yu-mincho-pr6n", "游明朝体", "Yu Mincho", "YuMincho", "MinionPro Regular", "MinionPro-Regular", serif;
+$toppan: "toppanBunkyuMincho", serif;
+
+//abstract
+.abstract-wrap {
+  display: grid;
+  grid-template-columns: 1fr 676px;
+  grid-template-rows: 150px 1fr 75px;
+  padding-bottom: 60px;
+  font-family: $yu-min;
+  .abstract-title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    padding-top: 60px;
+    margin: 0;
+    @include flexbox();
+    @include flex-grow(0);
+    @include justify-content(flex-start);
+    @include flex-direction(row);
+    @include align-items(center);
+    .abstitle-jp {
+      font-size: 32.41px;
+      line-height: 60px;
+      display: inline-block;
+      font-family: $toppan;
+    }
+    .abstitle-en {
+      font-size: 16.41px;
+      line-height: 2em;
+      display: inline-block;
+      font-family: $toppan;
+    }
+    .abstitle-bar {
+      font-size: 32.41px;
+      line-height: 60px;
+      display: inline-block;
+      font-family: $toppan;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  .abstract-content {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-family: $yu-min;
+    p {
+      font-size: 20px;
+      line-height: 48px;
+    }
+  }
+  .abstract-carousel {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .abstract-caption {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column: 2;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $culnarra-go;
+  }
+  .tns-outer {
+    width: 300px;
+    margin: 0 auto;
+    position:relative;
+    text-align: center;
+  }
+  .tns-inner {
+    position: relative;
+  }
+  .tns-nav {
+    text-align: center;
+  }
+  .tns-nav > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+    padding: 0;
+  }
+  
+  [data-controls="prev"],
+  [data-controls="next"] {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    padding: 0;
+    border: none;
+    
+    background: none;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+  }
+  [data-controls="prev"]:hover,
+  [data-controls="next"]:hover {
+    background: $purple;
+  }
+  [data-controls="prev"] {
+    left: 10px;
+  }
+  [data-controls="next"] {
+    right: 10px;
+  }
+}
+
+//card feed
+.related-feed {
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-evenly);
+}
+.related-item {
+  padding: 20px;
+  border-color: black;
+  border-width: 1.33px;
+  border-style: solid;
+  h4 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+//card content
+.card-contentwrap {
+  display: grid;
+  grid-template-columns: 260px 843px 1fr;
+  grid-template-rows:
+    minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto)
+    minmax(63px, auto) minmax(92px, auto) 1fr;
+  padding-top: 77px;
+  padding-bottom: 77px;
+  font-family: $yu-min;
+  .info-item.card-item {
+    border-bottom: 1px solid $purple;
+    border-left: 1px solid $purple;
+    border-right: 1px solid $purple;
+    &:first-child {
+      border-top: 1px solid $purple;
+      border-bottom: 1px solid $purple;
+      border-left: 1px solid $purple;
+      border-right: 1px solid $purple;
+    }
+    p {
+      font-family: $culnarra-go;
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+  .info-item.project-item {
+    border-bottom: 1px solid $orange;
+    border-left: 1px solid $orange;
+    border-right: 1px solid $orange;
+    &:first-child {
+      border-top: 1px solid $orange;
+      border-bottom: 1px solid $orange;
+      border-left: 1px solid $orange;
+      border-right: 1px solid $orange;
+    }
+  }
+  .card-approach {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .card-topic {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .card-tag {
+    grid-column: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .card-producer {
+    grid-column: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .card-contact {
+    grid-column: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .card-author {
+    grid-column: 1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .card-revised {
+    grid-column: 1;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  .card-date {
+    grid-column: 1;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  .info-content.card-content {
+    hr {
+      background-color: $purple;
+      color: $purple;
+      border: none;
+      height: 1px;
+    }
+    h5 {
+      padding-top: 78px;
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $culnarra-go;
+      font-weight: normal;
+      border-bottom-color: $purple;
+      border-bottom-width: 1pt;
+      border-bottom-style: solid;
+    }
+  }
+  .info-content.project-content {
+    hr {
+      background-color: $orange;
+      color: $orange;
+      border: none;
+      height: 1px;
+    }
+    h5 {
+      padding-top: 78px;
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $culnarra-go;
+      font-weight: normal;
+      border-bottom-color: $orange;
+      border-bottom-width: 1pt;
+      border-bottom-style: solid;
+    }
+  }
+  .info-content.note-content {
+    hr {
+      background-color: $green;
+      color: $green;
+      border: none;
+      height: 1px;
+    }
+    h5 {
+      padding-top: 78px;
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $culnarra-go;
+      font-weight: normal;
+      border-bottom-color: $green;
+      border-bottom-width: 1pt;
+      border-bottom-style: solid;
+    }
+  }
+  .info-content.event-content {
+    hr {
+      background-color: $gray;
+      color: $gray;
+      border: none;
+      height: 1px;
+    }
+    h5 {
+      padding-top: 78px;
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $culnarra-go;
+      font-weight: normal;
+      border-bottom-color: $gray;
+      border-bottom-width: 1pt;
+      border-bottom-style: solid;
+    }
+  }
+  .card-content {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    max-width: 675px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $yu-min;
+    font-size: 20px;
+    line-height: 48px;
+  }
+}

@@ -1,23 +1,18 @@
 @import "normalize.scss";
 @import "include.scss";
 @import "fonts.scss";
-@import "flexbox.scss";
+@import "mixins.scss";
 @import "tiny-slider.scss";
+@import "singlecommon.scss";
+@import "listcommon.scss";
+@import "index.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
-$purple: #6846ff;
-$green: #22b473;
-$orange: #ff921e;
-$grey: #878787;
-$black: black;
-$background: #f3f3f3;
 
-@function tracking( $target ){
-  @return ($target / 1000) * 1em;
-}
 
-@mixin tracking( $target ){
-  letter-spacing: tracking( $target );
-}
+// ---------------------------------------------------
+// ---------------------------------------------------
+//end of mixins
 
 * {
   text-rendering: optimizeLegibility;
@@ -89,8 +84,38 @@ hr {
   border: none;
   height: 1.2px;
 }
+.sticky-hr {
+  display: none;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $background;
+  //background-color: rgba(135,135,135,1);
+  z-index: 30;
+  opacity: 1;
+  .card-logo {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  header {
+    background-color: (135, 135, 135, 1);
+    opacity: 1;
+  }
+  .sticky-hr {
+    display: block;
+  }
+}
+
+.sticky + .main {
+  padding-top: 50px;
+}
+
 // ----------------------------------------
 // -------------------------------------------
+
 .body-wrap {
   max-width: 1372px;
   margin: 0 auto;
@@ -130,7 +155,7 @@ hr {
       padding-left: 6px;
       padding-right: 6px;
       margin-top: 4px;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       align-content: center;
       text-align: center;
       a {
@@ -141,7 +166,9 @@ hr {
 }
 h1.title {
   font-size: 14px;
+  line-height: 25px;
   margin: 0;
+  font-family: $century;
 }
 .row-item {
   @include flex-grow(0);
@@ -173,7 +200,6 @@ h1.title {
 // }
 .black-btm {
   border-bottom: 4px solid $black;
-  padding-bottom: 8px;
   a {
     margin-bottom: 3px;
   }
@@ -207,7 +233,7 @@ h1.title {
   @include align-items(center);
   .abstract-bar {
     background-color: $grey;
-    height: 3px;
+    height: 2px;
     width: 50%;
     margin-top: 1.5px;
     margin-bottom: 1.5px;
@@ -227,194 +253,15 @@ h1.title {
     height: 4px;
     width: 50%;
   }
-}
-
-//abstract
-.abstract-wrap {
-  display: grid;
-  grid-template-columns: 1fr 676px;
-  grid-template-rows: 150px 1fr 75px;
-  padding-bottom: 60px;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
-  .abstract-title {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 1;
-    .abstitle-jp {
-      font-size: 32.41pt;
-      line-height: 60px;
-      display: inline-block;
-    }
-    .abstitle-en {
-      font-size: 16.41pt;
-      line-height: 2em;
-      display: inline-block;
-    }
-
-    h2 {
-      padding-top: 60px;
-      margin: 0;
-    }
+  .tag-bar {
+    background-color: $black;
+    height: 4px;
+    width: 50%;
   }
-  .abstract-item {
-    grid-column: 1;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    p {
-      font-size: 1.25em;
-      line-height: 3em;
-    }
-  }
-  .abstract-carousel {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .abstract-caption {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column: 2;
-  }
-  .tns-outer {
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-  }
-  .tns-inner {
-    position: relative;
-  }
-  .tns-controls {
-    position: absolute;
-    z-index: 2;
-  }
-  [data-controls="prev"],
-  [data-controls="next"] {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    color: black;
-    background: none;
-    line-height: 30px;
-    border-style: none;
-
-    text-align: center;
-  }
-  [data-controls="prev"] {
-    left: 10px;
-  }
-  [data-controls="next"] {
-    right: 10px;
-  }
-}
-.tns-horizontal.tns-subpixel > .tns-item {
-  text-align: center;
-}
-
-//card feed
-.related-feed {
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(space-evenly);
-}
-.related-item {
-  padding: 20px;
-  border-color: black;
-  border-width: 1.33px;
-  border-style: solid;
-  h4 {
-    text-align: center;
-    padding-bottom: 30px;
-  }
-}
-
-//card content
-.card-contentwrap {
-  display: grid;
-  grid-template-columns: 260px 843px 1fr;
-  grid-template-rows: 63px 63px 86px 183px 136px 61px 61px 92px 1fr;
-  padding-top: 77px;
-  padding-bottom: 77px;
-  font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
-  .card-item {
-    border-bottom: 1px solid $purple;
-    border-left: 1px solid $purple;
-    border-right: 1px solid $purple;
-    &:first-child {
-      border-top: 1px solid $purple;
-      border-bottom: 1px solid $purple;
-      border-left: 1px solid $purple;
-      border-right: 1px solid $purple;
-    }
-  }
-
-  p {
-    font-size: 1em;
-    line-height: 2em;
-  }
-  .card-approach {
-    grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .card-topic {
-    grid-column: 1;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .card-tag {
-    grid-column: 1;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  .card-producer {
-    grid-column: 1;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-  .card-contact {
-    grid-column: 1;
-    grid-row-start: 5;
-    grid-row-end: 6;
-  }
-  .card-author {
-    grid-column: 1;
-    grid-row-start: 6;
-    grid-row-end: 7;
-  }
-  .card-revised {
-    grid-column: 1;
-    grid-row-start: 7;
-    grid-row-end: 8;
-  }
-  .card-date {
-    grid-column: 1;
-    grid-row-start: 8;
-    grid-row-end: 9;
-  }
-  .card-content {
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 9;
-    max-width: 675px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    p {
-      font-size: 20px;
-      line-height: 48pt;
-    }
-    .card-title {
-    }
-    h5 {
-      padding-top: 78px;
-      font-size: 20px;
-      font-weight: normal;
-      border-bottom-color: $purple;
-      border-bottom-width: 1pt;
-      border-bottom-style: solid;
-    }
+  .event-bar {
+    background-color: $grey;
+    height: 4px;
+    width: 50%;
   }
 }
 
@@ -491,7 +338,7 @@ h1.title {
     margin-left: auto;
     margin-right: auto;
     overflow-y: hidden;
-    font-family: "Yu Gothic";
+    font-family: $yu-min;
     hr {
       background-color: $orange;
       color: $orange;
@@ -568,11 +415,53 @@ h1.title {
 }
 
 .card-related-project {
-  .relatedprj-feed {
-    @include flexbox();
-    @include flex-grow(0);
-    @include flex-direction(row);
-    @include justify-content(space-evenly);
+  .tns-outer {
+    // width: 300px;
+    margin: 0 auto;
+    position:relative;
+    text-align: center;
+  }
+  .tns-inner {
+    position: relative;
+  }
+  .tns-nav {
+    text-align: center;
+  }
+  .tns-nav > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+    padding: 0;
+  }
+  
+  [data-controls="prev"],
+  [data-controls="next"] {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    padding: 0;
+    border: none;
+    
+    background: none;
+    font-size: 30px;
+    color: black;
+    line-height: 20px;
+    text-align: center;
+  }
+  [data-controls="prev"]:hover,
+  [data-controls="next"]:hover {
+    background: $orange;
+  }
+  [data-controls="prev"] {
+    left: 10px;
+  }
+  [data-controls="next"] {
+    right: 10px;
+  }
+  .tns-ovh {
     max-width: 676.5px;
     align-content: center;
     margin-left: auto;
@@ -581,45 +470,18 @@ h1.title {
     overflow-wrap: break-word;
     height: auto;
     align-items: center;
-    // .tns-outer {
-    //   margin: 0 auto;
-    //   position: relative;
-    //   text-align: center;
-    // }
-    // .tns-inner {
-    //   position: relative;
-    // }
-    // .tns-controls {
-    //   position: absolute;
-    //   z-index: 2;
-    // }
-    // [data-controls="prev"],
-    // [data-controls="next"] {
-    //   position: absolute;
-    //   z-index: 2;
-    //   top: 50%;
-    //   width: 30px;
-    //   height: 30px;
-    //   padding: 0;
-    //   color: black;
-    //   background: none;
-    //   line-height: 30px;
-    //   border-style: none;
-    //   text-align: center;
-    // }
-    // [data-controls="prev"] {
-    //   left: 10px;
-    // }
-    // [data-controls="next"] {
-    //   right: 10px;
-    // }
+  }
+  .relatedprj-feed {
+    
     .prjfeed-item {
       max-width: 326px;
       height: 625px;
       border-color: black;
       border-width: 1.33px;
       border-style: solid;
-      box-sizing: border-box;
+      margin-left: 30px;
+      margin-right: 5px;
+  
       h4 {
         text-align: center;
         padding-bottom: 30px;
@@ -641,6 +503,62 @@ h1.title {
 }
 
 .related-notes {
+  .tns-outer {
+    // width: 300px;
+    margin: 0 auto;
+    position:relative;
+    text-align: center;
+  }
+  .tns-inner {
+    position: relative;
+  }
+  .tns-nav {
+    text-align: center;
+  }
+  .tns-nav > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+    padding: 0;
+  }
+  
+  [data-controls="prev"],
+  [data-controls="next"] {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    padding: 0;
+    border: none;
+    
+    background: none;
+    font-size: 30px;
+    color: black;
+    line-height: 20px;
+    text-align: center;
+  }
+  [data-controls="prev"]:hover,
+  [data-controls="next"]:hover {
+    background: $green;
+  }
+  [data-controls="prev"] {
+    left: 10px;
+  }
+  [data-controls="next"] {
+    right: 10px;
+  }
+  .tns-ovh {
+    max-width: 676.5px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    height: auto;
+    align-items: center;
+  }
   .relatednote-feed {
     .notefeed-item {
       margin-left: auto;
@@ -654,9 +572,9 @@ h1.title {
       padding-right: 33px;
       padding-top: 40px;
       padding-bottom: 22px;
-      overflow: hidden;
+      // overflow: hidden;
       position: relative;
-      display: block;
+      height: 270px;
       &:before {
         // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
         content: "\200C";
@@ -705,10 +623,11 @@ h1.title {
     word-break: break-all;
     overflow-wrap: break-word;
     height: auto;
-
-    h4 {
-      word-break: break-all;
-      font-size: 25pt;
+    font-family: $yu-min;
+    font-size: 25px;
+    line-height: 48px;
+    font-weight: bold;
+    .related-tag-item {
       border-bottom: 1pt solid $black;
       margin-bottom: 15px;
       overflow-wrap: break-word;
@@ -721,7 +640,10 @@ h1.title {
   padding-bottom: 80px;
   text-align: center;
   h3 {
+    font-family: $toppan;
     font-size: 36px;
+    line-height: 60px;
+    font-kerning: auto;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -730,59 +652,75 @@ h1.title {
 }
 
 .related-card {
-  .relatedcard-feed {
-    @include flexbox();
-    @include flex-direction(row);
-    @include justify-content(space-between);
+  .tns-outer {
+    // width: 300px;
+    margin: 0 auto;
+    position:relative;
+    text-align: center;
+  }
+  .tns-inner {
+    position: relative;
+  }
+  .tns-nav {
+    text-align: center;
+  }
+  .tns-nav > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+    padding: 0;
+  }
+  
+  [data-controls="prev"],
+  [data-controls="next"] {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    padding: 0;
+    border: none;
+    
+    background: none;
+    font-size: 30px;
+    color: black;
+    line-height: 20px;
+    text-align: center;
+  }
+  [data-controls="prev"]:hover,
+  [data-controls="next"]:hover {
+    background: $purple;
+  }
+  [data-controls="prev"] {
+    left: 10px;
+  }
+  [data-controls="next"] {
+    right: 10px;
+  }
+  .tns-ovh {
     max-width: 1024px;
+    align-content: center;
     margin-left: auto;
     margin-right: auto;
     word-break: break-all;
     overflow-wrap: break-word;
     height: auto;
     align-items: center;
-    // box-sizing: border-box;
-    .tns-outer {
-      margin: 0 auto;
-      position: relative;
-      text-align: center;
-    }
-    .tns-inner {
-      position: relative;
-    }
-    .tns-controls {
-      position: absolute;
-      z-index: 2;
-    }
-    [data-controls="prev"],
-    [data-controls="next"] {
-      position: absolute;
-      z-index: 2;
-      top: 50%;
-      width: 30px;
-      height: 30px;
-      padding: 0;
-      color: black;
-      background: none;
-      line-height: 30px;
-      border-style: none;
-      text-align: center;
-    }
-    [data-controls="prev"] {
-      left: 10px;
-    }
-    [data-controls="next"] {
-      right: 10px;
-    }
+  }
+  .relatedcard-feed {    
     .cardfeed-item {
-      padding-left: 21px;
+      align-items: center;
+      margin-left: 25px;
+      margin-right: 25px;
+      padding-left: 20px;
       padding-right: 20px;
       padding-bottom: 20px;
       padding-top: 32px;
       border-color: black;
       border-width: 1pt;
       border-style: solid;
-      max-width: 288px;
+      max-width: 287px;
       width: 100%;
       overflow-x: hidden;
       li {
@@ -843,15 +781,52 @@ h1.title {
     h4 {
       line-height: 2em;
       font-size: 16px;
-      font-family: "Yu Gothic";
+      letter-spacing: auto;
+      font-family: $culnarra-go;
       &:first-of-type {
         padding-top: 57px;
       }
     }
     p {
-      line-height: 25pt;
+      font-family: $yu-min;
+      line-height: 25px;
       font-size: 12px;
-      font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
+      letter-spacing: auto;
+    }
+    &#copyright {
+      padding-top: 60px;
+      font-family: $culnarra-go;
+      font-size: 14px;
+      line-height: 28px;
+    }
+    .footer-icons {
+      padding-top: 20px;
+      @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include flex-grow(0);
+    max-width: 150px;
+      .twitter-logo {
+        max-width: 35px;
+        display: inline;
+        svg {
+          fill: white;
+        }
+      }
+      .insta-logo {
+        max-width: 35px;
+        display: inline;
+        svg {
+          fill: white;
+        }
+      }
+      .facebook-logo {
+        max-width: 35px;
+        display: inline;
+        svg {
+          fill: white;
+        }
+      }
     }
   }
   .footer-info {
@@ -861,285 +836,144 @@ h1.title {
     padding-top: 85px;
     padding-bottom: 85px;
   }
-  .footer-social {
-  }
+  
 }
 
-.index-wrap {
-  padding-top: 50px;
-  // padding-bottom: 77px;
 
-  //grid for the whole layout until the tags
+.event-contentwrap {
+  padding-top: 77px;
+  padding-bottom: 77px;
   display: grid;
-  grid-template-columns: 327px 327px 327px 327px;
-  grid-template-rows: 286px 330px 330px 1fr;
-  grid-column-gap: 20.5px;
-  grid-row-gap: 40px;
+  grid-template-columns: 260px 843px 1fr;
+  grid-template-rows: minmax(63px, auto) minmax(63px, auto) minmax(66px, auto) minmax(60px, auto) minmax(65px, auto) minmax(
+      90px,
+      auto
+    ) 1fr;
   overflow: hidden;
-  .index-items {
-  }
-  .blkbox-logo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 1;
-  }
-  .index-about {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row: 1;
-    line-height: 1.8em;
-    font-size: 1em;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-history {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 41px;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-    h4 {
-      padding-bottom: 35px;
-    }
-    li {
-      padding-bottom: 25px;
+  .event-item {
+    border-bottom: 1px solid $grey;
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
+    &:first-child {
+      border-top: 1px solid $grey;
+      border-bottom: 1px solid $grey;
+      border-left: 1px solid $grey;
+      border-right: 1px solid $grey;
     }
   }
-  .index-card-1 {
-    grid-column: 2;
-    grid-row:2;
-
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-card-2 {
-    grid-column-start:3;
-    grid-column-end: 4;
-    grid-row: 2;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-card-3 {
-    grid-column-start:3;
-    grid-column-end: 4;
-    grid-row: 3;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-card-4 {
-    grid-column-start:1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-card-5 {
-    grid-column-start:2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-note-6 {
-    grid-column-start:3;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .index-tags{
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-    text-align: center;
-
-  .index-tags-row {
-    @include flexbox();
-    @include flex-direction(row);
-    @include flex-grow(0);
-    @include flex(5);
-    @include align-content(center);
-  }
-  li{
-    font-size: 25px;
-    line-height: 3em;
-  }
-  }
-}
-.secondary-index-wrap {
-  display: grid;
-  grid-template-columns: 1fr 327px 327px 327px 327px 1fr;
-  grid-template-rows: 286px 330px 330px 330px 330px 330px  1fr;
-  // grid-template-columns: 325px 325px 325px 325px 325px 325px;
-  // grid-template-rows: 309px 309px 309px 309px 309px 309px;
-  grid-column-gap: 20.5px;
-  grid-row-gap: 46px;
-  overflow: hidden;
-  padding-top: 57px;
-
-  .snd-index-img{
-    overflow: hidden;
-    grid-column-start: 1;
-    grid-column-end: 5;
+  .event-approach {
+    grid-column: 1;
     grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .event-topic {
+    grid-column: 1;
+    grid-row-start: 2;
     grid-row-end: 3;
   }
-  .snd-index-img2{
-    overflow: hidden;
-
-
-    grid-column-start:4;
-    grid-column-end:7;
-    grid-row-start: 5;
-    grid-row-end: 7;
-  }
-  .snd-card-1 {
-    grid-column-start:5;
-    grid-column-end:6;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .snd-card-2 {
-    grid-column-start:2;
-    grid-column-end:4;
+  .event-author {
+    grid-column: 1;
     grid-row-start: 3;
     grid-row-end: 4;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
   }
-  .snd-card-3{
-    grid-column-start:2;
-    grid-column-end:3;
+  .event-revised {
+    grid-column: 1;
     grid-row-start: 4;
     grid-row-end: 5;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
   }
-  .snd-card-4{
-    grid-column-start:3;
-    grid-column-end:4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-  }
-  .snd-card-5{
-    grid-column-start:2;
-    grid-column-end:3;
+  .event-date {
+    grid-column: 1;
     grid-row-start: 5;
     grid-row-end: 6;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
   }
-  .snd-card-6{
-    grid-column-start:2;
-    grid-column-end:4;
-    grid-row-start: 6;
+  .event-content {
+    grid-column: 2;
+    grid-row-start: 1;
     grid-row-end: 7;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
+    max-width: 675px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+    h3 {
+      padding-bottom: 15px;
+      font-family: $culnarra-go;
+      font-size: 20px;
+      line-height: 48px;
+    }
+    .event-title {
+      padding-bottom: 15px;
+    }
+    hr {
+      background-color: $orange;
+      color: $orange;
+      border: none;
+      height: 1px;
+      margin-bottom: 28px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $yu-min;
+      letter-spacing: 0;
+      font-kerning: auto;
+    }
+  }
+}
+
+.event-info {
+  background-color: $grey;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  .event-infotitle {
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 15px;
+  }
+  .event-infogrid {
+    padding-top: 37px;
+    display: grid;
+    grid-template-columns: 609px 609px;
+    grid-template-rows: 458px;
+    grid-column-gap: 86px;
+    .event-infoitem {
+      display: grid;
+      grid-template-columns: 609px;
+      grid-template-rows: minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(
+          48px,
+          auto
+        );
+      grid-row-gap: minmax(20px, auto);
+      .event-infoitem-child {
+        position: relative;
+        h5 {
+          font-size: 16px;
+          text-align: left;
+        }
+        p {
+          text-indent: 2em;
+        }
+      }
+    }
   }
 }
 
 
-.cardlist-wrap {
-  display: grid;
-  grid-template-columns: 327.5px 327.5px 327.5px 327.5px;
-  grid-template-rows: 596px 596px 596px;
-
-  grid-column-gap: 20px;
-  grid-row-gap: 52px;
-  overflow: hidden;
-
-
-  padding-bottom: 311px;
-  .cardlist-item {
-    overflow: hidden;
-    border-color: black;
-    border-width: 1pt;
-    border-style: solid;
-    align-items: center;
-    .cardlist-info {
-      padding-left: 25px;
-    padding-right: 25px;
-    }
-    h5.cardlist-title {
-      font-size: 20px;
-      padding-top: 30px;
-      padding-bottom: 40px;
-      @include tracking(15);
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    p{
-      font-size: 1em;
-      line-height: 2em;
-      font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
-    }
-    .cardlist-abs{
-      padding-bottom: 35px;
-    }
-    .itemtag-row {
-      @include flexbox();
-      @include flex-direction(row);
-      @include flex-wrap(wrap);
-      @include flex-grow(0);
-      @include align-items(center);
-      @include justify-content(space-evenly);
-      p{
-        // @include flex (4);
-        white-space: nowrap;
-        word-break: break-all;
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-
-    }
-    .cardlist-image {
-      padding-top: 44px;
-      padding-bottom: 44px;
-      padding-left: 25px;
-      padding-right: 25px;
-      max-width: 100%;
-      background-color: $purple;
-      img {
-        width: 100%;
-      }
-    }
-    .cardlist-imagecap {
-      display: none;
-      padding-top: 44px;
-    padding-bottom: 44px;
-      
-    }
-
+.slider-arrow {
+  position: absolute;
+  display: block;
+  padding: 20px;
+  font-size: 25px;
+  .glide__arrow--right {
+    bottom: 50%;
+    right: 30px;
   }
-  //padding-top: 57px;
+  .glide__arrow--left {
+    bottom: 50%;
+    left: 30px;
+  }
 }

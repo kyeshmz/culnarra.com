@@ -1,0 +1,77 @@
+{{ partial "head.html" . }}
+
+<body>
+    <div id="global-header">
+        {{ partial "header.html" . }}
+        {{ partial "card-logo.html" . }}
+    </div>
+    <div class="body-wrap">
+        <div class="bar-wrap">
+            <hr class="event-bar">
+            <hr class="abstract-bar">
+        </div>
+        {{ partial "event/event-abstract.html" . }}
+        <div class="event-info">
+            <h3 class="event-infotitle">イベント関係情報</h3>
+            <div class="event-infogrid">
+                <div class="event-infoitem">
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                </div>
+                <div class="event-infoitem">
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                    <div class="event-infoitem-child">
+                        <h5>［日時］</h5>
+                        <p>主催：慶應義塾大学アート・センター
+                            共催：港区（平成30年度港区文化プログラム連携事業）
+                            助成：平成30年度 文化庁 地域の美術館・歴史博物館を中核としたクラスター形成事業</p>
+                        <p>2018年11月18日（日）10:00-11:30／13:00-14:30</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {{ partial "event/event-content.html" . }}
+        <hr>
+        {{ partial "event/event-relatedtag.html" . }}
+        {{ partial "event/event-relatedproject.html" . }}
+        {{ partial "event/event-relatednote.html" . }}
+        {{ partial "event/event-relatedcard.html" . }}
+
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{{ partial "head.html" . }}
+
+<body>
+    <div class="body-wrap">
+        {{ partial "header.html" . }}
+        {{ partial "card-logo.html" . }}
+        <div class="bar-wrap">
+            <hr class="event-bar">
+            <hr class="abstract-bar">
+        </div>
+        {{ partial "event/event-relatedtag.html" . }}
+        <div class="eventlist-wrap">
+            <div class="eventlist-item">
+                <div class="eventlist-image">
+                    <img src="{{ "/img/dummy2.jpg" | relURL }}">
+                    <span class="eventlist-date">Sep. 30</span>
+                </div>
+                <div class="eventlist-info">
+                    <h5 class="eventlist-title">「泉岳寺と禅の文化」レポート</h5>
+                    <p class="eventlist-abs">堀川貴司は、日本の国文学者、慶應義塾大学教授。大阪府生まれ。東京学芸大学教育学部附属高等学校卒、</p>
+                    <div class="itemtag-row">
+                        <a href=""><p class="event-tag">#曹洞宗</p></a>
+                        <p>#曹洞宗</p>
+                        <p>#禅</p>
+                        <p>#曹洞宗</p>
+                        <p>#曹洞宗</p>
+                        <p>#禅</p>
+                        <p>#禅</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+</body>
+
+</html>

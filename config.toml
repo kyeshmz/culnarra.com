@@ -1,4 +1,19 @@
-baseURL = "http://kkshmz.github.io/culnarra/"
 languageCode = "en-us"
 title = "My New Hugo Site"
-canonifyURLs = "true"
+DefaultContentLanguage = "jp"
+
+#change this to false when on culnarra.com
+baseURL = "http://localhost:1313"
+#baseURL = "https://kkshmz.github.io/culnarra/"
+#canonifyURLs = "true"
+
+
+[languages]
+    [languages.en]
+        title = "My blog"
+        contentDir = "content/en"
+        weight = 2
+    [languages.jp]
+        title = "カルナラプロジェクト"
+        contentDir = "content/jp"
+        weight = 1

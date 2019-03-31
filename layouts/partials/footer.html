@@ -11,13 +11,17 @@
                     電話 03-5427-1621 <br>Fax 03-5427-1620</p>
                 <p>メールでのお問い合わせ</p>
                 <p>info@culnarra.com</p>
-                <h4>アーカイヴへのお問い合わせ </h4>
-                <p><a>アーカイヴ利用案内をご覧下さい</a></p>
+                <div class="footer-icons">
+                        {{ partial "instagram-logo.html" . }}
+                        {{ partial "twitter-logo.html" . }}
+                        {{ partial "facebook-logo.html" . }}
+                </div>
             </div>
-            <div class="footer-item">
+            <div class="footer-item" id="copyright">
                 <p>© 1993-2019 慶應義塾大学アート・センター Keio University Art Center</p>
             </div>
         </div>
+
         <div class="footer-social">
             {{ partial "twitter-feed.html" . }}
         </div>

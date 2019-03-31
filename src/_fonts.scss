@@ -7,21 +7,30 @@
 @font-face {
   font-family: "Yu Mincho DemiBold";
   font-weight: normal;
-  src: local("YuMincho DemiBold");
+  src: local("YuMincho DemiBold"), local("YuMincho-Regular");
   unicode-range: U+4E00 –9FEF, U+3040 –309F, 30a0–30ff;
 }
 @font-face {
   font-family: "MinionPro-Regular";
   font-weight: normal;
-  src: local('Minion Pro Bold'), local('MinionPro-Bold'),
-  url('/fonts/MinionPro-Regular.woff2') format('woff2'),
-  url('/fonts/MinionPro-Regular.woff') format('woff');
+  src: local("Minion Pro Bold"), local("MinionPro-Bold"), url("/fonts/MinionPro-Regular.woff2") format("woff2"),
+    url("/fonts/MinionPro-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "MinionPro-Regular";
   font-weight: normal;
-  src: local('Minion Pro Bold'), local('MinionPro-Bold'),
-  url('/fonts/MinionPro-Regular.woff2') format('woff2'),
-  url('/fonts/MinionPro-Regular.woff') format('woff');
+  src: local("Minion Pro Bold"), local("MinionPro-Bold"), url("/fonts/MinionPro-Regular.woff2") format("woff2"),
+    url("/fonts/MinionPro-Regular.woff") format("woff");
 }
-
+@font-face {
+  font-family: "AktivGrotesk-Medium";
+  font-weight: normal;
+  src: local("AktivGrotesk-Medium"), local("AktivGroteskMedium"),
+    url("/fonts/AktivGrotesk-Medium.woff2") format("woff2"), url("/fonts/AktivGrotesk-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Century";
+  font-weight: normal;
+  src: local("Century"), local("Century-Regular"), local("CenturyRegular"), url("/fonts/Century.woff2") format("woff2"),
+    url("/fonts/Century.woff") format("woff");
+}

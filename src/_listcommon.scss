@@ -1,0 +1,625 @@
+@import "mixins.scss";
+
+//-------------------------------------------------
+//-------------------------------------------------
+.eventlist-wrap {
+  display: grid;
+  grid-template-columns: 327px 327px 327px 327px;
+  grid-template-rows: 596px 596px 596px;
+
+  grid-column-gap: 20px;
+  grid-row-gap: 52px;
+  overflow: hidden;
+  padding-bottom: 272px;
+
+  .eventlist-item {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    .eventlist-info {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: relative;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 2.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.2em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
+    }
+    h5.eventlist-title {
+      font-size: 20px;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      @include tracking(15);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    p {
+      font-size: 1em;
+      line-height: 2em;
+      font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
+    }
+    .eventlist-abs {
+      padding-bottom: 35px;
+    }
+    .itemtag-row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include flex-grow(0);
+      @include align-items(center);
+      @include justify-content(space-evenly);
+      p {
+        // @include flex (4);
+        white-space: nowrap;
+        word-break: break-all;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+    .eventlist-image {
+      padding-top: 44px;
+      padding-bottom: 44px;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+      background-color: $purple;
+      position: relative;
+      img {
+        width: 100%;
+        z-index: 1;
+      }
+      .eventlist-date {
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        padding: 3px;
+        background-color: white;
+        max-width: 40px;
+        display: inline-block;
+        z-index: 30;
+        position: absolute;
+        right: 1em;
+        bottom: 2em;
+      }
+    }
+  }
+}
+.cardlist-wrap {
+  display: grid;
+  grid-template-columns: 327px 327px 327px 327px;
+  grid-template-rows: 596px 596px 596px;
+
+  grid-column-gap: 20px;
+  grid-row-gap: 52px;
+  overflow: hidden;
+
+  padding-bottom: 272px;
+  .cardlist-item {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    .cardlist-info {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: relative;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 2.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.2em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
+    }
+    h5.cardlist-title {
+      font-size: 20px;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      @include tracking(15);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    p {
+      font-size: 1em;
+      line-height: 2em;
+      font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
+    }
+    .cardlist-abs {
+      padding-bottom: 35px;
+    }
+    .itemtag-row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include flex-grow(0);
+      @include align-items(center);
+      @include justify-content(space-evenly);
+      text-align: center;
+      p {
+        // @include flex (4);
+        white-space: nowrap;
+        word-break: break-all;
+        margin-left: 12px;
+        margin-right: 12px;
+
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+      }
+    }
+    .cardlist-image {
+      padding-top: 44px;
+      padding-bottom: 44px;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+      background-color: $purple;
+      img {
+        width: 100%;
+      }
+    }
+    .cardlist-imagecap {
+      display: none;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+  }
+}
+
+.projectlist-wrap {
+  display: grid;
+  grid-template-columns: 327.5px 327.5px 327.5px 327.5px;
+  grid-template-rows: 909px 909px 909px;
+  grid-column-gap: 20px;
+  grid-row-gap: 56px;
+  overflow: hidden;
+  padding-bottom: 272px;
+  .projectlist-item {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    .projectlist-image {
+      padding-top: 116px;
+      padding-bottom: 105px;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+      background-color: $purple;
+      img {
+        width: 100%;
+      }
+    }
+    .projectlist-info {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: relative;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 2.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.2em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
+    }
+    .projectlist-imagecap {
+      display: none;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+    h5.projectlist-title {
+      font-size: 20px;
+      padding-top: 10px;
+      padding-bottom: 33px;
+      @include tracking(15);
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: $toppan;
+      line-height: 60px;
+    }
+    p {
+      font-size: 1em;
+      line-height: 2em;
+      font-family: $yu-min;
+    }
+    .projectitemtag-row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include flex-grow(0);
+      @include align-items(center);
+      @include justify-content(space-evenly);
+      padding-bottom: 33px;
+      padding-top: 33px;
+      p {
+        // @include flex (4);
+        white-space: nowrap;
+        word-break: break-all;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+      }
+    }
+  }
+}
+.notelist-wrap {
+  display: grid;
+  grid-template-columns: 676px 676px;
+  grid-template-rows: 286.5px 286.5px 286.5px 286.5px 286.5px 286.5px;
+  grid-column-gap: 20px;
+  grid-row-gap: 24px;
+  overflow: hidden;
+  padding-bottom: 362px;
+  .notelist-item {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+  }
+  .notelist-info {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    position: relative;
+    &:before {
+      // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+      content: "\200C";
+      display: block;
+      position: absolute;
+      right: 1em;
+      //bottom: 1.85em;
+      top: 10.2em;
+      width: 50%;
+      // right: 1em;
+      text-align: center;
+      height: 1.2em;
+
+      background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+    }
+  }
+  p {
+    font-size: 1em;
+    line-height: 2em;
+    font-family: $yu-min;
+  }
+  .notelist-title {
+    padding-bottom: 2em;
+  }
+  .notelist-abs {
+    padding-bottom: 44px;
+  }
+  .noteitemtag-row {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include flex-grow(0);
+    @include align-items(center);
+    @include justify-content(space-evenly);
+    p {
+      // @include flex (4);
+      white-space: nowrap;
+      word-break: break-all;
+      padding-left: 12px;
+      padding-right: 12px;
+      border-bottom-color: black;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      font-family: $yu-min;
+      font-size: 1em;
+      line-height: 30px;
+    }
+  }
+}
+.taglist-cardwrap {
+  display: grid;
+  grid-template-columns: 327px 327px 327px 327px;
+  grid-template-rows: 596px;
+
+  grid-column-gap: 20px;
+  grid-row-gap: 52px;
+  overflow: hidden;
+
+  padding-bottom: 40px;
+  .taglist-carditem {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    .taglist-cardinfo {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: relative;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 2.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.2em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
+    }
+    h5.taglist-cardtitle {
+      font-size: 20px;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      @include tracking(15);
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: $toppan;
+      line-height: 60px;
+    }
+    p {
+      font-size: 1em;
+      line-height: 2em;
+      font-family: $yu-min;
+    }
+    .taglist-cardabs {
+      padding-bottom: 35px;
+    }
+    .taglist-itemtag-cardrow {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include flex-grow(0);
+      @include align-items(center);
+      @include justify-content(space-evenly);
+      p {
+        // @include flex (4);
+        white-space: nowrap;
+        word-break: break-all;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+      }
+    }
+    .taglist-cardimage {
+      padding-top: 44px;
+      padding-bottom: 44px;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+      background-color: $purple;
+      img {
+        width: 100%;
+      }
+    }
+    .taglist-cardimagecap {
+      display: none;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+  }
+}
+.taglist-projectwrap {
+  display: grid;
+  grid-template-columns: 327.5px 327.5px 327.5px 327.5px;
+  grid-template-rows: 909px;
+  grid-column-gap: 20px;
+  grid-row-gap: 56px;
+  overflow: hidden;
+  padding-bottom: 40px;
+  .taglist-projectitem {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    .taglist-projectimage {
+      padding-top: 116px;
+      padding-bottom: 105px;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+      background-color: $purple;
+      img {
+        width: 100%;
+      }
+    }
+    .taglist-projectinfo {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: relative;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 2.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.2em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
+    }
+    .taglist-projectimagecap {
+      display: none;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+    h5.taglist-projecttitle {
+      font-size: 20px;
+      padding-top: 10px;
+      padding-bottom: 33px;
+      @include tracking(15);
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: $toppan;
+      line-height: 60px;
+    }
+    p {
+      font-size: 1em;
+      line-height: 2em;
+      font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
+    }
+    .taglist-itemtag-row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include flex-grow(0);
+      @include align-items(center);
+      @include justify-content(space-evenly);
+      padding-bottom: 33px;
+      padding-top: 33px;
+      p {
+        // @include flex (4);
+        white-space: nowrap;
+        word-break: break-all;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        font-family: $yu-min;
+      font-size: 1em;
+      line-height: 30px;
+      }
+    }
+  }
+}
+.taglist-notewrap {
+  display: grid;
+  grid-template-columns: 676px 676px;
+  grid-template-rows: 286.5px 286.5px;
+  grid-column-gap: 20px;
+  grid-row-gap: 24px;
+  overflow: hidden;
+
+  .taglist-noteitem {
+    overflow: hidden;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+  }
+  .taglist-noteinfo {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    position: relative;
+    &:before {
+      // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+      content: "\200C";
+      display: block;
+      position: absolute;
+      right: 1em;
+      //bottom: 1.85em;
+      top: 10.2em;
+      width: 50%;
+      // right: 1em;
+      text-align: center;
+      height: 1.2em;
+
+      background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+    }
+  }
+  p {
+    font-size: 1em;
+    line-height: 2em;
+    font-family: $yu-min;
+  }
+  .taglist-notetitle {
+    padding-bottom: 2em;
+  }
+  .taglist-noteabs {
+    padding-bottom: 44px;
+  }
+  .taglist-noteitemtag-row {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include flex-grow(0);
+    @include align-items(center);
+    @include justify-content(space-evenly);
+    p {
+      // @include flex (4);
+      white-space: nowrap;
+      word-break: break-all;
+      padding-left: 12px;
+      padding-right: 12px;
+      border-bottom-color: black;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      font-family: $yu-min;
+      font-size: 1em;
+      line-height: 30px;
+    }
+  }
+}
