@@ -35,7 +35,7 @@ fields:
   description: Metadata for author
 - type: text
   label: 改訂履歴
-  name: modifed_date
+  name: modified_date
   description: 改訂履歴 modified date
 - type: text
   label: "【メタデータ】場所"
