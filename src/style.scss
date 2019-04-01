@@ -356,12 +356,30 @@ h1.title {
       font-family: $culnarra-go;
       padding-bottom: 8px;
     }
+    h3 {
+      padding-bottom: 15px;
+      font-family: $culnarra-go;
+      font-size: 20px;
+      line-height: 48px;
+    }
     hr {
       background-color: $orange;
       color: $orange;
       border: none;
       height: 1px;
       margin-bottom: 15px;
+    }
+    li,p {
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $yu-min;
+      letter-spacing: 0;
+      font-kerning: auto;
+    }
+    p{
+      img{
+        max-width: 100%;
+      }
     }
   }
 }
@@ -371,7 +389,8 @@ h1.title {
   padding-bottom: 77px;
   display: grid;
   grid-template-columns: 260px 843px 1fr;
-  grid-template-rows: 63px 63px 66px 60px 65px 90px 1fr;
+  //grid-template-rows:minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(90px, auto) minmax(58px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) 1fr;
+  grid-template-rows: minmax(63px, auto) minmax(63px, auto) minmax(66px, auto) minmax(60px, auto) minmax(65px, auto) minmax(90px, auto) 1fr;
   overflow: hidden;
   .note-item {
     border-bottom: 1px solid $green;
@@ -382,6 +401,16 @@ h1.title {
       border-bottom: 1px solid $green;
       border-left: 1px solid $green;
       border-right: 1px solid $green;
+    }
+    li {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+    p {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
     }
   }
   .note-approach {
@@ -423,11 +452,29 @@ h1.title {
     margin-left: auto;
     margin-right: auto;
     overflow-y: hidden;
+    h3 {
+      padding-bottom: 15px;
+      font-family: $culnarra-go;
+      font-size: 20px;
+      line-height: 48px;
+    }
     hr {
       background-color: $green;
       color: $green;
       border: none;
       height: 1px;
+    }
+    li,p {
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $yu-min;
+      letter-spacing: 0;
+      font-kerning: auto;
+    }
+    p{
+      img{
+        max-width: 100%;
+      }
     }
   }
 }
@@ -947,7 +994,11 @@ h1.title {
       letter-spacing: 0;
       font-kerning: auto;
     }
-    
+    p{
+      img{
+        max-width: 100%;
+      }
+    }
   }
 }
 

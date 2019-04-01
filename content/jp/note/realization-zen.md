@@ -28,7 +28,7 @@ related_ptag = "龍源寺"
 tag = ["寺院", "龍源寺", "坐禅", "禅", "インターンシップ", "学生レポート"]
 title_eng = "Realization Taught by the Spirits of Zen"
 title_jp = "禅の精神が教えてくれる「気づく」こと"
-type = "event"
+type = "note"
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

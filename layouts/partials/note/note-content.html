@@ -1,55 +1,42 @@
 <div class="content note-contentwrap">
-        <div class="info-item note-item note-approach">
-            <p class="item-title">カードの種類</p>
-            <p>文化機関</p>
+                <div class="info-item note-item note-approach">
+                                <p class="item-title">技法</p>
+                                {{ with delimit .Params.meta_giho ", " }}
+                                <p>{{ . }}</p>
+                                {{ end }}
+                </div>
+                <div class="info-item note-item note-topic">
+                                <p class="item-title">主題</p>
+                                {{ with delimit .Params.meta_topic_category ", " }}
+                                <p>{{ . }}</p>
+                                {{ end }}
+                </div>
+                <div class="info-item note-item note-author">
+                                <p class="item-title">タグ</p>
+                                {{ with delimit .Params.tag ", " }}
+                                        <p>{{ . }}</p>
+                                        {{ end }}
+                </div>
+                <div class="info-item note-item note-revised">
+                        <p class="item-title">改訂履歴（日付、編者）</p>
+                        <p>読む</p>
+                </div>
+                <div class="info-item note-item note-date">
+                        <p class="item-title">日付・場所</p>
+                        <p>アプローチカテゴリ</p>
+                        <p>読む</p>
+                </div>
+                <div class="note-content info-content">
+                         {{ with .Params.main_title }}<h3 class="note-content info-title">{{ . }}</h3> {{ end }}
+                        {{ .Params.main_content | markdownify }}
+                        <p>
+                           
+                        </p>
+                        {{ with .Params.card_reference }}
+                        <h3>レファレンス</h3>
+                        <p>
+                                {{ .  | markdownify}}
+                        </p>
+                        {{ end }}
+                </div>
         </div>
-        <div class="info-item note-item note-topic">
-                        <p class="item-title">アプローチカテゴリ</p>
-            <p>読む</p>
-        </div>
-        <div class="info-item note-item note-tag">
-                        <p class="item-title">トピックカテゴリ</p>
-                <p>読む</p>
-        </div>
-        <div class="info-item note-item note-author">
-                <p class="item-title">カード作成者</p>
-                <p>読む</p>
-        </div>
-        <div class="info-item note-item note-revised">
-                <p class="item-title">改訂履歴（日付、編者）</p>
-                <p>読む</p>
-        </div>
-        <div class="info-item note-item note-date">
-                 <p class="item-title">日付・場所</p>
-                <p>アプローチカテゴリ</p>
-                <p>読む</p>
-        </div>
-        <div class="note-content">
-            <h3 class="note-title">申込み方法、費用、仕様など</h3>
-            <hr>
-            <p>
-                    [PREFACE］「都市のカルチュラル・ナラティヴ」プロジェクト──地域の文化資源への新しいアプローチ｜本間友 
-                    ［LECTURE］幕末明治の慶應義塾周辺──増上寺、愛宕社から高輪・三田界隈｜内藤正人 
-                    ［COLUMN］お隣研究紹介──國學院大學研究開発推進センター渋谷学研究会 
-                    ［GUIDE TOUR］慶應義塾と三田の名建築──建築ガイドツアー 
-                    ［GUIDE TOUR］港区生まれ港区育ち、「港区建築ツアー」から考える｜遠山啓一 
-                    ［INTERVIEW］留学生がきく！ 増上寺座談会 （張滌非、李篠硯、フランツ・ワクトメイスター）
-                    ［COLUMN］建築のジェネレーション・ギャップを跨ぐ無形文化｜フランツ・ワクトメイスター 
-                    ［REPORT］伊坂道子氏講演「増上寺旧境内の変遷」に学ぶ、増上寺の江戸から現代 
-                    ［COLUMN］「グーグル・アースダイバー」から見る港区──架空のインタビューを通じたデザイン・フィクション｜Rhetorica 
-                    ［INTERVIEW］グーグル・アースダイバーに聞く──〝唯坂史観〟から読む港区｜Rhetorica 
-                    ［INTERVIEW］Dr.Hillman Interview: The Google Earth Diver into Minato-Ku｜Rhetorica 
-                    ［COLUMN］Notes on The Google Earth Diver: Design Fiction of a Hoax Interview｜Rhetorica 
-                    ［REPORT］What do the Old Precincts tell us?: Report on the Lecture by Michiko Isaka on the Transition of Zojo-ji Precincts｜Yu Homma 
-                    ［COLUMN］How Pop Music Bridges Past and Present｜Frans Wachtmeister 
-                    ［INTERVIEW］Interview with Monks!: Exchange Students Meet Zojo-ji Temple 
-                    ［GUIDE TOUR］Born and Raised in Minato-ku: A Hometown Architectural Tour｜Keiichi Toyama 
-                    ［COLUMN］Introduction of Research Neighbours: Kokugakuin University Research & Development Promotive Center Shibuya-gaku (study) Research Group 
-                    ［GUIDE TOUR］The Renowned Architectures in Keio University and Mita Area 
-                    ［LECTURE］The Keio University Area during the Late Edo and Early Meiji Eras: From Zojo-ji Temple and Atago-jinja Shrine to the Takanawa and Mita Neighborhoods｜Masato Naito 
-                    ［PREFACE］Cultural Narrative of a City: A New Approach to the Cultural Resources in Local Area｜Yu Homma
-            </p>
-                
-        </div>
-    {{ .Content }}
-</div>

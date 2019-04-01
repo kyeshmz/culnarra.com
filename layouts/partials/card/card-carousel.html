@@ -1,7 +1,7 @@
-<ul class="img-slider cf-slider">
-        <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
-        <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
-        <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
-        <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
-        <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
-</ul>
+<ul class="img-slider abstract-slider">
+                {{ range $.Params.image_credit }}
+                <li class="img-item">
+                    <img src="{{ .project_image | relURL }}" alt="image">
+                    <div class="abstract-caption"><p>{{ .credit_text  | markdownify}}</p></div>
+                </li>{{ end }}
+            </ul>
