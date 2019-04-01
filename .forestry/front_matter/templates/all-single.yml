@@ -130,6 +130,10 @@ fields:
   label: image caption 3
   description: Caption of image 3
 - type: textarea
+  name: image_caption_4
+  label: image caption 4
+  description: caption of iamge 4
+- type: textarea
   name: event_place
   label: event place
   description: Event Place
