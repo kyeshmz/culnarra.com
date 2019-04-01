@@ -151,6 +151,13 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+- type: textarea
+  name: event_date
+  label: eventdate
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: field_group_list
   name: image_credit
   label: Photo Credit
