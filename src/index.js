@@ -23,7 +23,7 @@ if (abstractSlider.length > 0) {
       slideBy: 'page',
       nav: false,
       controlsText: ['＜', '＞'],
-      autoplay: true,
+      autoplay: false,
       speed: 2400,
       autoplayHoverPause: true,
       autoplayButtonOutput: false,

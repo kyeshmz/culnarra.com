@@ -32,7 +32,7 @@ related_ptag = "ARTEFACT"
 tag = ["ARTEFACT", "泉岳寺", "増上寺", "龍源寺", "妙定院", "常照院", "大学の建築", "近代建築", "重要文化財", "画廊", "現代美術"]
 title_eng = "ARTEFACT 02 Features: Internship"
 title_jp = "ARTEFACT 02 特集：インターンシップ"
-type = "event"
+type = "project"
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
