@@ -143,10 +143,6 @@ fields:
   name: event_organizer
   label: Event Organizer
   description: Who is organizing the event
-- type: text
-  name: reference_card
-  label: "【プロジェクト】reference card"
-  description: レファレンスするかーど
 - type: textarea
   name: meta_credit
   label: 制作クレジット
@@ -174,6 +170,9 @@ fields:
       wysiwyg: true
       schema:
         format: markdown
+- type: tag_list
+  name: reference_cards
+  label: "【イベント】レファレンスするカード"
 pages:
 - content/jp/event/sengakuji.md
 - content/jp/note/realization-zen.md
