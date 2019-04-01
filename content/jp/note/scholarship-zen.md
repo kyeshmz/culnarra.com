@@ -27,7 +27,7 @@ related_ptag = "禅"
 tag = ["禅", "泉岳寺", "斯道文庫", "禅宗", "学寮", "塔頭", "曹洞宗", "臨済宗", "五山", "両足院", "建仁寺"]
 title_eng = "Scholarship and Culture of Zen Temples"
 title_jp = "禅宗寺院の学問と文化"
-type = "event"
+type = "note"
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
