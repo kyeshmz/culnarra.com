@@ -181,6 +181,7 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
+- content/jp/event/architecture-forum.md
 - content/jp/event/sengakuji.md
 - content/jp/note/realization-zen.md
 - content/jp/project/ARTEFACT02.md
