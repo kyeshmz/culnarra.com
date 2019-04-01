@@ -157,8 +157,14 @@ fields:
   name: reference_card
   label: "【プロジェクト】reference card"
   description: レファレンスするかーど
-- type: tag_list
-  name: ''
+- type: textarea
+  name: meta_credit
+  label: 制作クレジット
+  description: 'credit for the work '
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 pages:
 - content/jp/project/ARTEFACT01.md
 - content/jp/event/sengakuji.md
