@@ -165,4 +165,5 @@ fields:
   label: Event Organizer
   description: Who is organizing the event
 pages:
+- content/jp/project/ARTEFACT01.md
 - content/jp/event/sengakuji.md
