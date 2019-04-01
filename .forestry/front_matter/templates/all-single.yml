@@ -175,6 +175,7 @@ fields:
       schema:
         format: markdown
 pages:
+- content/jp/event/sengakuji.md
 - content/jp/note/realization-zen.md
 - content/jp/project/ARTEFACT02.md
 - content/jp/project/ARTEFACT01.md
