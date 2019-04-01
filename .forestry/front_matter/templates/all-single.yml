@@ -199,6 +199,9 @@ fields:
     min: '1'
     labelField: credit_text
   fields:
+  - type: file
+    name: project_image
+    label: image
   - type: textarea
     name: credit_text
     label: Credit Text
