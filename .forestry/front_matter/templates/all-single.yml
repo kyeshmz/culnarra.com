@@ -153,6 +153,10 @@ fields:
   name: event_organizer
   label: Event Organizer
   description: Who is organizing the event
+- type: text
+  name: reference_card
+  label: "【プロジェクト】reference card"
+  description: レファレンスするかーど
 pages:
 - content/jp/project/ARTEFACT01.md
 - content/jp/event/sengakuji.md
