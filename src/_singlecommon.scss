@@ -283,7 +283,7 @@ $toppan: "toppanBunkyuMincho", serif;
       border: none;
       height: 1px;
     }
-    h5 {
+    h3, h5 {
       padding-top: 78px;
       font-size: 20px;
       line-height: 48px;
@@ -293,6 +293,7 @@ $toppan: "toppanBunkyuMincho", serif;
       border-bottom-width: 1pt;
       border-bottom-style: solid;
     }
+    
   }
   .card-content {
     grid-column: 2;

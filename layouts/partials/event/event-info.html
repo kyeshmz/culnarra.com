@@ -1,0 +1,39 @@
+<div class="event-info">
+        <h3 class="event-infotitle">イベント関係情報</h3>
+        <div class="event-infogrid">
+            <div class="event-infoitem">
+                <div class="event-infoitem-child">
+                    <h5>［日時］</h5>
+                    <p>{{ .Params.event_date }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［場所］</h5>
+                    <p> {{ .Params.event_place }} </p>
+                </div>
+                
+                <div class="event-infoitem-child">
+                    <h5>[対象]</h5>
+                    <p>{{ .Params.event_audience }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［費用］</h5>
+                    <p>{{ .Params.event_fee }}</p>
+                </div>
+            </div>
+            <div class="event-infoitem">
+                <div class="event-infoitem-child">
+                    <h5>［申し込み方法］</h5>
+                    <p>{{ .Params.event_participate }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［問い合わせ］</h5>
+                    <p> {{ .Params.event_contact }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［製作］</h5>
+                    <p> {{ .Params.event_organizer }}/p>
+                </div>
+            </div>
+        </div>
+
+    </div>

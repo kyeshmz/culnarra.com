@@ -1,15 +1,21 @@
 <div class="content event-contentwrap">
         <div class="info-item event-item event-approach">
-                <p class="item-title">アプローチカテゴリ</p>
-                {{ with .Params.approachcategory}} <p> {{ .  }}</p> {{ end }}
+                        <p class="item-title">技法</p>
+                        {{ with delimit .Params.meta_giho ", " }}
+                        <p>{{ . }}</p>
+                        {{ end }}
         </div>
         <div class="info-item event-item event-topic">
-                <p class="item-title">トピックカテゴリ</p>
-                <p></p>
+                        <p class="item-title">主題</p>
+                        {{ with delimit .Params.meta_topic_category ", " }}
+                        <p>{{ . }}</p>
+                        {{ end }}
         </div>
         <div class="info-item event-item event-author">
-                <p class="item-title">カード作成者</p>
-                {{ with .Params.meta_author }} <p> {{ . }} </p> {{ end }}
+                        <p class="item-title">タグ</p>
+                        {{ with delimit .Params.tag ", " }}
+                                <p>{{ . }}</p>
+                                {{ end }}
         </div>
         <div class="info-item event-item event-revised">
                 <p class="item-title">改訂履歴（日付、編者）</p>
@@ -21,8 +27,7 @@
                 <p>読む</p>
         </div>
         <div class="event-content info-content">
-                <h3 class="event-content info-title">申込み方法、費用、仕様など</h3>
-                <hr>
+                 {{ with .Params.main_title }}<h3 class="event-content info-title">{{ . }}</h3> {{ end }}
                 {{ .Params.main_content | markdownify }}
                 <p>
                    

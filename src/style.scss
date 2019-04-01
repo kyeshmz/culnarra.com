@@ -934,19 +934,20 @@ h1.title {
       padding-bottom: 15px;
     }
     hr {
-      background-color: $orange;
-      color: $orange;
+      background-color: $grey;
+      color: $grey;
       border: none;
       height: 1px;
       margin-bottom: 28px;
     }
-    p {
+    li,p {
       font-size: 20px;
       line-height: 48px;
       font-family: $yu-min;
       letter-spacing: 0;
       font-kerning: auto;
     }
+    
   }
 }
 
