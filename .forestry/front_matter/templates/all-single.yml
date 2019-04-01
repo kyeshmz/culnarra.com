@@ -181,6 +181,7 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
+- content/jp/note/scholarship-zen.md
 - content/jp/note/possibility-publicness.md
 - content/jp/note/realization-zen.md
 - content/jp/event/ryugenji.md
