@@ -1,5 +1,5 @@
 ---
-label: ALL Single
+label: Event Single
 hide_body: false
 fields:
 - type: text
@@ -17,30 +17,6 @@ fields:
   type: datetime
   hidden: false
   default: ''
-- type: tag_list
-  label: "【メタデータ】技法"
-  name: meta_giho
-  description: 技法・アプローチカテゴリー
-- type: tag_list
-  name: tag
-  label: "【メタデータ】Card Tag"
-  description: Tag about the card
-- type: text
-  label: "【関連コンテンツ】pTag"
-  name: related_ptag
-  description: 関連コンテンツのキーワード / ptag
-- type: text
-  label: "【メタデータ】カード作成者"
-  name: meta_author
-  description: Metadata for author
-- type: text
-  label: 改訂履歴
-  name: modifed_date
-  description: 改訂履歴 modified date
-- type: text
-  label: "【メタデータ】場所"
-  name: meta_place
-  description: メタデータ　場所
 - type: file
   name: ogp_image
   label: "【アブストラクト】Main Image"
@@ -51,6 +27,14 @@ fields:
   name: project_images
   label: "【アブストラクト】Project Images"
   description: Images about the project
+- type: textarea
+  label: "【アブストラクト】画像のクレジット"
+  name: image_abstract
+  description: Abstract text of image
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: text
   name: yt_videourl
   label: "【アブストラクト】Youtube Video URL"
@@ -69,7 +53,7 @@ fields:
     schema:
       format: markdown
 - type: textarea
-  name: abstract_content_short
+  name: abstract_content
   label: "【アブストラクト】Card Abstract Short"
   description: Abstract of the card MD 表記
   config:
@@ -77,9 +61,25 @@ fields:
     schema:
       format: markdown
 - type: text
+  label: "【メタデータ】場所"
+  name: meta_place
+  description: メタデータ　場所
+- type: tag_list
+  name: tag
+  label: "【メタデータ】Card Tag"
+  description: Tag about the card
+- type: text
+  label: "【メタデータ】カード作成者"
+  name: meta_author
+  description: Metadata for author
+- type: text
   label: "【メタデータ】所管"
   name: meta_jurisdiction
   description: 'Jurisdiction of project '
+- type: tag_list
+  name: meta_topic_category
+  label: "【メタデータ】トピックカテゴリー"
+  description: トピックカテゴリー
 - type: select
   name: card_category
   config:
@@ -92,9 +92,9 @@ fields:
   description: Category of the card
   default: 文化機関
 - type: tag_list
-  name: meta_topic_category
-  label: "【メタデータ】トピックカテゴリー"
-  description: トピックカテゴリー
+  label: "【メタデータ】アプローチカテゴリー"
+  name: meta_approachcategory
+  description: アプローチカテゴリー
 - type: text
   name: layout
   label: layout
@@ -106,7 +106,7 @@ fields:
   label: type
   name: type
   hidden: true
-  default: event
+  default: card
 - type: text
   label: "【メインコンテンツ】コンテンツタイトル"
   name: main_title
@@ -128,42 +128,9 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-- type: datetime
-- type: textarea
-  name: image_caption_1
-  label: image caption 1
-  description: Caption of image set 1
-- type: textarea
-  name: image_caption_2
-  label: image caption 2
-  description: Caption of image 2
-- type: textarea
-  name: image_caption_3
-  label: image caption 3
-  description: Caption of image 3
-- type: textarea
-  name: event_place
-  label: event place
-  description: Event Place
-- type: textarea
-  name: event_audience
-  label: event audience
-  description: event audience
 - type: text
-  label: Event Fee
-  name: event_fee
-  description: Event Fee
-- type: textarea
-  label: Event Participate
-  name: event_participate
-  description: How to participate in the event
-- type: textarea
-  name: event_contact
-  label: Event Contact
-  description: Event contact
-- type: textarea
-  name: event_organizer
-  label: Event Organizer
-  description: Who is organizing the event
+  label: "【関連コンテンツ】関連キーワード"
+  name: related_keyword
+  description: 関連コンテンツのキーワード
 pages:
 - content/jp/event/sengakuji.md
