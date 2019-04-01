@@ -17,6 +17,9 @@ fields:
   type: datetime
   hidden: false
   default: ''
+  config:
+    date_format: MM/DD/YYYY
+    time_format: " "
 - type: tag_list
   label: "【メタデータ】技法"
   name: meta_giho
