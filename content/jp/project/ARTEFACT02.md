@@ -37,6 +37,15 @@ vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
 credit_text = "* ARTEFACT 02 インターンシップ \n* CC BY 4.0 \n* 慶應義塾大学アート・センター／Rhetorica"
+project_image = "/img/project/project2-3.jpg"
+[[image_credit]]
+credit_text = "* ARTEFACT 02 インターンシップ \n* CC BY 4.0 \n* 慶應義塾大学アート・センター／Rhetorica"
+project_image = "/img/project/project2-4.jpg"
+[[image_credit]]
+credit_text = "* ARTEFACT 02 インターンシップ \n* CC BY 4.0 \n* 慶應義塾大学アート・センター／Rhetorica"
+project_image = "/img/project/project2-2.jpg"
+[[image_credit]]
+credit_text = "* ARTEFACT 02 インターンシップ \n* CC BY 4.0 \n* 慶應義塾大学アート・センター／Rhetorica"
 project_image = "/img/project/project2-1.jpg"
 
 +++
