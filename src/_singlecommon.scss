@@ -14,7 +14,7 @@ $toppan: "toppanBunkyuMincho", serif;
 .abstract-wrap {
   display: grid;
   grid-template-columns: 1fr 676px;
-  grid-template-rows: 150px 1fr 75px;
+  grid-template-rows: minmax(150px, auto) 1fr 75px;
   padding-bottom: 60px;
   font-family: $yu-min;
   .abstract-title {
@@ -22,12 +22,14 @@ $toppan: "toppanBunkyuMincho", serif;
     grid-column-end: 3;
     grid-row: 1;
     padding-top: 60px;
+    padding-bottom: 40px;
     margin: 0;
+    text-align: left;
     @include flexbox();
     @include flex-grow(0);
-    @include justify-content(flex-start);
-    @include flex-direction(row);
-    @include align-items(center);
+    //@include justify-content(flex-start);
+    @include flex-direction(column);
+    @include align-items(left);
     .abstitle-jp {
       font-size: 32.41px;
       line-height: 60px;
@@ -49,7 +51,7 @@ $toppan: "toppanBunkyuMincho", serif;
       padding-right: 5px;
     }
   }
-  .abstract-content {
+  .abstract-item {
     grid-column: 1;
     grid-row-start: 2;
     grid-row-end: 3;
@@ -60,6 +62,7 @@ $toppan: "toppanBunkyuMincho", serif;
     }
   }
   .abstract-carousel {
+    grid-column: 2;
     grid-row-start: 2;
     grid-row-end: 3;
     .img-item {

@@ -271,20 +271,33 @@ h1.title {
   padding-bottom: 77px;
   display: grid;
   grid-template-columns: 260px 843px 1fr;
-  grid-template-rows: 63px 63px 63px 90px 58px 63px 63px 63px 1fr;
+  grid-template-rows: minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(90px, auto) minmax(58px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) 1fr;
   overflow: hidden;
   .project-item {
     border-bottom: 1px solid $orange;
     border-left: 1px solid $orange;
     border-right: 1px solid $orange;
+    font-family: $culnarra-go;
     &:first-child {
       border-top: 1px solid $orange;
       border-bottom: 1px solid $orange;
       border-left: 1px solid $orange;
       border-right: 1px solid $orange;
     }
+    li {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+    p {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
   }
-
+  li {
+    padding-bottom: 5px;
+  }
   p {
     font-size: 1em;
     line-height: 2em;

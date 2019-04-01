@@ -1,5 +1,4 @@
 +++
- = []
 abstract_content = "ARTEFACTは「都市のカルチュラル・ナラティヴ」のプロジェクト・マガジンです。\n\nプロジェクトの活動を、レファレンスを追記した書き起こしやレポートなどによって記録するとともに、プロジェクトの活動に参加できなかった人でも、本誌を手にとることによって都市のカルチュラル・ナラティヴを知り、楽しむことができるような誌面作りを目指して、マガジンとしての企画記事も含めた構成をとっています。\n\n創刊号の特集は、「都市のカルチュラル・ナラティヴ」と「増上寺」です。"
 abstract_content_short = "プロジェクトの活動を、レファレンス豊富なレポートなどによって記録したプロジェクトマガジン。創刊号の特集は、「都市のカルチュラル・ナラティヴ」と「増上寺」です。"
 card_category = "文化機関"
@@ -33,7 +32,7 @@ related_ptag = "ARTEFACT"
 tag = ["ARTEFACT", "増上寺", "浮世絵", "幕末", "明治", "近代建築", "渋谷学", "名所案内", "デザイン・フィクション"]
 title_eng = "ARTEFACT 01 Features: Cultural Narrative of a City / Zojo-ji Temple"
 title_jp = "ARTEFACT 01 特集：都市のカルチュラル・ナラティヴ／増上寺"
-type = "event"
+type = "project"
 vimeo_videourl = ""
 yt_videourl = ""
 
