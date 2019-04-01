@@ -68,7 +68,7 @@ fields:
   label: "【アブストラクト】Card Abstract Long "
   description: Abstract of the card MD 表記
   config:
-    required: true
+    required: false
     wysiwyg: true
     schema:
       format: markdown
@@ -94,7 +94,7 @@ fields:
     required: false
   label: type
   name: type
-  hidden: true
+  hidden: false
   default: event
 - type: text
   label: "【メインコンテンツ】コンテンツタイトル"
