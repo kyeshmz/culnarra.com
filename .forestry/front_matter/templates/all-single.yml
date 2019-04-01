@@ -1,7 +1,6 @@
 ---
 label: ALL Single
 hide_body: false
-display_field: credit
 fields:
 - type: text
   name: title_jp
