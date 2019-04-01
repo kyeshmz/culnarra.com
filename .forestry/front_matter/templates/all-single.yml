@@ -198,6 +198,7 @@ fields:
   description: aaaa
   config:
     min: '1'
+    labelField: credit_text
   fields:
   - type: textarea
     name: credit_text
