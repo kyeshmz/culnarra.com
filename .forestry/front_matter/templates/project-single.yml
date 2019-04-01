@@ -1,5 +1,5 @@
 ---
-label: Event Single
+label: Project Single
 hide_body: false
 fields:
 - type: text
@@ -45,18 +45,10 @@ fields:
   description: Enter in www.//player.vimeo.com/video/****
 - type: textarea
   name: abstract_content
-  label: "【アブストラクト】Card Abstract Long "
+  label: "【アブストラクト】Card Abstract content"
   description: Abstract of the card MD 表記
   config:
     required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-- type: textarea
-  name: abstract_content
-  label: "【アブストラクト】Card Abstract Short"
-  description: Abstract of the card MD 表記
-  config:
     wysiwyg: true
     schema:
       format: markdown
@@ -64,9 +56,13 @@ fields:
   label: "【メタデータ】場所"
   name: meta_place
   description: メタデータ　場所
+- type: text
+  label: "【メタデータ】連絡"
+  name: meta_contact
+  description: メタデータ　連絡
 - type: tag_list
   name: tag
-  label: "【メタデータ】Card Tag"
+  label: "【メタデータ】Project Tag"
   description: Tag about the card
 - type: text
   label: "【メタデータ】カード作成者"

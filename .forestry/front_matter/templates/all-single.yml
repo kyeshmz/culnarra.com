@@ -128,7 +128,6 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-- type: datetime
 - type: textarea
   name: image_caption_1
   label: image caption 1
