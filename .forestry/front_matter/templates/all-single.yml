@@ -82,8 +82,8 @@ fields:
       format: markdown
 - type: tag_list
   name: meta_topic_category
-  label: "【メタデータ】トピックカテゴリー"
-  description: トピックカテゴリー
+  label: "【メタデータ】主題・トピックカテゴリー"
+  description: 主題・トピックカテゴリー
 - type: text
   name: layout
   label: layout
@@ -157,6 +157,8 @@ fields:
   name: reference_card
   label: "【プロジェクト】reference card"
   description: レファレンスするかーど
+- type: tag_list
+  name: ''
 pages:
 - content/jp/project/ARTEFACT01.md
 - content/jp/event/sengakuji.md
