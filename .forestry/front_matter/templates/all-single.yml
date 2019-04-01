@@ -121,18 +121,34 @@ fields:
   name: image_caption_1
   label: image caption 1
   description: Caption of image set 1
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: image_caption_2
   label: image caption 2
   description: Caption of image 2
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: image_caption_3
   label: image caption 3
   description: Caption of image 3
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: image_caption_4
   label: image caption 4
   description: caption of iamge 4
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_place
   label: event place
