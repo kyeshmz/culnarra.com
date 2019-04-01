@@ -352,11 +352,16 @@ h1.title {
     margin-right: auto;
     overflow-y: hidden;
     font-family: $yu-min;
+    .project-title {
+      font-family: $culnarra-go;
+      padding-bottom: 8px;
+    }
     hr {
       background-color: $orange;
       color: $orange;
       border: none;
       height: 1px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -625,25 +630,36 @@ h1.title {
 
 //related tag
 .related-tag {
+  word-break: break-all;
   .related-tag-feed {
-    @include flexbox();
-    @include flex-direction(row);
-    @include justify-content(space-between);
+    // @include flexbox();
+    // @include flex-direction(row);
+    // @include justify-content(space-between);
     max-width: 676px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     word-break: break-all;
+    word-wrap: break-word;
     overflow-wrap: break-word;
     height: auto;
     font-family: $yu-min;
     font-size: 25px;
     line-height: 48px;
     font-weight: bold;
+    //display: inline;
     .related-tag-item {
       border-bottom: 1pt solid $black;
       margin-bottom: 15px;
+      // padding-left: 10px;
+      padding-right: 10px;
+      display: inline-block;
       overflow-wrap: break-word;
+     // overflow-wrap: break-word;
+     li {
+      display: inline;
+      overflow-wrap: break-word;
+     }
     }
   }
 }
