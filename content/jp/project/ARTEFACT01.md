@@ -1,9 +1,11 @@
 +++
+ = []
 abstract_content = "ARTEFACTは「都市のカルチュラル・ナラティヴ」のプロジェクト・マガジンです。\n\nプロジェクトの活動を、レファレンスを追記した書き起こしやレポートなどによって記録するとともに、プロジェクトの活動に参加できなかった人でも、本誌を手にとることによって都市のカルチュラル・ナラティヴを知り、楽しむことができるような誌面作りを目指して、マガジンとしての企画記事も含めた構成をとっています。\n\n創刊号の特集は、「都市のカルチュラル・ナラティヴ」と「増上寺」です。"
 abstract_content_short = "プロジェクトの活動を、レファレンス豊富なレポートなどによって記録したプロジェクトマガジン。創刊号の特集は、「都市のカルチュラル・ナラティヴ」と「増上寺」です。"
 card_category = "文化機関"
 card_reference = "* 市古夏生・鈴木健一『新訂 江戸名所図会』筑摩書房\n* アート・センターBooklet 18 『文化観光：「観光」のリマスタリング』\n* 内藤鳴雪『鳴雪自叙伝』岩波書店、2002年\n* 伊坂道子『芝増上寺境内地の歴史的景観 : その建築と都市的空間』岩田書院、2013年"
 date = "2018-03-11T15:00:00+00:00"
+date_string = ""
 event_audience = ""
 event_contact = ""
 event_fee = ""
@@ -35,5 +37,11 @@ title_jp = "ARTEFACT 01 特集：都市のカルチュラル・ナラティヴ�
 type = "project"
 vimeo_videourl = ""
 yt_videourl = ""
+[[image_credit]]
+credit_text = "ARTEFACT 01 都市のカルチュラル・ナラティヴ／増上寺 CC BY 4.0 慶應義塾大学アート・センター／Rhetorica"
+[[image_credit]]
+credit_text = "ARTEFACT 01 都市のカルチュラル・ナラティヴ／増上寺 CC BY 4.0 慶應義塾大学アート・センター／Rhetorica"
+[[image_credit]]
+credit_text = "ARTEFACT 01 都市のカルチュラル・ナラティヴ／増上寺 CC BY 4.0 慶應義塾大学アート・センター／Rhetorica"
 
 +++
