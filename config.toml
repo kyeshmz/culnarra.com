@@ -1,7 +1,7 @@
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Culnarra - Cultural Narrative of a City"
 DefaultContentLanguage = "jp"
-
+description = ""
 #change this to false when on culnarra.com
 baseURL = "http://localhost:1313"
 #baseURL = "https://kkshmz.github.io/culnarra/"
