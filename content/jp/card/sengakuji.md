@@ -33,5 +33,6 @@ vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
 credit_text = "泉岳寺 本堂\n\nAll Rights Reserved\n\nクレジット：泉岳寺 本堂, 提供：泉岳寺"
+project_image = "/img/card/card1.JPG"
 
 +++
