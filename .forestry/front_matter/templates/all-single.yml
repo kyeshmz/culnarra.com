@@ -110,6 +110,10 @@ fields:
   label: "【メインコンテンツ】コンテンツ本文"
   name: main_content
   description: コンテンツとなる部分
+- type: tag_list
+  name: meta_cardtype
+  label: カードの種類
+  description: 'Card type '
 - type: textarea
   name: card_reference
   label: "【メインコンテンツ】Card Reference"
