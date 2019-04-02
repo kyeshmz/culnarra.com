@@ -185,6 +185,7 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
+- content/jp/card/shigeru-yokota.md
 - content/jp/card/zojoji.md
 - content/jp/card/KUAC.md
 - content/jp/card/akogishi-memorial.md
