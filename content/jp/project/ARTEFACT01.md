@@ -5,6 +5,7 @@ abstract_content_short = "プロジェクトの活動を、レファレンス豊
 abstract_content_short_en = "ARTEFACT records the activities of the Cultural Narrative of a City project by edited transcriptions, reports and so on. The first volume featured Zojo-ji Temple and Cultural Narrative of a City."
 card_category = "文化機関"
 card_reference = "* 市古夏生・鈴木健一『新訂 江戸名所図会』筑摩書房\n* アート・センターBooklet 18 『文化観光：「観光」のリマスタリング』\n* 内藤鳴雪『鳴雪自叙伝』岩波書店、2002年\n* 伊坂道子『芝増上寺境内地の歴史的景観 : その建築と都市的空間』岩田書院、2013年"
+card_reference_en = "* 市古夏生・鈴木健一『新訂 江戸名所図会』筑摩書房\n* アート・センターBooklet 18 『文化観光：「観光」のリマスタリング』\n* 内藤鳴雪『鳴雪自叙伝』岩波書店、2002年\n* 伊坂道子『芝増上寺境内地の歴史的景観 : その建築と都市的空間』岩田書院、2013年"
 date = "2018-03-11T15:00:00+00:00"
 date_string = "03/12/2018  "
 event_audience = ""
@@ -55,7 +56,6 @@ tag = ["ARTEFACT", "増上寺", "浮世絵", "幕末", "明治", "近代建築",
 tag_en = ["ARTEFACT", "Zojoji", "Ukiyo-e", "Late Edo period", "Meiji Period", "Modern Architeecture", "Shibuya-gaku", "Famous Sites", "Design Fiction"]
 title_eng = "ARTEFACT 01 Features: Cultural Narrative of a City / Zojo-ji Temple"
 title_jp = "ARTEFACT 01 特集：都市のカルチュラル・ナラティヴ／増上寺"
-type = "project"
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

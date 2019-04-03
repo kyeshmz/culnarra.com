@@ -154,8 +154,8 @@ fields:
       format: markdown
 - type: textarea
   name: abstract_content_en
-  label: "【アブストラクト】Card Abstract Long "
-  description: Abstract of the card MD 表記
+  label: "【アブストラクト】Card Abstract Long ENGLISH"
+  description: Abstract of the card MD 表記 ENGLISH
   config:
     required: false
     wysiwyg: true
@@ -163,8 +163,8 @@ fields:
       format: markdown
 - type: textarea
   name: abstract_content_short_en
-  label: "【アブストラクト】Card Abstract Short"
-  description: Abstract of the card MD 表記
+  label: "【アブストラクト】Card Abstract Short ENGLISH"
+  description: Abstract of the card MD 表記 ENGLISH
   config:
     wysiwyg: true
     schema:
@@ -298,13 +298,13 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
+- content/jp/card/akogishi-memorial.md
 - content/jp/project/ARTEFACT01.md
 - content/jp/project/ARTEFACT02.md
 - content/jp/note/realization-zen.md
 - content/jp/note/possibility-publicness.md
 - content/jp/note/scholarship-zen.md
 - content/jp/card/sengakuji.md
-- content/jp/card/akogishi-memorial.md
 - content/jp/card/KUAC.md
 - content/jp/card/zojoji.md
 - content/jp/card/shigeru-yokota.md
