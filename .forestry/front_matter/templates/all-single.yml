@@ -289,6 +289,8 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
+- content/jp/project/ARTEFACT01.md
+- content/jp/project/ARTEFACT02.md
 - content/jp/note/realization-zen.md
 - content/jp/note/possibility-publicness.md
 - content/jp/note/scholarship-zen.md
