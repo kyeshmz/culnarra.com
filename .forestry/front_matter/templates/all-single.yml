@@ -22,7 +22,7 @@ fields:
   description: Tag about the card
 - type: tag_list
   name: tag_en
-  label: "【メタデータ】Card Tag"
+  label: "【メタデータ】Card Tag ENGLISH"
   description: Tag about the card
 - name: date
   label: "【アブストラクト】Date"
