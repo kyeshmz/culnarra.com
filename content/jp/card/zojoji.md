@@ -40,14 +40,16 @@ meta_place = "35.656389, 139.748333"
 meta_topic_category = ["寺院"]
 meta_topic_category_en = ["Temple"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card4-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "増上寺"
 related_ptag_en = "Zojoji"
 tag = ["浄土宗", "江戸時代", "徳川幕府", "霊廟", "芝公園"]
 tag_en = ["Jodo-sect", "Edo period", "Tokugawa shogunate", "Mausoleum", "Shiba Park"]
 title_eng = "Zojoji"
 title_jp = "増上寺"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
