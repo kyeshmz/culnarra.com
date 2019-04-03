@@ -49,8 +49,10 @@
                         <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                         <ul>
                             {{ range where .Site.RegularPages "Section" "project"}}
-                            {{ range .Params.tag }}
-                            <a href="{{ . | relURL }}">
+                            {{ range .Params.tag_en }}
+                            <a href="{{ . | relLangURL }}">
+                                    {{ end }}
+                                    {{range .Params.tag}}
                                 <li class="related-tag-item"> #{{ . }}</li>
                             </a>
                             {{ end }}
@@ -107,12 +109,12 @@
         <div class="snd-card-1 index-projmod">
             <a href="">
                 <h5>ARTEFACT 02 特集：インターンシップ</h5>
-
+                <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
             </a>
         </div>
         <div class="snd-card-2 note-module">
             <div class="index-note">
-                <a href="{{ "/event/architecture-forum/" | relURL }}">
+                <a href="{{ "/event/architecture-forum/" | relLangURL }}">
                     <!-- 2 -->
                     <h5 class="index-notetitle">ギャラリーから考える公共性──日本橋から竹橋へ／40年の対話
                     </h5>
@@ -148,7 +150,7 @@
         </div>
         <div class="snd-card-6 note-module">
             <div class="index-note">
-                <a href="{{ "/event/sengakuji/" | relURL }}">
+                <a href="{{ "/event/sengakuji/" | relLangURL }}">
                     <div class="note-bar"></div>
                     <!-- 1 -->
                     <h5 class="index-notetitle">禅の精神が教えてくれる「気づく」こと

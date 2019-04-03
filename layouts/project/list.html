@@ -2,8 +2,10 @@
 
 <body>
     <div class="body-wrap">
-        {{ partial "header.html" . }}
-        {{ partial "card-logo.html" . }}
+        <div id="global-header">
+            {{ partial "header.html" . }}
+            {{ partial "card-logo.html" . }}
+        </div>
         <div class="bar-wrap">
             <hr class="project-bar">
             <hr class="abstract-bar">
@@ -12,13 +14,18 @@
             <div class="related-tag-feed">
                 <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                 <ul>
-                    {{ range where .Site.RegularPages "Section" "project"}}
-                    {{ range .Params.tag }}
+                    {{range (where .Site.RegularPages "Section" "project")}}
+                    {{ $slice := slice }}
+                    {{ range  .Params.tag }}
+                    {{ $slice = $slice | append . | uniq}}
+                    {{ end }}
+                    {{ range $uniqueTags := $slice | uniq }}
                     <a href="{{ . | relURL }}">
-                        <li class="related-tag-item"> #{{ . }}</li>
+                        <li class="related-tag-item"> # {{ $uniqueTags }}</li>
                     </a>
                     {{ end }}
-                    {{end }}
+                    {{ end }}
+
                 </ul>
             </div>
         </div>

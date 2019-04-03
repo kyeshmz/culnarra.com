@@ -15,7 +15,7 @@
                 <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                 <ul>
                     {{ range where .Site.RegularPages "Section" "card"}}
-                    {{ range .Params.tag }}
+                    {{ range .Params.tag_en }}
                     <a href="{{ . | relURL }}">
                         <li class="related-tag-item"> #{{ . }}</li>
                     </a>
@@ -45,10 +45,10 @@
                         </figcaption>
                     </div>
                     <div class="cardlist-info">
-                        <h5 class="cardlist-title">{{ .Params.title_jp }}</h5>
-                        <p class="cardlist-abs">{{ .Params.abstract_content }}</p>
+                        <h5 class="cardlist-title">{{ .Params.title_eng }}</h5>
+                        <p class="cardlist-abs">{{ .Params.abstract_content_en }}</p>
                         <div class="itemtag-row">
-                            {{ range .Params.tag }}
+                            {{ range .Params.tag_en }}
                             <a href=" {{  .  | relURL}}">
                                 <p>#{{ . }}</p>
                             </a>

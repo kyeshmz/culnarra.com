@@ -1,23 +1,32 @@
 <div class="body-wrap">
-<header>
-    <div class="nav-menu row">
-        <div class="row black-btm row-item nav-grow" id="nav-title">
-            <h1 class="title"><a href="{{ .Site.BaseURL }}">Cultural Narrative of a City</a></h1>
-        </div>
-        <nav>
-            <ul class="row-item row">
-                    <a href="{{ "/card/" | relURL }}"><li class="brdr-btm card-btm">カード</li></a>
-                    <a href="{{ "/project/" | relURL }}"><li class="brdr-btm project-btm">プロジェクト</li></a>
-                    <a href="{{ "/note/" | relURL }}"><li class="brdr-btm note-btm">ノート</li></a>
-                    <a href="{{ "/event/" | relURL }}"><li class="brdr-btm event-btm">イベント</li></a>
-            </ul>
-        </nav>
-        <nav>
-                <ul class="row-item row languages">
-                        <li class=""><a href="{{ .Site.BaseURL }}">このサイトについて</a></li>
-                    <li class=""><a href="{{ .Site.BaseURL }}en/">English</a> / <a href="{{ .Site.BaseURL }}jp/">Japanese</a></li>
+    <header>
+        <div class="nav-menu row">
+            <div class="row black-btm row-item nav-grow" id="nav-title">
+                <h1 class="title"><a href="{{ .Site.BaseURL }}">Cultural Narrative of a City</a></h1>
+            </div>
+            <nav>
+                <ul class="row-item row">
+                    <a href="{{ "/card/" | relLangURL }}">
+                        <li class="brdr-btm card-btm">カード</li>
+                    </a>
+                    <a href="{{ "/project/" | relLangURL }}">
+                        <li class="brdr-btm project-btm">プロジェクト</li>
+                    </a>
+                    <a href="{{ "/note/" | relLangURL }}">
+                        <li class="brdr-btm note-btm">ノート</li>
+                    </a>
+                    <a href="{{ "/event/" | relLangURL }}">
+                        <li class="brdr-btm event-btm">イベント</li>
+                    </a>
                 </ul>
-        </nav>
-    </div>
-</div>
+            </nav>
+            <nav>
+                <ul class="row-item row languages">
+                    <li class=""><a href="{{ .Site.BaseURL }}">このサイトについて</a></li>
+                    <li class=""><a href="{{ .Site.BaseURL }}en/">English</a> / <a
+                            href="{{ .Site.BaseURL }}jp/">Japanese</a></li>
+                </ul>
+            </nav>
+        </div>
 </header>
+</div>
