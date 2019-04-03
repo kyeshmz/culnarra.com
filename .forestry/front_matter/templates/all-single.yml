@@ -152,7 +152,6 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-
 - type: text
   name: layout
   label: layout
@@ -205,7 +204,6 @@ fields:
   name: event_organizer
   label: Event Organizer
   description: Who is organizing the event
-
 - type: textarea
   name: event_date
   label: eventdate
@@ -232,6 +230,14 @@ fields:
       wysiwyg: true
       schema:
         format: markdown
+  - type: textarea
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: CREDIT TEXT ENG
+    name: credit_text_en
+    description: ENGLISH CREDIT TEXT
 - type: tag_list
   name: reference_cards
   label: "【イベント】レファレンスするカード"
