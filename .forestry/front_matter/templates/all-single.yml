@@ -17,7 +17,7 @@ fields:
   name: meta_giho
   description: 技法・アプローチカテゴリー
 - type: tag_list
-  label: "【メタデータ】技法"
+  label: "【メタデータ】技法 ENGLISH"
   name: meta_giho_en
   description: 技法・アプローチカテゴリー
 - type: tag_list
