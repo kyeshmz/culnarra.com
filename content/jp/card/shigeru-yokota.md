@@ -40,14 +40,16 @@ meta_place = "35.653063, 139.760510"
 meta_topic_category = ["美術"]
 meta_topic_category_en = ["Art"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card6-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "横田茂ギャラリー"
 related_ptag_en = "横田茂ギャラリー"
 tag = ["現代美術", "アーカイヴ"]
 tag_en = ["Contemporary Art", "Archive"]
 title_eng = "Shigeru Yokota Gallery"
 title_jp = "横田茂ギャラリー"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
