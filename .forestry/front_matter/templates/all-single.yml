@@ -154,8 +154,8 @@ fields:
       format: markdown
 - type: textarea
   name: abstract_content_en
-  label: "【アブストラクト】Card Abstract Long "
-  description: Abstract of the card MD 表記
+  label: "【アブストラクト】Card Abstract Long ENGLISH"
+  description: Abstract of the card MD 表記 ENGLISH
   config:
     required: false
     wysiwyg: true
@@ -163,8 +163,8 @@ fields:
       format: markdown
 - type: textarea
   name: abstract_content_short_en
-  label: "【アブストラクト】Card Abstract Short"
-  description: Abstract of the card MD 表記
+  label: "【アブストラクト】Card Abstract Short ENGLISH"
+  description: Abstract of the card MD 表記 ENGLISH
   config:
     wysiwyg: true
     schema:
