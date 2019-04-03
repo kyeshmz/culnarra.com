@@ -301,6 +301,7 @@ fields:
   label: "【イベント】レファレンスするカード ENGLISH"
   name: reference_cards_en
 pages:
+- content/jp/event/gallery-publicness.md
 - content/jp/event/architecture-forum.md
 - content/jp/card/JCRI.md
 - content/jp/card/NHK-archives.md
@@ -318,7 +319,6 @@ pages:
 - content/jp/card/KUAC.md
 - content/jp/card/toraya-archives.md
 - content/jp/event/sengakuji.md
-- content/jp/event/gallery-publicness.md
 - content/jp/event/ryugenji.md
 - content/jp/card/JCRI.md
 - content/jp/card/toraya-archives.md
