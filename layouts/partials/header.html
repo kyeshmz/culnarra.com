@@ -15,7 +15,7 @@
         <nav>
                 <ul class="row-item row languages">
                         <li class=""><a href="{{ .Site.BaseURL }}">このサイトについて</a></li>
-                    <li class="">  {{ range .Translations }}<a src="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a> / <a src="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName}}</a> {{ end }}</li>
+                    <li class=""><a href="{{ .Site.BaseURL }}en/">English</a> / <a href="{{ .Site.BaseURL }}jp/">Japanese</a></li>
                 </ul>
         </nav>
     </div>

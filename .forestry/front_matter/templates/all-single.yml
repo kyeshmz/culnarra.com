@@ -24,7 +24,7 @@ fields:
   name: meta_topic_category
   label: "【メタデータ】主題・トピックカテゴリー"
   description: 主題・トピックカテゴリー
-  - type: tag_list
+- type: tag_list
   name: meta_topic_category_en
   label: "【メタデータ】主題・トピックカテゴリー ENGLISH"
   description: 主題・トピックカテゴリー
