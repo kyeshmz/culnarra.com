@@ -14,38 +14,37 @@
                 <div class="related-tag-feed">
                     <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                     <ul>
-                        {{ range (where .Site.RegularPages "Section" "event" | first 2)}}
+                        {{ range where .Site.RegularPages "Section" "event"}}
                         {{ range .Params.tag }}
-                        <!-- <a href=""> -->
+                        <a href="{{ . | relURL }}">
                             <li class="related-tag-item"> #{{ . }}</li>
-                        <!-- </a> -->
+                        </a>
                         {{ end }}
                         {{end }}
                     </ul>
                 </div>
             </div>
         <div class="eventlist-wrap">
-                {{ range where .Site.RegularPages "Section" "event"}}
             <div class="eventlist-item">
-                    <a href=" {{ .Permalink }}">   
                 <div class="eventlist-image">
-                    <img src=" {{ .Params.ogp_image }} | relURL }}">
-                    <!-- <span class="eventlist-date">Sep. 30</span> -->
+                    <img src="{{ "/img/dummy2.jpg" | relURL }}">
+                    <span class="eventlist-date">Sep. 30</span>
                 </div>
                 <div class="eventlist-info">
-                    <h5 class="eventlist-title"> {{.Params.title_jp}}</h5>
-                    <p class="eventlist-abs">{{ .Params.abstract_content }}</p>
+                    <h5 class="eventlist-title">「泉岳寺と禅の文化」レポート</h5>
+                    <p class="eventlist-abs">堀川貴司は、日本の国文学者、慶應義塾大学教授。大阪府生まれ。東京学芸大学教育学部附属高等学校卒、</p>
                     <div class="itemtag-row">
-                            {{ range .Params.tag }}
-                            <a>
-                                <p>#{{ . }}</p>
-                            </a>
-                            {{ end }}
+                        <a href=""><p class="event-tag">#曹洞宗</p></a>
+                        <p>#曹洞宗</p>
+                        <p>#禅</p>
+                        <p>#曹洞宗</p>
+                        <p>#曹洞宗</p>
+                        <p>#禅</p>
+                        <p>#禅</p>
                     </div>
                 </div>
             </div>
-            {{ end }}
-        </a>
+
         </div>
     </div>
     {{ partial "footer.html" . }}

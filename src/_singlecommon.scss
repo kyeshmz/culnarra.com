@@ -155,6 +155,12 @@ $toppan: "toppanBunkyuMincho", serif;
   padding-top: 77px;
   padding-bottom: 77px;
   font-family: $yu-min;
+  .info-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .info-item.card-item {
     border-bottom: 1px solid $purple;
     border-left: 1px solid $purple;
@@ -230,7 +236,7 @@ $toppan: "toppanBunkyuMincho", serif;
       height: 1px;
     }
     h3, h5 {
-      padding-top: 78px;
+
       font-size: 20px;
       line-height: 48px;
       font-family: $culnarra-go;
@@ -249,7 +255,7 @@ $toppan: "toppanBunkyuMincho", serif;
       height: 1px;
     }
     h3, h5 {
-      padding-top: 78px;
+
       font-size: 20px;
       line-height: 48px;
       font-family: $culnarra-go;
@@ -267,7 +273,7 @@ $toppan: "toppanBunkyuMincho", serif;
       height: 1px;
     }
     h3, h5 {
-      padding-top: 78px;
+
       font-size: 20px;
       line-height: 48px;
       font-family: $culnarra-go;
@@ -286,7 +292,6 @@ $toppan: "toppanBunkyuMincho", serif;
       height: 1px;
     }
     h3, h5 {
-      padding-top: 78px;
       font-size: 20px;
       line-height: 48px;
       font-family: $culnarra-go;
@@ -309,5 +314,224 @@ $toppan: "toppanBunkyuMincho", serif;
     font-family: $yu-min;
     font-size: 20px;
     line-height: 48px;
+  }
+}
+.project-contentwrap {
+  padding-top: 77px;
+  padding-bottom: 77px;
+  display: grid;
+  grid-template-columns: 260px 843px 1fr;
+  grid-template-rows: minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(90px, auto) minmax(58px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) 1fr;
+  overflow: hidden;
+  .info-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .project-item {
+    border-bottom: 1px solid $orange;
+    border-left: 1px solid $orange;
+    border-right: 1px solid $orange;
+    font-family: $culnarra-go;
+    
+    &:first-child {
+      border-top: 1px solid $orange;
+      border-bottom: 1px solid $orange;
+      border-left: 1px solid $orange;
+      border-right: 1px solid $orange;
+    }
+    li {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+    p {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+  }
+  li {
+    padding-bottom: 5px;
+  }
+  p {
+    font-size: 1em;
+    line-height: 2em;
+  }
+  .project-approach {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .project-topic {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .project-tag {
+    grid-column: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .project-producer {
+    grid-column: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .project-contact {
+    grid-column: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .project-author {
+    grid-column: 1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  .project-revised {
+    grid-column: 1;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  .project-date {
+    grid-column: 1;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  .project-content {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 9;
+    max-width: 675px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+    font-family: $yu-min;
+    .project-title {
+      font-family: $culnarra-go;
+      padding-bottom: 8px;
+    }
+    h3 {
+      padding-bottom: 15px;
+      font-family: $culnarra-go;
+      font-size: 20px;
+      line-height: 48px;
+    }
+    hr {
+      background-color: $orange;
+      color: $orange;
+      border: none;
+      height: 1px;
+      margin-bottom: 15px;
+    }
+    li,p {
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $yu-min;
+      letter-spacing: 0;
+      font-kerning: auto;
+    }
+    p{
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.note-contentwrap {
+  padding-top: 77px;
+  padding-bottom: 77px;
+  display: grid;
+  grid-template-columns: 260px 843px 1fr;
+  //grid-template-rows:minmax(63minpx, auto) minmax(63px, auto) minmax(63px, auto) minmax(90px, auto) minmax(58px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) 1fr;
+  grid-template-rows: 63px 63px minmax(66px,auto) minmax(60px,auto) minmax(65px,auto) 90px 1fr;
+  overflow: hidden;
+  .note-item {
+    border-bottom: 1px solid $green;
+    border-left: 1px solid $green;
+    border-right: 1px solid $green;
+    &:first-child {
+      border-top: 1px solid $green;
+      border-bottom: 1px solid $green;
+      border-left: 1px solid $green;
+      border-right: 1px solid $green;
+    }
+    li {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+    p {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+  }
+  .note-approach {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .note-topic {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .note-tag {
+    grid-column: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .note-author {
+   grid-column: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .note-revised {
+    grid-column: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .note-date {
+    grid-column: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .note-content {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    max-width: 675px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+    h3 {
+      padding-bottom: 15px;
+      font-family: $culnarra-go;
+      font-size: 20px;
+      line-height: 48px;
+    }
+    hr {
+      background-color: $green;
+      color: $green;
+      border: none;
+      height: 1px;
+    }
+    li,p {
+      font-size: 20px;
+      line-height: 48px;
+      font-family: $yu-min;
+      letter-spacing: 0;
+      font-kerning: auto;
+    }
+    p{
+      img{
+        max-width: 100%;
+      }
+    }
   }
 }

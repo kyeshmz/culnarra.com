@@ -1,7 +1,16 @@
 <div class="relation related-cards">
     <h3>関連する<span class="card-color">カード</span></h3>
     <ul class="relatedcard-feed">
+            {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
+            {{ range $randomPosts }}
         <div class="cardfeed-item">
+            <a href="">
+                <h4>{{ .Params.title_jp }}</h4>
+                <li class="img-item"><img src=" {{ .Params.ogp_image }}| relURL }}" alt="image"></li>
+            </a>
+        </div>
+        {{ end }}
+        <!-- <div class="cardfeed-item">
             <a href="">
                 <h4>「形而情學其の五</h4>
                 <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
@@ -18,12 +27,6 @@
                 <h4>「形而情學其の五</h4>
                 <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
             </a>
-        </div>
-        <div class="cardfeed-item">
-            <a href="">
-                <h4>「形而情學其の五</h4>
-                <li class="img-item"><img src="{{ "/img/pj1_bw.jpg" | relURL }}" alt="image"></li>
-            </a>
-        </div>
+        </div> -->
     </ul>
 </div>

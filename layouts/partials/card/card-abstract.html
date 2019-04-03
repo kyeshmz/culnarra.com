@@ -1,9 +1,7 @@
 <div class="card-abs abstract-wrap">
     <div class="card-abstitle abstract-title ">
-        {{ with .Params.title_jp}} <h2>{{.}}</h2>{{end}}
-        {{ with .Params.title_en}} <h2>{{.}}</h2>{{end}}
-        <h2 class="abstitle-jp">ARTEFACT 02 特集:インターンシップ</h2>
-        <h2 class="abstitle-en"> ARTEFACT 02 Features: Internship</h2>
+        {{ with .Params.title_jp}} <h2 class="abstitle-jp">{{.}}</h2>{{end}}
+        {{ with .Params.title_eng}} <h2 class="abstitle-en">{{.}}</h2>{{end}}
     </div>
     <div class="abstract-content">
         <p> 都市とともに歴史を重ね、現代に活動する寺院は、都市が蓄積する歴史的・文化的地層を見通す窓であり、過去から現在へと繋がる都市の物語の証言者でもあります。
@@ -11,7 +9,7 @@
         </p>
     </div>
     <div class="abstract-carousel">
-        {{ partial "carousel.html" . }}
+        {{ partial "card/card-carousel.html" . }}
     </div>
 </div>
 <hr>

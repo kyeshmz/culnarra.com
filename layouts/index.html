@@ -1,12 +1,15 @@
 {{ partial "head.html" . }}
 
 <body>
-
+        <!-- <div id="global-header">
+                {{ partial "header.html" . }}
+                {{ partial "card-logo.html" . }}
+            </div> -->
     <div class="body-wrap">
-        <div id="global-header">
-            {{ partial "header.html" . }}
-            {{ partial "card-logo.html" . }}
-        </div>
+            <div id="global-header">
+                    {{ partial "header.html" . }}
+                    {{ partial "card-logo.html" . }}
+                </div>
         <div class="index-wrap">
             {{ partial "blkbox-logo.html" . }}
             <div class="index-items index-about">
@@ -48,14 +51,15 @@
                     <div class="related-tag-feed">
                         <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                         <ul>
-                            {{ range where .Site.RegularPages "Section" "project"}}
-                            {{ range .Params.tag_en }}
-                            <a href="{{ . | relLangURL }}">
-                                    {{ end }}
-                                    {{range .Params.tag}}
+                                {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 3 }}
+                                {{ range $randomPosts }}
+                            <!-- {{ range .Params.tag_en }} -->
+                            <!-- <a href="{{ . | relLangURL }}"> -->
+                                    <!-- {{ end }} -->
+                                    <!-- {{range .Params.tag}} -->
                                 <li class="related-tag-item"> #{{ . }}</li>
-                            </a>
-                            {{ end }}
+                            <!-- </a>-->
+                            <!-- {{ end }}  -->
                             {{end }}
                         </ul>
                     </div>

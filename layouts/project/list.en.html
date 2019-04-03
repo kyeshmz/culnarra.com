@@ -14,11 +14,15 @@
             <div class="related-tag-feed">
                 <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                 <ul>
-                        {{ range (where .Site.RegularPages "Section" "project" | first 2)}}
-                        {{ range .Params.tag }}
-                        <!-- <a href=""> -->
-                            <li class="related-tag-item"> #{{ . }}</li>
-                        <!-- </a> -->
+                    {{range (where .Site.RegularPages "Section" "project")}}
+                    {{ $slice := slice }}
+                    {{ range  .Params.tag }}
+                    {{ $slice = $slice | append . | uniq}}
+                    {{ end }}
+                    {{ range $uniqueTags := $slice | uniq }}
+                    <a href="{{ . | relURL }}">
+                        <li class="related-tag-item"> # {{ $uniqueTags }}</li>
+                    </a>
                     {{ end }}
                     {{ end }}
 
@@ -39,7 +43,7 @@
                         <p class="projectlist-abs">{{ .Params.abstract_content_short }}</p>
                         <div class="projectitemtag-row">
                             {{ range .Params.tag }}
-                            <a href="">
+                            <a href=" {{  .  | relURL}}">
                                 <p>#{{ . }}</p>
                             </a>
                             {{ end }}

@@ -29,7 +29,8 @@ if (abstractSlider.length > 0) {
       autoplayButtonOutput: false,
       lazyload: false,
       nested: 'inner',
-      fixedWidth: 550
+      fixedWidth: 550,
+      startIndex: 0
     });
   }
 
@@ -49,6 +50,7 @@ if (relatedprjFeed.length > 0) {
     autoplayButtonOutput: false,
     lazyload: false,
     nested: 'inner',
+    startIndex: 0
     //gutter: '20',
     // fixedWidth: '326'
     // edgePadding: '23'
@@ -91,7 +93,8 @@ if (relatednoteFeed.length > 0) {
     autoplayButtonOutput: false,
     lazyload: false,
     nested: 'inner',
-    autoHeight: true
+    autoHeight: true,
+    startIndex: 0
   });
 }
 
@@ -111,7 +114,8 @@ if (relatedcardFeed.length > 0) {
     autoplayButtonOutput: false,
     lazyload: false,
     nested: 'inner',
-    gutter: 20
+    gutter: 20,
+    startIndex: 0
     // container: '.relatedcard-feed',
     // mouseDrag: true,
     // items: 1,

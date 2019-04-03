@@ -90,7 +90,7 @@ hr {
 .sticky {
   position: fixed;
   top: 0;
-  //left: 0;
+  left: 0;
   width: 100%;
   background-color: $background;
   //background-color: rgba(135,135,135,1);
@@ -98,7 +98,7 @@ hr {
   opacity: 1;
   margin-left: auto;
     margin-right: auto;
-    max-width: 1372px;
+    // max-width: 1372px;
     // display: block;
     
   .card-logo {
@@ -271,218 +271,7 @@ h1.title {
 }
 
 //card content
-.project-contentwrap {
-  padding-top: 77px;
-  padding-bottom: 77px;
-  display: grid;
-  grid-template-columns: 260px 843px 1fr;
-  grid-template-rows: minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(90px, auto) minmax(58px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) 1fr;
-  overflow: hidden;
-  .project-item {
-    border-bottom: 1px solid $orange;
-    border-left: 1px solid $orange;
-    border-right: 1px solid $orange;
-    font-family: $culnarra-go;
-    &:first-child {
-      border-top: 1px solid $orange;
-      border-bottom: 1px solid $orange;
-      border-left: 1px solid $orange;
-      border-right: 1px solid $orange;
-    }
-    li {
-      font-size: 12px;
-      line-height: 24px;
-      font-family: $culnarra-go;
-    }
-    p {
-      font-size: 12px;
-      line-height: 24px;
-      font-family: $culnarra-go;
-    }
-  }
-  li {
-    padding-bottom: 5px;
-  }
-  p {
-    font-size: 1em;
-    line-height: 2em;
-  }
-  .project-approach {
-    grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .project-topic {
-    grid-column: 1;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .project-tag {
-    grid-column: 1;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  .project-producer {
-    grid-column: 1;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-  .project-contact {
-    grid-column: 1;
-    grid-row-start: 5;
-    grid-row-end: 6;
-  }
-  .project-author {
-    grid-column: 1;
-    grid-row-start: 6;
-    grid-row-end: 7;
-  }
-  .project-revised {
-    grid-column: 1;
-    grid-row-start: 7;
-    grid-row-end: 8;
-  }
-  .project-date {
-    grid-column: 1;
-    grid-row-start: 8;
-    grid-row-end: 9;
-  }
-  .project-content {
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 9;
-    max-width: 675px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-y: hidden;
-    font-family: $yu-min;
-    .project-title {
-      font-family: $culnarra-go;
-      padding-bottom: 8px;
-    }
-    h3 {
-      padding-bottom: 15px;
-      font-family: $culnarra-go;
-      font-size: 20px;
-      line-height: 48px;
-    }
-    hr {
-      background-color: $orange;
-      color: $orange;
-      border: none;
-      height: 1px;
-      margin-bottom: 15px;
-    }
-    li,p {
-      font-size: 20px;
-      line-height: 48px;
-      font-family: $yu-min;
-      letter-spacing: 0;
-      font-kerning: auto;
-    }
-    p{
-      img{
-        max-width: 100%;
-      }
-    }
-  }
-}
 
-.note-contentwrap {
-  padding-top: 77px;
-  padding-bottom: 77px;
-  display: grid;
-  grid-template-columns: 260px 843px 1fr;
-  //grid-template-rows:minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) minmax(90px, auto) minmax(58px, auto) minmax(63px, auto) minmax(63px, auto) minmax(63px, auto) 1fr;
-  grid-template-rows: minmax(63px, auto) minmax(63px, auto) minmax(66px, auto) minmax(60px, auto) minmax(65px, auto) minmax(90px, auto) 1fr;
-  overflow: hidden;
-  .note-item {
-    border-bottom: 1px solid $green;
-    border-left: 1px solid $green;
-    border-right: 1px solid $green;
-    &:first-child {
-      border-top: 1px solid $green;
-      border-bottom: 1px solid $green;
-      border-left: 1px solid $green;
-      border-right: 1px solid $green;
-    }
-    li {
-      font-size: 12px;
-      line-height: 24px;
-      font-family: $culnarra-go;
-    }
-    p {
-      font-size: 12px;
-      line-height: 24px;
-      font-family: $culnarra-go;
-    }
-  }
-  .note-approach {
-    grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .note-topic {
-    grid-column: 1;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .note-tag {
-    grid-column: 1;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  .note-author {
-    grid-column: 1;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-  .note-revised {
-    grid-column: 1;
-    grid-row-start: 5;
-    grid-row-end: 6;
-  }
-  .note-date {
-    grid-column: 1;
-    grid-row-start: 6;
-    grid-row-end: 7;
-  }
-  .note-content {
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 7;
-    max-width: 675px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-y: hidden;
-    h3 {
-      padding-bottom: 15px;
-      font-family: $culnarra-go;
-      font-size: 20px;
-      line-height: 48px;
-    }
-    hr {
-      background-color: $green;
-      color: $green;
-      border: none;
-      height: 1px;
-    }
-    li,p {
-      font-size: 20px;
-      line-height: 48px;
-      font-family: $yu-min;
-      letter-spacing: 0;
-      font-kerning: auto;
-    }
-    p{
-      img{
-        max-width: 100%;
-      }
-    }
-  }
-}
 
 .card-related-project {
   .tns-outer {
@@ -551,9 +340,9 @@ h1.title {
       border-style: solid;
       margin-left: 30px;
       margin-right: 5px;
-  
-      h4 {
-        text-align: center;
+      padding: 25px;
+      h4,h5 {
+        text-align: left;
         padding-bottom: 30px;
       }
       // &:first-child {
@@ -634,7 +423,7 @@ h1.title {
       margin-left: auto;
       margin-right: auto;
       max-width: 676.5px;
-      align-content: center;
+      align-content: left;
       border-color: black;
       border-width: 1.33px;
       border-style: solid;
@@ -650,10 +439,11 @@ h1.title {
         content: "\200C";
         display: block;
         position: absolute;
-        right: 3.5em;
-        bottom: 1.85em;
+        right: 2.1em;
+        bottom: 3em;
+        height: 1.5em;
         //top: 8.5em;
-        width: 25%;
+        width: 55%;
         text-align: center;
 
         background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
@@ -664,10 +454,34 @@ h1.title {
       }
 
       h5 {
+        font-size: 24px;
+        line-height: 30px;
+        font-family: $yu-min;
+        white-space: nowrap;
         padding-bottom: 33px;
+        &:before {
+          // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+          content: "\200C";
+          display: block;
+          position: absolute;
+          right: 0em;
+          top: 1.5em;
+          height: 1.5em;
+          //top: 8.5em;
+          width: 15%;
+          text-align: center;
+  
+          background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+          background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+          background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+          background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+          background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        }
       }
       p {
+        max-height: 120px;
         font-size: 1em;
+        font-family: $yu-min;
         line-height: 1.875em;
         overflow: hidden;
         padding: 0;
@@ -780,7 +594,7 @@ h1.title {
     right: 10px;
   }
   .tns-ovh {
-    max-width: 676.5px;
+    max-width: 1024px;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -792,16 +606,16 @@ h1.title {
   .relatedcard-feed {    
     .cardfeed-item {
       align-items: center;
-      margin-left: 25px;
-      margin-right: 25px;
-      padding-left: 20px;
-      padding-right: 20px;
+      margin-left: 9px;
+      margin-right: 9px;
+      padding-left: 11px;
+      padding-right: 11px;
       padding-bottom: 20px;
       padding-top: 32px;
       border-color: black;
       border-width: 1pt;
       border-style: solid;
-      max-width: 287px;
+      max-width: 326px;
       width: 100%;
       overflow-x: hidden;
       li {
@@ -931,6 +745,12 @@ h1.title {
       auto
     ) 1fr;
   overflow: hidden;
+  .info-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .event-item {
     border-bottom: 1px solid $grey;
     border-left: 1px solid $grey;
@@ -940,6 +760,16 @@ h1.title {
       border-bottom: 1px solid $grey;
       border-left: 1px solid $grey;
       border-right: 1px solid $grey;
+    }
+    li {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
+    }
+    p {
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $culnarra-go;
     }
   }
   .event-approach {
@@ -1029,10 +859,7 @@ h1.title {
     .event-infoitem {
       display: grid;
       grid-template-columns: 609px;
-      grid-template-rows: minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(
-          48px,
-          auto
-        );
+      grid-template-rows: minmax(48px, auto) minmax(48px, auto) minmax(48px, auto) minmax(48px, auto);
       grid-row-gap: minmax(20px, auto);
       .event-infoitem-child {
         position: relative;

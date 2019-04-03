@@ -1,12 +1,11 @@
 {{ partial "head.html" . }}
 
 <body>
-
+    <div id="global-header">
+        {{ partial "header.html" . }}
+        {{ partial "card-logo.html" . }}
+    </div>
     <div class="body-wrap">
-        <div id="global-header">
-            {{ partial "header.html" . }}
-            {{ partial "card-logo.html" . }}
-        </div>
         <div class="bar-wrap">
             <hr class="event-bar">
             <hr class="abstract-bar">

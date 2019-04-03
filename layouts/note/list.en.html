@@ -16,11 +16,11 @@
                 <div class="related-tag-feed">
 
                     <ul>
-                            {{ range (where .Site.RegularPages "Section" "note" | first 2)}}
+                        {{ range where .Site.RegularPages "Section" "note"}}
                         {{ range .Params.tag }}
-                        <!-- <a href="{{ . | relURL }}"> -->
+                        <a href="{{ . | relURL }}">
                             <li class="related-tag-item"> #{{ . }}</li>
-                        <!-- </a> -->
+                        </a>
                         {{ end }}
                         {{end }}
                     </ul>

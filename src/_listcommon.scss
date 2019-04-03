@@ -65,11 +65,11 @@
         position: absolute;
         right: 1em;
         //bottom: 1.85em;
-        top: 16.1em;
+        top: 16.3em;
         width: 50%;
         // right: 1em;
         text-align: center;
-        height: 1.2em;
+        height: 1.5em;
 
         background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
         background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
@@ -91,6 +91,13 @@
         word-break: break-all;
         padding-left: 12px;
         padding-right: 12px;
+        white-space: nowrap;
+        word-break: break-all;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
       }
     }
     .eventlist-image {
@@ -260,6 +267,7 @@
       // background-color: $purple;
       img {
         width: 100%;
+
       }
     }
     .projectlist-info {
