@@ -40,14 +40,16 @@ meta_place = "35.637757, 139.736292"
 meta_topic_category = ["寺院"]
 meta_topic_category_en = ["Temple"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card1-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "泉岳寺"
 related_ptag_en = "Sengakuji"
 tag = ["曹洞宗", "江戸時代", "赤穂義士", "学寮", "禅", "高輪"]
 tag_en = ["Soto-sect", "Edo period", "Ako-Gishi", "Zen", "Buddhist Colleges", "Gakuryo", "Takanawa"]
 title_eng = "Sengakuji"
 title_jp = "泉岳寺"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
