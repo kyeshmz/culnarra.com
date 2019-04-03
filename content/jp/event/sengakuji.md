@@ -43,6 +43,7 @@ modified_date = "2019.03.30 YH"
 ogp_image = ""
 reference_card = ""
 reference_cards = ["泉岳寺", "斯道文庫", "赤穂義士記念館"]
+reference_cards_en = ["Sengakuji", "Ako-Gishi Memorial "]
 related_ptag = "泉岳寺"
 related_ptag_en = "Sengakuji"
 tag = ["泉岳寺", "赤穂義士", "禅", "学寮", "塔頭", "曹洞宗", "臨済宗", "五山"]
