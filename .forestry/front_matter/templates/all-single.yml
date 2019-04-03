@@ -298,10 +298,11 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
-- content/jp/card/NHK-archives.md
-- content/jp/card/ajinomotofoundation.md
-- content/jp/card/Sogetsu.md
 - content/jp/card/JCRI.md
+- content/jp/card/NHK-archives.md
+- content/jp/card/Sogetsu.md
+- content/jp/card/shigeru-yokota.md
+- content/jp/card/ajinomotofoundation.md
 - content/jp/card/akogishi-memorial.md
 - content/jp/card/zojoji.md
 - content/jp/project/ARTEFACT01.md
@@ -311,7 +312,6 @@ pages:
 - content/jp/note/scholarship-zen.md
 - content/jp/card/sengakuji.md
 - content/jp/card/KUAC.md
-- content/jp/card/shigeru-yokota.md
 - content/jp/card/toraya-archives.md
 - content/jp/event/sengakuji.md
 - content/jp/event/architecture-forum.md
