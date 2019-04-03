@@ -357,6 +357,9 @@ h1.title {
       //   padding-top: 35px;
       //   padding-bottom: 35px;
       // }
+      img{
+        height: 100%;
+      }
     }
   }
 }
@@ -629,6 +632,7 @@ h1.title {
 
     h4 {
       overflow-x: hidden;
+      white-space: nowrap;
       // word-break: break-all;
       font-size: 18px;
       margin-bottom: 15px;

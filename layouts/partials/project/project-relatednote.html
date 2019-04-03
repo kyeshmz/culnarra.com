@@ -1,7 +1,7 @@
 <div class="relation related-notes">
         <h3>レファレンス<span class="note-color">ノート</span></h3>
         <ul class="relatednote-feed">
-                {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
+                {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "note") | first 4 }}
                 {{ range $randomPosts }}
             <div class="notefeed-item">
                 <a href=" {{ .Permalink }}">

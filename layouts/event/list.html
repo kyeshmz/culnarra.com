@@ -29,12 +29,14 @@
             <div class="eventlist-item">
                     <a href=" {{ .Permalink }}">   
                 <div class="eventlist-image">
-                    <img src=" {{ .Params.ogp_image }} | relURL }}">
+                    
+                    <img src=" {{ .Params.ogp_image }} ">
                     <!-- <span class="eventlist-date">Sep. 30</span> -->
                 </div>
                 <div class="eventlist-info">
                     <h5 class="eventlist-title"> {{.Params.title_jp}}</h5>
-                    <p class="eventlist-abs">{{ .Params.abstract_content }}</p>
+                    <p class="eventlist-abs">[日時]：{{ .Params.event_date }}</p>
+                    <p> [場所]：{{ .Params.event_place }}</p>
                     <div class="itemtag-row">
                             {{ range .Params.tag }}
                             <a>

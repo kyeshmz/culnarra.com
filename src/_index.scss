@@ -192,6 +192,9 @@
         line-height: 2em;
         font-family: $yu-min;
         overflow: hidden;
+        p{
+          overflow: hidden;
+        }
       }
     }
   }
@@ -375,6 +378,7 @@
         font-size: 1em;
         line-height: 2em;
         font-family: $yu-min;
+        overflow: hidden;
       }
     }
   }

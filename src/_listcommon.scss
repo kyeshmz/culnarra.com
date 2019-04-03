@@ -5,7 +5,7 @@
 .eventlist-wrap {
   display: grid;
   grid-template-columns: 327px 327px 327px 327px;
-  grid-template-rows: 596px 596px 596px;
+  grid-template-rows: minmax(596px,auto) minmax(596px,auto) minmax(596px,auto);
 
   grid-column-gap: 20px;
   grid-row-gap: 52px;
@@ -45,7 +45,7 @@
     h5.eventlist-title {
       font-size: 20px;
       padding-top: 30px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
       @include tracking(15);
       overflow: hidden;
       white-space: nowrap;
@@ -53,32 +53,33 @@
     p {
       font-size: 1em;
       line-height: 2em;
-      font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
+      font-family: $yu-min;
     }
     .eventlist-abs {
       max-height: 200px;
-      margin-bottom: 35px;
-      &:before {
-        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
-        content: "\200C";
-        display: block;
-        position: absolute;
-        right: 1em;
-        //bottom: 1.85em;
-        top: 16.3em;
-        width: 50%;
-        // right: 1em;
-        text-align: center;
-        height: 1.5em;
+  
+      // &:before {
+      //   // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+      //   content: "\200C";
+      //   display: block;
+      //   position: absolute;
+      //   right: 1em;
+      //   //bottom: 1.85em;
+      //   top: 16.3em;
+      //   width: 50%;
+      //   // right: 1em;
+      //   text-align: center;
+      //   height: 1.5em;
 
-        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
-        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
-        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
-        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
-        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
-      }
+      //   background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      //   background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      //   background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      //   background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      //   background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      // }
     }
     .itemtag-row {
+      padding-top: 15px;
       @include flexbox();
       @include flex-direction(row);
       @include flex-wrap(wrap);
@@ -102,7 +103,7 @@
     }
     .eventlist-image {
       padding-top: 44px;
-      padding-bottom: 44px;
+      padding-bottom: 22px;
       padding-left: 25px;
       padding-right: 25px;
       max-width: 100%;
@@ -110,6 +111,7 @@
       position: relative;
       img {
         width: 100%;
+        height: 183px;
         z-index: 1;
       }
       .eventlist-date {
@@ -234,6 +236,7 @@
       background-color: $purple;
       img {
         width: 100%;
+        height: 183px;
       }
     }
     .cardlist-imagecap {
@@ -258,9 +261,12 @@
     border-width: 1px;
     border-style: solid;
     align-items: center;
+    .projectlist-abs {
+      padding-bottom: 10px;
+    }
     .projectlist-image {
-      padding-top: 116px;
-      padding-bottom: 105px;
+      padding-top: 80px;
+      padding-bottom: 85px;
       padding-left: 25px;
       padding-right: 25px;
       max-width: 100%;

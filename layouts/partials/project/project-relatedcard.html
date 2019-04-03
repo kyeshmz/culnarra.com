@@ -4,9 +4,9 @@
                 {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
                 {{ range $randomPosts }}
             <div class="cardfeed-item">
-                <a href="">
+                <a href="{{ .Permalink }}">
                     <h4>{{ .Params.title_jp }}</h4>
-                    <li class="img-item"><img src=" {{ .Params.ogp_image }}| relURL }}" alt="image"></li>
+                    <li class="img-item"><img src=" {{ .Params.ogp_image }}" alt="image"></li>
                 </a>
             </div>
             {{ end }}
