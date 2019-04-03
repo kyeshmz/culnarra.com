@@ -36,6 +36,14 @@ fields:
   name: tag_en
   label: "【メタデータ】Card Tag ENGLISH"
   description: Tag about the card
+- type: tag_list
+  name: meta_cardtype
+  label: カードの種類
+  description: 'Card type '
+- type: tag_list
+  name: meta_cardtype_en
+  label: カードの種類
+  description: 'Card type ENGLISH '
 - name: date
   label: "【アブストラクト】Date"
   type: datetime
@@ -168,6 +176,10 @@ fields:
   label: "【メインコンテンツ】コンテンツタイトル"
   name: main_title
   description: Main content title
+- type: text
+  label: "【メインコンテンツ】コンテンツタイトル ENGLISH"
+  name: main_title_en
+  description: Main content title
 - type: textarea
   config:
     wysiwyg: true
@@ -176,10 +188,14 @@ fields:
   label: "【メインコンテンツ】コンテンツ本文"
   name: main_content
   description: コンテンツとなる部分
-- type: tag_list
-  name: meta_cardtype
-  label: カードの種類
-  description: 'Card type '
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: "【メインコンテンツ】コンテンツ本文 ENGLISH"
+  name: main_content_en
+  description: コンテンツとなる部分
 - type: textarea
   name: event_place
   label: event place
@@ -207,6 +223,37 @@ fields:
 - type: textarea
   name: event_date
   label: eventdate
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: event_place_en
+  label: event place ENGLISH
+  description: Event Place
+- type: textarea
+  name: event_audience_en
+  label: event audience ENGLISH
+  description: event audience
+- type: text
+  label: Event Fee ENGLISH
+  name: event_fee_en
+  description: Event Fee ENGLISH
+- type: textarea
+  label: Event Participate ENGLISH
+  name: event_participate_en
+  description: How to participate in the event
+- type: textarea
+  name: event_contact_en
+  label: Event Contact ENGLISH
+  description: Event contact
+- type: textarea
+  name: event_organizer_en
+  label: Event Organizer ENGLISH
+  description: Who is organizing the event
+- type: textarea
+  name: event_date_en
+  label: eventdate ENGLISH
   config:
     wysiwyg: true
     schema:
