@@ -301,6 +301,7 @@ fields:
   label: "【イベント】レファレンスするカード ENGLISH"
   name: reference_cards_en
 pages:
+- content/jp/card/akogishi-memorial.md
 - content/jp/card/JCRI.md
 - content/jp/card/JCRI.md
 - content/jp/event/gallery-publicness.md
@@ -309,7 +310,6 @@ pages:
 - content/jp/card/Sogetsu.md
 - content/jp/card/shigeru-yokota.md
 - content/jp/card/ajinomotofoundation.md
-- content/jp/card/akogishi-memorial.md
 - content/jp/card/zojoji.md
 - content/jp/project/ARTEFACT01.md
 - content/jp/project/ARTEFACT02.md
