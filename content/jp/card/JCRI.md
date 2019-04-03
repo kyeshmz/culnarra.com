@@ -34,5 +34,5 @@ yt_videourl = ""
 [[image_credit]]
 credit_text = "Japan Cultural Research Institute\n\nAll Rights Reserved\n\nクレジット：Japan Cultural Research Institute"
 project_image = "/img/card/card7.jpeg"
-
+draft = "false"
 +++

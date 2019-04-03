@@ -56,7 +56,27 @@
       font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
     }
     .eventlist-abs {
-      padding-bottom: 35px;
+      max-height: 200px;
+      margin-bottom: 35px;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 16.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.2em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
     }
     .itemtag-row {
       @include flexbox();
@@ -155,7 +175,28 @@
       font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
     }
     .cardlist-abs {
-      padding-bottom: 35px;
+      max-height: 200px;
+      margin-bottom: 35px;
+      overflow: hidden;
+      &:before {
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: "\200C";
+        display: block;
+        position: absolute;
+        right: 1em;
+        //bottom: 1.85em;
+        top: 16.1em;
+        width: 50%;
+        // right: 1em;
+        text-align: center;
+        height: 1.5em;
+
+        background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+        background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      }
     }
     .itemtag-row {
       @include flexbox();
@@ -232,11 +273,11 @@
         position: absolute;
         right: 1em;
         //bottom: 1.85em;
-        top: 2.1em;
-        width: 50%;
+        top: 1.8em;
+        width: 60%;
         // right: 1em;
         text-align: center;
-        height: 1.2em;
+        height: 1.5em;
 
         background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
         background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
@@ -273,7 +314,7 @@
       @include align-items(center);
       @include justify-content(space-evenly);
       padding-bottom: 33px;
-      padding-top: 33px;
+      padding-top: 15px;
       p {
         // @include flex (4);
         white-space: nowrap;
@@ -418,7 +459,9 @@
       font-family: $yu-min;
     }
     .taglist-cardabs {
-      padding-bottom: 35px;
+      max-height: 200px;
+      overflow: hidden;
+      margin-bottom: 35px;
     }
     .taglist-itemtag-cardrow {
       @include flexbox();

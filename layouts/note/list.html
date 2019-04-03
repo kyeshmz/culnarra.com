@@ -12,33 +12,22 @@
                 <hr class="abstract-bar">
             </div>
             <div class="relation related-tag">
+
                 <div class="related-tag-feed">
+
+                    <ul>
+                        {{ range where .Site.RegularPages "Section" "note"}}
+                        {{ range .Params.tag }}
+                        <a href="{{ . | relURL }}">
+                            <li class="related-tag-item"> #{{ . }}</li>
+                        </a>
+                        {{ end }}
+                        {{end }}
+                    </ul>
                     <!-- need to range so that first 5 or so get layed out then add a linebreak -->
-                    <a href="">
-                        <h4 class="related-tag-item">#曹洞宗</h4>
-                    </a>
-                    <a href="">
-                        <h4 class="related-tag-item">#曹洞宗</h4>
-                    </a>
-                    <a href="">
-                        <h4 class="related-tag-item">#曹洞宗</h4>
-                    </a>
-                    <a href="">
-                        <h4 class="related-tag-item">#曹洞宗</h4>
-                    </a>
-                    <a href="">
-                        <h4 class="related-tag-item">#曹洞宗</h4>
-                    </a>
 
                 </div>
-                <div class="related-tag-feed">
-                    <!-- need to range so that first 5 or so get layed out then add a linebreak -->
-                    <h4 class="related-tag-item">#曹洞宗</h4>
-                    <h4 class="related-tag-item">#曹洞宗</h4>
-                    <h4 class="related-tag-item">#曹洞宗</h4>
-                    <h4 class="related-tag-item">#曹洞宗</h4>
-                    <h4 class="related-tag-item">#曹洞宗</h4>
-                </div>
+           
             </div>
             <div class="notelist-wrap">
                 {{ range where .Site.RegularPages "Section" "note"}}
@@ -47,80 +36,19 @@
                         <div class="notelist-info">
                             <h5 class="notelist-title">{{ .Params.title_jp}}</h5>
                             <p class="notelist-abs">
-                              {{ .Params.abstract_content_short }}
+                                {{ .Params.abstract_content_short }}
                             </p>
                             <div class="noteitemtag-row">
                                 {{ range .Params.tag }}
-                                <a href=" {{  .  | relURL}}"><p>#{{ . }}</p></a>
+                                <a href=" {{  .  | relURL}}">
+                                    <p>#{{ . }}</p>
+                                </a>
                                 {{end }}
                             </div>
                         </div>
                     </a>
                 </div>
                 {{ end }}
-                <div class="notelist-item">
-                    <a href="">
-                        <!-- <div class="notelist-imagecap">
-                                <figcaption>
-                                        <div class="">
-                                                <p>新萬來舎(第二研究室)</p>
-                                                <p>新萬來舎(第二研究室)</p>
-                                            </div>
-                                            <div class="">
-                                                <p>URI: NOG_1006</p>
-                                                <p>URI: NOG_1006</p>
-                                                <p>URI: NOG_1006</p>
-                                            </div>
-                                </figcaption>
-                            </div> -->
-                        <div class="notelist-info">
-                            <h5 class="notelist-title">舞踏：越境する身体</h5>
-                            <p class="notelist-abs">
-                                土方巽の《禁色》（1959）発表から半世紀が過ぎ、舞踏は国や地域を越えた広がりを見せています。世界の各地でパフォーマンスやワークショップが開催されているほか、様々な研究者により舞踏研究が行われています。「舞踏：越境する身体」では
-                            </p>
-                            <div class="noteitemtag-row">
-                                <p>#禅</p>
-                                <p>#曹洞宗</p>
-                                <p>#禅</p>
-                                <p>#曹洞宗</p>
-                                <p>#曹洞宗</p>
-                                <p>#禅</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="notelist-item">
-                    <a href="">
-                        <!-- <div class="notelist-imagecap">
-                                    <figcaption>
-                                            <div class="">
-                                                    <p>新萬來舎(第二研究室)</p>
-                                                    <p>新萬來舎(第二研究室)</p>
-                                                </div>
-                                                <div class="">
-                                                    <p>URI: NOG_1006</p>
-                                                    <p>URI: NOG_1006</p>
-                                                    <p>URI: NOG_1006</p>
-                                                </div>
-                                    </figcaption>
-                                </div> -->
-                        <div class="notelist-info">
-                            <h5 class="notelist-title">舞踏：越境する身体</h5>
-                            <p class="notelist-abs">
-                                土方巽の《禁色》（1959）発表から半世紀が過ぎ、舞踏は国や地域を越えた広がりを見せています。世界の各地でパフォーマンスやワークショップが開催されているほか、様々な研究者により舞踏研究が行われています。「舞踏：越境する身体」では
-                            </p>
-                            <div class="noteitemtag-row">
-                                <p>#禅</p>
-                                <p>#曹洞宗</p>
-                                <p>#禅</p>
-                                <p>#曹洞宗</p>
-                                <p>#曹洞宗</p>
-                                <p>#禅</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
             </div>
         </div>
     </div>

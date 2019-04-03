@@ -46,6 +46,27 @@
       padding-bottom: 25px;
     }
   }
+  .index-mod {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    p,
+    h5 {
+      font-family: $culnarra-go;
+      font-size: 13px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    img {
+      text-align: center;
+      max-height: 200px;
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .index-card-1 {
     grid-column: 2;
     grid-row: 2;
@@ -132,7 +153,7 @@
       padding-top: 40px;
       padding-bottom: 44px;
       position: relative;
-      
+
       .index-notetitle {
         padding-bottom: 2em;
         &:before {
@@ -154,9 +175,9 @@
       .index-notebody {
         // padding-bottom: 44px;
         font-size: 1em;
-          line-height: 2em;
-          font-family: $yu-min;
-          overflow: hidden;
+        line-height: 2em;
+        font-family: $yu-min;
+        overflow: hidden;
       }
     }
   }
@@ -164,20 +185,55 @@
 .secondary-index-wrap {
   display: grid;
   grid-template-columns: 1fr 327px 327px 327px 327px 1fr;
-  grid-template-rows: minmax(286px,auto) 330px 330px 330px 250px 250px 1fr;
+  grid-template-rows: minmax(286px, auto) 330px 330px 330px 330px 250px 1fr;
   // grid-template-columns: 325px 325px 325px 325px 325px 325px;
   // grid-template-rows: 309px 309px 309px 309px 309px 309px;
   grid-column-gap: 20.5px;
   grid-row-gap: 46px;
   overflow: hidden;
   padding-top: 57px;
+  .index-mod {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    p,
+    h5 {
+      font-family: $culnarra-go;
+      font-size: 13px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    img {
+      text-align: center;
+      max-height: 200px;
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .index-projmod {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    h5 {
+      font-size: 22px;
+      line-height: 30px;
+      font-family: $culnarra-go;
+    }
+    p{
 
+    }
+  }
   .snd-index-img {
     overflow: hidden;
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 3;
+    overflow: hidden;
     img {
       max-width: 100%;
     }
@@ -189,6 +245,7 @@
     grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 7;
+    overflow: hidden;
     img {
       max-width: 100%;
     }
@@ -210,6 +267,7 @@
     border-color: black;
     border-width: 1pt;
     border-style: solid;
+    overflow: hidden;
   }
   .snd-card-2 {
     grid-column-start: 2;
@@ -218,6 +276,7 @@
     grid-row-end: 4;
     border-color: black;
     border-width: 1pt;
+    overflow: hidden;
     border-style: solid;
   }
   .snd-card-3 {
@@ -225,6 +284,7 @@
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+    overflow: hidden;
     border-color: black;
     border-width: 1pt;
     border-style: solid;
@@ -234,6 +294,7 @@
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
+    overflow: hidden;
     border-color: black;
     border-width: 1pt;
     border-style: solid;
@@ -243,6 +304,7 @@
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
+    overflow: hidden;
     border-color: black;
     border-width: 1pt;
     border-style: solid;
@@ -255,6 +317,12 @@
     border-color: black;
     border-width: 1pt;
     border-style: solid;
+  }
+  .note-bar {
+    position: absolute;
+    content: " ";
+    left: 2em;
+    background-color: $green;
   }
   .note-module {
     overflow: hidden;
@@ -278,7 +346,7 @@
           bottom: 3em;
           width: 50%;
           text-align: center;
-          height: 1.2em;
+          height: 1.8em;
           background-image: -webkit-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
           background-image: -moz-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
           background-image: -ms-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
@@ -288,9 +356,11 @@
       }
       .index-notebody {
         // padding-bottom: 44px;
+        // margin-bottom: 20px;
+        max-height: 200px;
         font-size: 1em;
-          line-height: 2em;
-          font-family: $yu-min;
+        line-height: 2em;
+        font-family: $yu-min;
       }
     }
   }

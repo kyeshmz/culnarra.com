@@ -8,7 +8,20 @@
             <hr class="event-bar">
             <hr class="abstract-bar">
         </div>
-        {{ partial "event/event-relatedtag.html" . }}
+        <div class="relation related-tag">
+                <div class="related-tag-feed">
+                    <!-- need to range so that first 5 or so get layed out then add a linebreak -->
+                    <ul>
+                        {{ range where .Site.RegularPages "Section" "event"}}
+                        {{ range .Params.tag }}
+                        <a href="{{ . | relURL }}">
+                            <li class="related-tag-item"> #{{ . }}</li>
+                        </a>
+                        {{ end }}
+                        {{end }}
+                    </ul>
+                </div>
+            </div>
         <div class="eventlist-wrap">
             <div class="eventlist-item">
                 <div class="eventlist-image">

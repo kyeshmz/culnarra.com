@@ -20,6 +20,10 @@ fields:
   name: tag
   label: "【メタデータ】Card Tag"
   description: Tag about the card
+- type: tag_list
+  name: tag_en
+  label: "【メタデータ】Card Tag"
+  description: Tag about the card
 - name: date
   label: "【アブストラクト】Date"
   type: datetime
@@ -119,7 +123,7 @@ fields:
   label: "【メインコンテンツ】Card Reference"
   description: カード自体のレファレンス欄
   config:
-    required: true
+    required: false
     wysiwyg: true
     schema:
       format: markdown

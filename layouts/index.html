@@ -14,92 +14,57 @@
                 <h4>更新履歴</h4>
                 <ul>
                     <li>
-                        ■「東京ビエンナーレ1970」展示再構成図をオンライン公開
+                        <a href="https://medium.com/@culnarra/about-website-9e7756926282">■ウェブサイト（プロトタイプ版）について</a>
                     </li>
                     <li>
-                        ■「東京ビエンナーレ1970」展示再構成図をオンライン公開
+                        <a href="https://medium.com/@culnarra/intern-blog-93ae3c2e0500">■カルナラ！インターン生ブログを始めました</a>
                     </li>
-                    <li>
-                        ■「東京ビエンナーレ1970」展示再構成図をオンライン公開
-                    </li>
-                    <li>
-                        ■「東京ビエンナーレ1970」展示再構成図をオンライン公開
-                    </li>
-                    <li>
-                        ■「東京ビエンナーレ1970」展示再構成図をオンライン公開
-                    </li>
+                
 
                 </ul>
             </div>
-            <div class="index-card-1">
+            <div class="index-card-1 index-mod">
                 <a href="">
                     <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     <img src="{{ "/img/index/index-1.jpg" | relURL }}">
                 </a>
             </div>
-            <div class="index-card-2">
+            <div class="index-card-2 index-mod">
                 <a href="">
                     <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
                 </a>
             </div>
             <div class="index-tags">
-                <ul>
-                    <div class="index-tags-row">
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
+                <div class="relation related-tag">
+                    <div class="related-tag-feed">
+                        <!-- need to range so that first 5 or so get layed out then add a linebreak -->
+                        <ul>
+                            {{ range where .Site.RegularPages "Section" "project"}}
+                            {{ range .Params.tag }}
+                            <a href="{{ . | relURL }}">
+                                <li class="related-tag-item"> #{{ . }}</li>
+                            </a>
+                            {{ end }}
+                            {{end }}
+                        </ul>
                     </div>
-                    <div class="index-tags-row">
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                    </div>
-                    <div class="index-tags-row">
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                        <a href="">
-                            <li>#江戸時代</li>
-                        </a>
-                    </div>
-                </ul>
+                </div>
             </div>
-            <div class="index-card-3">
+            <div class="index-card-3 index-mod">
                 <a href="">
                     <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
                 </a>
             </div>
             <!-- grid row 4 -->
-            <div class="index-card-4">
+            <div class="index-card-4 index-mod">
                 <a href="">
                     <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
                 </a>
             </div>
-            <div class="index-card-5">
+            <div class="index-card-5 index-mod">
                 <a href="">
                     <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
@@ -131,10 +96,10 @@
                         <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     </a>
         </div> -->
-        <div class="snd-card-1">
+        <div class="snd-card-1 index-projmod">
             <a href="">
                 <h5>ARTEFACT 02 特集：インターンシップ</h5>
-                <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
+
             </a>
         </div>
         <div class="snd-card-2 note-module">
@@ -152,13 +117,13 @@
             </div>
 
         </div>
-        <div class="snd-card-3">
+        <div class="snd-card-3 index-mod">
             <a href="">
                 <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                 <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
             </a>
         </div>
-        <div class="snd-card-4">
+        <div class="snd-card-4 index-mod">
             <a href="">
                 <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                 <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
@@ -167,7 +132,7 @@
         <div class="snd-index-img2">
             <img src="{{ "/img/index/index-2.jpg" | relURL }}">
         </div>
-        <div class="snd-card-5">
+        <div class="snd-card-5 index-mod">
             <a href="">
                 <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                 <img src="{{ "/img/pj1_bw.jpg" | relURL }}">
@@ -176,6 +141,7 @@
         <div class="snd-card-6 note-module">
             <div class="index-note">
                 <a href="{{ "/event/sengakuji/" | relURL }}">
+                    <div class="note-bar"></div>
                     <!-- 1 -->
                     <h5 class="index-notetitle">禅の精神が教えてくれる「気づく」こと
                     </h5>
