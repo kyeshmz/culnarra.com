@@ -40,7 +40,7 @@ meta_place = "35.653063, 139.760510"
 meta_topic_category = ["画廊", "美術"]
 meta_topic_category_en = ["Gallery", "Art"]
 modified_date = "2019.03.31 YH"
-ogp_image = ""
+ogp_image = "/img/event/ogp/event3-2-ogp.jpg"
 reference_cards = ["横田茂ギャラリー", "JCRI"]
 reference_cards_en = ["Shigeru Yokota Gallery", "JCRI"]
 related_ptag = "横田茂ギャラリー"
@@ -49,6 +49,7 @@ tag = ["横田茂ギャラリー", "現代美術", "画廊", "竹芝", "アー�
 tag_en = ["Shigeru Yokota Gallery", "Contemporary Art", "Gallery", "Takeshiba", "Archive"]
 title_eng = "Guided tour and Talk \"Gallery and Publicness\"　"
 title_jp = "特別見学＋トーク「ギャラリーと公共性」"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
