@@ -54,5 +54,6 @@ yt_videourl = ""
 [[image_credit]]
 credit_text = "* 赤穂義士記念館\n* CC BY 4.0\n* クレジット：赤穂義士記念館 撮影：慶應義塾大学アート・センター"
 credit_text_en = "* Ako Gishi's Memorial Hall\n* CC BY 4.0\n* Ako Gishi's Memorial Hall, photo by Keio University Art Center"
+project_image = "/img/card/card2.jpg"
 
 +++
