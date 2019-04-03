@@ -40,14 +40,16 @@ meta_place = "35.632992, 139.732865"
 meta_topic_category = ["食文化", "美術"]
 meta_topic_category_en = ["Food Culture", "Art"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card9-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "味の素食の文化センター"
 related_ptag_en = "Sogetsu Foundation"
 tag = ["食文化", "江戸", "錦絵", "アーカイヴ", "ライブラリー", " 高輪"]
 tag_en = ["Food Culture", "Edo", "Ukiyo-e", "Archive", "Library", "Takanawa"]
 title_eng = "Ajinomoto Foundation For Dietary Culture"
 title_jp = "味の素食の文化センター"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
