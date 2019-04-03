@@ -17,6 +17,18 @@ fields:
   name: meta_giho
   description: 技法・アプローチカテゴリー
 - type: tag_list
+  label: "【メタデータ】技法"
+  name: meta_giho_en
+  description: 技法・アプローチカテゴリー
+- type: tag_list
+  name: meta_topic_category
+  label: "【メタデータ】主題・トピックカテゴリー"
+  description: 主題・トピックカテゴリー
+  - type: tag_list
+  name: meta_topic_category_en
+  label: "【メタデータ】主題・トピックカテゴリー ENGLISH"
+  description: 主題・トピックカテゴリー
+- type: tag_list
   name: tag
   label: "【メタデータ】Card Tag"
   description: Tag about the card
@@ -40,8 +52,24 @@ fields:
   name: related_ptag
   description: 関連コンテンツのキーワード / ptag
 - type: text
+  label: "【関連コンテンツ】pTag"
+  name: related_ptag_en
+  description: 関連コンテンツのキーワード / ptag
+- type: text
+  label: "【メタデータ】所管"
+  name: meta_jurisdiction
+  description: 'Jurisdiction of project '
+- type: text
+  label: "【メタデータ】所管 ENGLISH"
+  name: meta_jurisdiction_en
+  description: 'Jurisdiction of project '
+- type: text
   label: "【メタデータ】カード作成者"
   name: meta_author
+  description: Metadata for author
+- type: text
+  label: "【メタデータ】カード作成者 ENGLISH"
+  name: meta_author_en
   description: Metadata for author
 - type: text
   label: 改訂履歴
@@ -51,10 +79,31 @@ fields:
   label: "【メタデータ】場所"
   name: meta_place
   description: メタデータ　場所
-- type: text
-  label: "【メタデータ】所管"
-  name: meta_jurisdiction
-  description: 'Jurisdiction of project '
+- type: textarea
+  name: card_reference
+  label: "【メインコンテンツ】Card Reference"
+  description: カード自体のレファレンス欄
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: meta_credit
+  label: 制作クレジット
+  description: 'credit for the work '
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: meta_credit_en
+  label: 制作クレジット ENGLISH
+  description: 'credit for the work '
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: file
   name: ogp_image
   label: "【アブストラクト】Main Image"
@@ -86,10 +135,24 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-- type: tag_list
-  name: meta_topic_category
-  label: "【メタデータ】主題・トピックカテゴリー"
-  description: 主題・トピックカテゴリー
+- type: textarea
+  name: abstract_content_en
+  label: "【アブストラクト】Card Abstract Long "
+  description: Abstract of the card MD 表記
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: abstract_content_short_en
+  label: "【アブストラクト】Card Abstract Short"
+  description: Abstract of the card MD 表記
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+
 - type: text
   name: layout
   label: layout
@@ -119,15 +182,6 @@ fields:
   label: カードの種類
   description: 'Card type '
 - type: textarea
-  name: card_reference
-  label: "【メインコンテンツ】Card Reference"
-  description: カード自体のレファレンス欄
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-- type: textarea
   name: event_place
   label: event place
   description: Event Place
@@ -151,14 +205,7 @@ fields:
   name: event_organizer
   label: Event Organizer
   description: Who is organizing the event
-- type: textarea
-  name: meta_credit
-  label: 制作クレジット
-  description: 'credit for the work '
-  config:
-    wysiwyg: true
-    schema:
-      format: markdown
+
 - type: textarea
   name: event_date
   label: eventdate

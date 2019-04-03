@@ -23,9 +23,9 @@
             </div>
         </div>
         <div class="projectlist-wrap">
-            {{ range where .Site.RegularPages "Section" "note"}}
+            {{ range where .Site.RegularPages "Section" "project"}}
             <div class="projectlist-item">
-                <a href="">
+                <a href=" {{ .Permalink }}">
 
                     <div class="projectlist-image">
                         <img src=" {{ .Params.ogp_image | relURL }} ">
@@ -45,7 +45,7 @@
                 </a>
             </div>
             {{end }}
-            <div class="projectlist-item">
+            <!-- <div class="projectlist-item">
                 <div class="projectlist-image">
                     <img src="{{ "/img/arte.png" | relURL }}">
                 </div>
@@ -75,7 +75,7 @@
                         <p>#禅</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>

@@ -6,14 +6,16 @@ description = ""
 baseURL = "http://localhost:1313"
 #baseURL = "https://kkshmz.github.io/culnarra/"
 #canonifyURLs = "true"
-
+defaultContentLanguageInSubdir = "true"
 
 [languages]
     [languages.en]
+        languageName = "English"
         title = "My blog"
         contentDir = "content/en"
-        weight = 2
+        weight = "2"
     [languages.jp]
+        languageName = "Japanese"
         title = "カルナラプロジェクト"
         contentDir = "content/jp"
-        weight = 1
+        weight = "1"

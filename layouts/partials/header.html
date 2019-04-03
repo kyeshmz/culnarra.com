@@ -1,5 +1,5 @@
 <div class="body-wrap">
-<header >
+<header>
     <div class="nav-menu row">
         <div class="row black-btm row-item nav-grow" id="nav-title">
             <h1 class="title"><a href="{{ .Site.BaseURL }}">Cultural Narrative of a City</a></h1>
@@ -15,7 +15,7 @@
         <nav>
                 <ul class="row-item row languages">
                         <li class=""><a href="{{ .Site.BaseURL }}">このサイトについて</a></li>
-                    <li class=""><a src="{{ .Site.BaseURL }}">English</a> / <a src="{{ .Site.BaseURL }}jp/">Japanese</a></li>
+                    <li class="">  {{ range .Translations }}<a src="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a> / <a src="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName}}</a> {{ end }}</li>
                 </ul>
         </nav>
     </div>
