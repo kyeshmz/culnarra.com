@@ -301,11 +301,12 @@ fields:
   label: "【イベント】レファレンスするカード ENGLISH"
   name: reference_cards_en
 pages:
-- content/jp/card/shigeru-yokota.md
 - content/jp/card/NHK-archives.md
 - content/jp/card/JCRI.md
 - content/jp/card/akogishi-memorial.md
 - content/jp/card/JCRI.md
+- content/jp/card/shigeru-yokota.md
+- content/jp/card/akogishi-memorial.md
 - content/jp/event/gallery-publicness.md
 - content/jp/event/architecture-forum.md
 - content/jp/card/Sogetsu.md
@@ -328,7 +329,6 @@ pages:
 - content/jp/card/shigeru-yokota.md
 - content/jp/card/zojoji.md
 - content/jp/card/KUAC.md
-- content/jp/card/akogishi-memorial.md
 - content/jp/card/sengakuji.md
 - content/jp/note/scholarship-zen.md
 - content/jp/note/possibility-publicness.md
