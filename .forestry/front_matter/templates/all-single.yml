@@ -298,6 +298,7 @@ fields:
   name: reference_cards
   label: "【イベント】レファレンスするカード"
 pages:
+- content/jp/card/zojoji.md
 - content/jp/card/akogishi-memorial.md
 - content/jp/project/ARTEFACT01.md
 - content/jp/project/ARTEFACT02.md
@@ -306,7 +307,6 @@ pages:
 - content/jp/note/scholarship-zen.md
 - content/jp/card/sengakuji.md
 - content/jp/card/KUAC.md
-- content/jp/card/zojoji.md
 - content/jp/card/shigeru-yokota.md
 - content/jp/card/Sogetsu.md
 - content/jp/card/ajinomotofoundation.md
