@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: content/jp/project
+  label: PROJECT JP
+  create: all
+  match: "**/*"
+  templates:
+  - all-single
+- type: directory
   path: content/jp/tag
   label: TAG JP
   create: all
