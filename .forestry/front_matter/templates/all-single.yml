@@ -97,6 +97,15 @@ fields:
     schema:
       format: markdown
 - type: textarea
+  name: card_reference_en
+  label: "【メインコンテンツ】Card Reference ENGLISH"
+  description: カード自体のレファレンス欄
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
   name: meta_credit
   label: 制作クレジット
   description: 'credit for the work '
