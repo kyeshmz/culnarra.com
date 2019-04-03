@@ -40,14 +40,16 @@ meta_place = "35.674066, 139.729230"
 meta_topic_category = ["美術", " 生け花", "音楽", "上演芸術"]
 meta_topic_category_en = ["Art", "Ikebana", "Music", "Performance"]
 modified_date = "2019-03-31　YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card8-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "草月会"
 related_ptag_en = ""
 tag = ["生け花", "現代美術", "現代音楽", "ジャズ", "舞台芸術", "映像", "赤坂"]
 tag_en = ["Ikebana", "Contemporary Art", "Contemporary Music", "Jazz", "Performing Arts", "Film ", "Akasaka"]
 title_eng = "Sogetsu Foundation"
 title_jp = "草月会"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
