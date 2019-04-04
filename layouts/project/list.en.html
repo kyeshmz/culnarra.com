@@ -3,7 +3,7 @@
 <body>
     <div class="body-wrap">
         <div id="global-header">
-            {{ partial "header.html" . }}
+            {{ partial "header-en.html" . }}
             {{ partial "card-logo.html" . }}
         </div>
         <div class="bar-wrap">
@@ -14,7 +14,7 @@
             <div class="related-tag-feed">
                 <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                 <ul>
-                        {{ range (where .Site.RegularPages "Section" "project" | first 1)}}
+                        {{ range (where .Site.RegularPages "Section" "project" | first 2)}}
                         {{ range .Params.tag_en }}
                         <!-- <a href=""> -->
                             <li class="related-tag-item"> #{{ . }}</li>

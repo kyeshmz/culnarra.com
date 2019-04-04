@@ -1,0 +1,38 @@
+<div class="content event-contentwrap">
+        <div class="info-item event-item event-approach">
+                        <p class="item-title">Method</p>
+                        {{ with delimit .Params.meta_giho_en ", " }}
+                        <p>{{ . }}</p>
+                        {{ end }}
+        </div>
+        <div class="info-item event-item event-topic">
+                        <p class="item-title">Subject</p>
+                        {{ with delimit .Params.meta_topic_category_en ", " }}
+                        <p>{{ . }}</p>
+                        {{ end }}
+        </div>
+        <div class="info-item event-item event-author">
+                        <p class="item-title">Tag</p>
+                        {{ with delimit .Params.tag_en ", " }}
+                                <p>{{ . }}</p>
+                                {{ end }}
+        </div>
+        <div class="info-item event-item event-revised">
+                <p class="item-title">Imprint</p>
+                <p>Creator : {{ .Params.meta_author_en }} </p>
+                <p>Revision : {{ .Params.modified_date }}</p>
+        </div>
+        <div class="event-content info-content">
+                 {{ with .Params.main_title_en }}<h3 class="event-content info-title">{{ . }}</h3> {{ end }} <hr>
+                {{ .Params.main_content_en | markdownify }}
+                <p>
+                   
+                </p>
+                {{ with .Params.card_reference_en }}
+                <h3>Reference</h3>
+                <p>
+                        {{ .  | markdownify}}
+                </p>
+                {{ end }}
+        </div>
+</div>

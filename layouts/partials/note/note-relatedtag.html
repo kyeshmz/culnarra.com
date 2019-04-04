@@ -1,18 +1,5 @@
 <div class="relation related-tag">
-        <div class="related-tag-feed">
-            <!-- need to range so that first 5 or so get layed out then add a linebreak -->
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-        </div>
-        <div class="related-tag-feed">
-            <!-- need to range so that first 5 or so get layed out then add a linebreak -->
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-            <h4 class="related-tag-item">#曹洞宗</h4>
-        </div>
+        <ul class="related-tag-feed">
+            {{ range .Params.tag  }} <li class="related-tag-item">#{{ . }}</li> {{ end }}
+        </ul>
     </div>

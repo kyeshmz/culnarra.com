@@ -1,11 +1,11 @@
 <div class="relation related-cards">
-        <h3>レファレンス<span class="card-color">カード</span></h3>
+        <h3>Reference<span class="card-color"> Cards</span></h3>
         <ul class="relatedcard-feed">
                 {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
                 {{ range $randomPosts }}
                 <div class="cardfeed-item">
                         <a href="{{ .Permalink }}">
-                            <h4>{{ .Params.title_jp }}</h4>
+                            <h4>{{ .Params.title_eng }}</h4>
                             <li class="img-item"><img src=" {{ .Params.ogp_image }}" alt="image"></li>
                         </a>
                     </div>

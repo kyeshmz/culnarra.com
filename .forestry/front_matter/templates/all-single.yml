@@ -209,26 +209,50 @@ fields:
   name: event_place
   label: event place
   description: Event Place
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_audience
   label: event audience
   description: event audience
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: text
   label: Event Fee
   name: event_fee
   description: Event Fee
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   label: Event Participate
   name: event_participate
   description: How to participate in the event
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_contact
   label: Event Contact
   description: Event contact
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_organizer
   label: Event Organizer
   description: Who is organizing the event
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_date
   label: eventdate
@@ -240,26 +264,50 @@ fields:
   name: event_place_en
   label: event place ENGLISH
   description: Event Place
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_audience_en
   label: event audience ENGLISH
   description: event audience
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: text
   label: Event Fee ENGLISH
   name: event_fee_en
   description: Event Fee ENGLISH
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   label: Event Participate ENGLISH
   name: event_participate_en
   description: How to participate in the event
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_contact_en
   label: Event Contact ENGLISH
   description: Event contact
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_organizer_en
   label: Event Organizer ENGLISH
   description: Who is organizing the event
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: textarea
   name: event_date_en
   label: eventdate ENGLISH

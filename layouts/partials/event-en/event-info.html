@@ -1,0 +1,39 @@
+<div class="event-info">
+        <h3 class="event-infotitle">イベント関係情報</h3>
+        <div class="event-infogrid">
+            <div class="event-infoitem">
+                <div class="event-infoitem-child">
+                    <h5>［Date］</h5>
+                    <p>{{ .Params.event_date_en }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［Venue］</h5>
+                    <p> {{ .Params.event_place_en }} </p>
+                </div>
+                
+                <div class="event-infoitem-child">
+                    <h5>[Audience]</h5>
+                    <p>{{ .Params.event_audience_en }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［Cost］</h5>
+                    <p>{{ .Params.event_fee_en }}</p>
+                </div>
+            </div>
+            <div class="event-infoitem">
+                <div class="event-infoitem-child">
+                    <h5>［Bookings］</h5>
+                    <p>{{ .Params.event_participate_en }}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［Enquiries］</h5>
+                    <p> {{ .Params.event_contact_en | markdownify}}</p>
+                </div>
+                <div class="event-infoitem-child">
+                    <h5>［Production］</h5>
+                    <p> {{ .Params.event_organizer_en | markdownify }}/p>
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -3,7 +3,7 @@
         <h3>参照された<span class="project-color">プロジェクト</span></h3>
 
         <ul class="relatedprj-feed glide__slides">
-                {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
+                {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "project") | first 4 }}
                 {{ range $randomPosts }}
             <div class="prjfeed-item">
                 <a href=" {{ .Permalink }}">

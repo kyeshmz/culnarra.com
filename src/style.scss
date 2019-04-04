@@ -345,6 +345,7 @@ h1.title {
       h4,h5 {
         text-align: left;
         padding-bottom: 30px;
+        white-space: nowrap;
       }
       // &:first-child {
       //   padding-left: 23px;
@@ -360,6 +361,7 @@ h1.title {
       // }
       img{
         height: 100%;
+        overflow: hidden;
       }
     }
   }
