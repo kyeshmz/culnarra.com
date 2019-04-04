@@ -3,7 +3,7 @@
         <ul class="relatedcard-feed">
                 {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
                 {{ range $randomPosts }}
-            <div class="cardfeed-item">
+            <div class="cardfeed-item card-tab">
                 <a href="{{ .Permalink }}">
                     <h4>{{ .Params.title_eng }}</h4>
                     <li class="img-item"><img src=" {{ .Params.ogp_image }}" alt="image"></li>

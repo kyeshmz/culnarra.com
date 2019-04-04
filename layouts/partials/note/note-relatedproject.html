@@ -5,7 +5,7 @@
             <ul class="relatedprj-feed glide__slides">
                     {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "project") | first 4 }}
                     {{ range $randomPosts }}
-                <div class="prjfeed-item">
+                <div class="prjfeed-item prj-tab">
                     <a href=" {{ .Permalink }}">
                         <li>
                             <h5>{{ .Params.title_jp }}</h5>

@@ -19,6 +19,7 @@
     border-style: solid;
     align-items: center;
     padding-bottom: 20px;
+    position: relative;
     .eventlist-info {
       padding-left: 25px;
       padding-right: 25px;
@@ -109,7 +110,7 @@
       padding-left: 25px;
       padding-right: 25px;
       max-width: 100%;
-      background-color: $purple;
+     
       position: relative;
       img {
         width: 100%;
@@ -143,6 +144,7 @@
 
   padding-bottom: 272px;
   .cardlist-item {
+    position: relative;
     overflow: hidden;
     border-color: black;
     border-width: 1px;
@@ -236,7 +238,7 @@
       padding-left: 25px;
       padding-right: 25px;
       max-width: 100%;
-      background-color: $purple;
+     
       img {
         width: 100%;
         height: 183px;
@@ -264,6 +266,7 @@
     border-width: 1px;
     border-style: solid;
     align-items: center;
+    position: relative;
     .projectlist-abs {
       padding-bottom: 10px;
     }
@@ -359,6 +362,7 @@
     border-width: 1px;
     border-style: solid;
     align-items: center;
+    position: relative;
   }
   .notelist-info {
     padding-left: 30px;

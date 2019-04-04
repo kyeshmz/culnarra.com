@@ -3,7 +3,7 @@
     <ul class="relatednote-feed">
             {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "note") | first 4 }}
             {{ range $randomPosts }}
-        <div class="notefeed-item">
+        <div class="notefeed-item note-tab">
             <a href=" {{ .Permalink }}">
                 <li>
                     <h5>{{ .Params.title_jp }}</h5>

@@ -26,7 +26,7 @@
         </div>
         <div class="cardlist-wrap">
             {{ range where .Site.RegularPages "Section" "card"}}
-            <div class="cardlist-item">
+            <div class="cardlist-item card-tab">
                 <a href=" {{ .Permalink }}">
                     <div class="cardlist-image">
                         <img src=" {{ .Params.ogp_image | relURL }} ">

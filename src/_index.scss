@@ -1,6 +1,61 @@
 @import "mixins.scss";
-
+.card-tab {
+  &:after {
+    content: "";
+    background-color: $purple;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 5px;
+  }
+}
+.event-tab {
+  &:after {
+    content: "";
+    background-color: $grey;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 5px;
+  }
+}
+.prj-tab {
+  &:after {
+    content: "";
+    background-color: $orange;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 5px;
+  }
+}
+.note-tab {
+  &:after {
+    content: "";
+    background-color: $green;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 5px;
+  }
+}
+.black-tab {
+  &:after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 5px;
+  }
+}
 .index-wrap {
+  display: relative;
   padding-top: 50px;
   // padding-bottom: 77px;
 
@@ -48,7 +103,7 @@
     line-height: 1.8em;
     font-size: 1em;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
     padding: 30px;
     overflow: hidden;
@@ -75,7 +130,7 @@
     padding-right: 32px;
     padding-top: 41px;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
     h4 {
       padding-bottom: 35px;
@@ -85,6 +140,7 @@
     }
   }
   .index-mod {
+    position: relative;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
@@ -110,7 +166,7 @@
     grid-row: 2;
 
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .index-card-2 {
@@ -118,7 +174,7 @@
     grid-column-end: 4;
     grid-row: 2;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .index-card-3 {
@@ -126,7 +182,7 @@
     grid-column-end: 4;
     grid-row: 3;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .index-card-4 {
@@ -135,7 +191,7 @@
     grid-row-start: 4;
     grid-row-end: 5;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .index-card-5 {
@@ -144,7 +200,7 @@
     grid-row-start: 4;
     grid-row-end: 5;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .index-card-6 {
@@ -153,7 +209,7 @@
     grid-row-start: 4;
     grid-row-end: 5;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .index-tags {
@@ -186,6 +242,7 @@
     border-style: solid;
     align-items: center;
     overflow: hidden;
+    position: relative;
     .index-note {
       padding-left: 30px;
       padding-right: 30px;
@@ -196,6 +253,12 @@
       .index-notetitle {
         padding-bottom: 2em;
         white-space: nowrap;
+        font-size: 13px;
+        line-height: 20px;
+        font-family: $culnarra-go;
+        
+        white-space: nowrap;
+        position: relative;
         &:before {
           content: "\200C";
           display: block;
@@ -221,6 +284,21 @@
         p{
           overflow: hidden;
         }
+        &:before {
+          content: "\200C";
+          display: block;
+          position: absolute;
+          right: 1em;
+          bottom: 2.6em;
+          width: 50%;
+          text-align: center;
+          height: 1.8em;
+          background-image: -webkit-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: -moz-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: -ms-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: -o-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: linear-gradient(to left, #f3f3f3, rgba(255, 255, 255, 0));
+        }
       }
     }
   }
@@ -228,7 +306,7 @@
 .secondary-index-wrap {
   display: grid;
   grid-template-columns: 1fr 327px 327px 327px 327px 1fr;
-  grid-template-rows: minmax(286px, auto) 330px 270px 330px 330px 330px 1fr;
+  grid-template-rows: minmax(286px, auto) 330px 270px 330px 330px 270px 1fr;
   // grid-template-columns: 325px 325px 325px 325px 325px 325px;
   // grid-template-rows: 309px 309px 309px 309px 309px 309px;
   grid-column-gap: 20.5px;
@@ -236,6 +314,7 @@
   overflow: hidden;
   padding-top: 57px;
   .index-mod {
+    position: relative;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
@@ -246,6 +325,7 @@
       font-size: 13px;
       line-height: 20px;
       margin-bottom: 10px;
+      padding-bottom: 15px
     }
     img {
       text-align: center;
@@ -254,9 +334,11 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+
     }
   }
   .index-projmod {
+    position: relative;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
@@ -304,7 +386,7 @@
   //   grid-row-start: 1;
   //   grid-row-end: 2;
   //   border-color: black;
-  //   border-width: 1pt;
+  //   border-width: 1px;
   //   border-style: solid;
   // }
   .snd-card-1 {
@@ -313,7 +395,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
     overflow: hidden;
   }
@@ -323,7 +405,7 @@
     grid-row-start: 3;
     grid-row-end: 4;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     overflow: hidden;
     border-style: solid;
   }
@@ -334,7 +416,7 @@
     grid-row-end: 5;
     overflow: hidden;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .snd-card-4 {
@@ -344,7 +426,7 @@
     grid-row-end: 5;
     overflow: hidden;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .snd-card-5 {
@@ -354,7 +436,7 @@
     grid-row-end: 6;
     overflow: hidden;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .snd-card-6 {
@@ -363,7 +445,7 @@
     grid-row-start: 6;
     grid-row-end: 7;
     border-color: black;
-    border-width: 1pt;
+    border-width: 1px;
     border-style: solid;
   }
   .note-bar {
@@ -373,6 +455,7 @@
     background-color: $green;
   }
   .note-module {
+    position: relative;
     overflow: hidden;
     border-color: black;
     border-width: 1px;
@@ -385,6 +468,7 @@
       padding-bottom: 44px;
       position: relative;
       .index-notetitle {
+        position: relative;
         padding-bottom: 2em;
         white-space: nowrap;
         &:before {

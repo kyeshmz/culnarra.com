@@ -342,6 +342,7 @@ h1.title {
       margin-left: 30px;
       margin-right: 5px;
       padding: 25px;
+      position: relative;
       h4,h5 {
         text-align: left;
         padding-bottom: 30px;
@@ -426,6 +427,7 @@ h1.title {
   }
   .relatednote-feed {
     .notefeed-item {
+      position: relative;
       margin-left: auto;
       margin-right: auto;
       max-width: 676.5px;
@@ -440,6 +442,7 @@ h1.title {
       // overflow: hidden;
       position: relative;
       height: 270px;
+      word-break: normal;
       &:before {
         // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
         content: "\200C";
@@ -611,6 +614,7 @@ h1.title {
   }
   .relatedcard-feed {    
     .cardfeed-item {
+      position: relative;
       align-items: center;
       margin-left: 9px;
       margin-right: 9px;

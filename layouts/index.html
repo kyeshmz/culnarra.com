@@ -13,6 +13,7 @@
         <div class="index-wrap">
             {{ partial "blkbox-logo.html" . }}
             <div class="index-items index-about">
+                
                 <h4>都市のカルチュラル・ナラティヴ</h4>
                 <p>今昔の文化資源や、文化を巡る学術的な成果を相互に連結し、多様な文化の物語（カルチュラル・ナラティヴ）を形づくるプロジェクト。このウェブサイトは、文化の物語を紡いでゆくための情報を集めた、カード型レファレンス集です。
                     カード：地域の文化機関や文化資源の情報
@@ -34,7 +35,8 @@
 
                 </ul>
             </div>
-            <div class="index-card-1 index-mod">
+            <div class="index-card-1 index-mod card-tab">
+                <!-- <div class="card-tab"></div> -->
                 {{ with .Site.GetPage "page" "/card/zojoji"}}
                 <a href="{{ .Permalink }}">
                     <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -42,7 +44,7 @@
                 </a>
                 {{ end }}
             </div>
-            <div class="index-card-2 index-mod">
+            <div class="index-card-2 index-mod event-tab">
                 {{ with .Site.GetPage "page" "/event/architecture-forum"}}
                 <a href="{{ .Permalink }}">
                     <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -69,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="index-card-3 index-mod">
+            <div class="index-card-3 index-mod card-tab">
                 {{ with .Site.GetPage "page" "/card/Sogetsu"}}
                 <a href="{{ .Permalink }}">
                     <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -78,7 +80,7 @@
                 {{ end }}
             </div>
             <!-- grid row 4 -->
-            <div class="index-card-4 index-mod">
+            <div class="index-card-4 index-mod card-tab">
                 {{ with .Site.GetPage "page" "/card/toraya-archives"}}
                 <a href="{{ .Permalink }}">
                     <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -86,7 +88,7 @@
                 </a>
                 {{ end }}
             </div>
-            <div class="index-card-5 index-mod">
+            <div class="index-card-5 index-mod event-tab">
                 {{ with .Site.GetPage "page" "/event/ryugenji"}}
                 <a href="{{ .Permalink }}">
                     <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -94,7 +96,7 @@
                 </a>
                 {{ end }}
             </div>
-            <div class="index-card-6 note-module">
+            <div class="index-card-6 note-module note-tab">
                 <div class="index-note">
                     {{ with .Site.GetPage "page" "/note/scholarship-zen"}}
                     <a href="{{ .Permalink }}">
@@ -120,7 +122,7 @@
                         <p>アデレードフェスティバル「Masterkey」「形而情學其の五　野花の露」（パリ）</p>
                     </a>
         </div> -->
-        <div class="snd-card-1 index-projmod">
+        <div class="snd-card-1 index-projmod prj-tab">
             {{ with .Site.GetPage "page" "/project/ARTEFACT02"}}
             <a href="{{ .Permalink }}">
                 <h5> {{ .Params.title_jp }}</h5>
@@ -128,7 +130,7 @@
             </a>
             {{ end }}
         </div>
-        <div class="snd-card-2 note-module">
+        <div class="snd-card-2 note-module note-tab">
             <div class="index-note">
                     {{ with .Site.GetPage "page" "/note/realization-zen"}}
                 <a href="{{ .Permalink }}">
@@ -144,7 +146,7 @@
             </div>
 
         </div>
-        <div class="snd-card-3 index-mod">
+        <div class="snd-card-3 index-mod card-tab">
             {{ with .Site.GetPage "page" "/card/KUAC"}}
             <a href="{{ .Permalink }}">
                 <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -152,7 +154,7 @@
             </a>
             {{ end }}
         </div>
-        <div class="snd-card-4 index-mod">
+        <div class="snd-card-4 index-mod card-tab">
             {{ with .Site.GetPage "page" "/card/ajinomotofoundation"}}
             <a href="{{ .Permalink }}">
                 <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -164,7 +166,7 @@
             <img src="{{ "/img/index/index-2.jpg" | relURL }}">
 
         </div>
-        <div class="snd-card-5 index-mod">
+        <div class="snd-card-5 index-mod card-tab">
             {{ with .Site.GetPage "page" "/card/JCRI"}}
             <a href="{{ .Permalink }}">
                 <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
@@ -172,7 +174,7 @@
             </a>
             {{ end }}
         </div>
-        <div class="snd-card-6 note-module">
+        <div class="snd-card-6 note-module event-tab">
             <div class="index-note">
                 {{ with .Site.GetPage "page" "/event/sengakuji"}}
                 <a href="{{ .Permalink }}">

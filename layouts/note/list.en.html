@@ -31,7 +31,7 @@
             </div>
             <div class="notelist-wrap">
                 {{ range where .Site.RegularPages "Section" "note"}}
-                <div class="notelist-item">
+                <div class="notelist-item note-tab">
                     <a href="{{ .Permalink }}">
                         <div class="notelist-info">
                             <h5 class="notelist-title">{{ .Params.title_eng }}</h5>
