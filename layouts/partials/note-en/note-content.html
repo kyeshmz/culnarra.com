@@ -1,0 +1,46 @@
+<div class="content note-contentwrap">
+        <div class="info-item note-item note-approach">
+                <p class="item-title">技法</p>
+                {{ with delimit .Params.meta_giho ", " }}
+                <p>{{ . }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item note-item note-topic">
+                <p class="item-title">主題</p>
+                {{ with delimit .Params.meta_topic_category ", " }}
+                <p>{{ . }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item note-item note-tag">
+                <p class="item-title">タグ</p>
+                {{ with delimit .Params.tag ", " }}
+                <p>{{ . }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item note-item note-author">
+                <p class="item-title">奥付</p>
+                {{ with  .Params.meta_author  }}
+                <p>カード作成者 : {{ . }}</p>
+                {{ end }}
+                {{ with .Params.modified_date  }}
+                <p>改訂履歴（日付、編者）: {{ . }}</p>
+                {{ end }}
+                {{ with .Params.meta_place  }}
+                <p>日付・場所: {{ . }}</p>
+                {{ end }}
+                
+        </div>
+        <div class="note-content info-content">
+                {{ with .Params.main_title }}<h3 class="note-content info-title">{{ . }}</h3> {{ end }}
+                {{ .Params.main_content | markdownify }}
+                <p>
+
+                </p>
+                {{ with .Params.card_reference }}
+                <h3>レファレンス</h3>
+                <p>
+                        {{ .  | markdownify}}
+                </p>
+                {{ end }}
+        </div>
+</div>

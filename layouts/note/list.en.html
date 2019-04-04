@@ -3,7 +3,7 @@
 <body>
     <div class="body-wrap">
         <div id="global-header">
-            {{ partial "header.html" . }}
+            {{ partial "header-en.html" . }}
             {{ partial "card-logo.html" . }}
         </div>
         <div class="main">
@@ -16,13 +16,13 @@
                 <div class="related-tag-feed">
 
                     <ul>
-                        {{ range where .Site.RegularPages "Section" "note"}}
-                        {{ range .Params.tag }}
+                            {{ range (where .Site.RegularPages "Section" "note" | first 1)}}
+                            {{ range .Params.tag_en }}
                         <a href="{{ . | relURL }}">
                             <li class="related-tag-item"> #{{ . }}</li>
                         </a>
                         {{ end }}
-                        {{end }}
+                        {{ end }}
                     </ul>
                     <!-- need to range so that first 5 or so get layed out then add a linebreak -->
 
@@ -34,12 +34,12 @@
                 <div class="notelist-item">
                     <a href="{{ .Permalink }}">
                         <div class="notelist-info">
-                            <h5 class="notelist-title">{{ .Params.title_jp}}</h5>
+                            <h5 class="notelist-title">{{ .Params.title_eng }}</h5>
                             <p class="notelist-abs">
-                                {{ .Params.abstract_content_short }}
+                                {{ .Params.abstract_content_short_en }}
                             </p>
                             <div class="noteitemtag-row">
-                                {{ range .Params.tag }}
+                                {{ range .Params.tag_en }}
                                 <a href=" {{  .  | relURL}}">
                                     <p>#{{ . }}</p>
                                 </a>
@@ -52,7 +52,7 @@
             </div>
         </div>
     </div>
-    {{ partial "footer.html" . }}
+    {{ partial "footer-en.html" . }}
 </body>
 
 </html>

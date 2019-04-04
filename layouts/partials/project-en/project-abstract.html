@@ -1,0 +1,16 @@
+<div class="abstract-wrap">
+    <div class="abstract-title ">
+            {{ with .Params.title_eng }} <h2 class="abstitle-jp">{{ . }}</h2>{{ end }}
+            {{ with .Params.title_jp }}<h2 class="abstitle-en">{{ . }}</h2>{{ end }}
+    </div>
+    <div class="abstract-item">
+        {{ with .Params.abstract_content_en }}
+        <p> {{ . }}
+        </p>
+        {{ end }}
+    </div>
+    <div class="abstract-carousel">
+        {{ partial "project-en/project-carousel.html" . }}
+    </div>
+</div>
+<hr>

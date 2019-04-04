@@ -3,7 +3,7 @@
 <body>
     <div class="body-wrap">
         <div id="global-header">
-                {{ partial "header.html" . }}
+                {{ partial "header-en.html" . }}
                 {{ partial "card-logo.html" . }}
         </div>
         <div class="bar-wrap">
@@ -14,40 +14,44 @@
                 <div class="related-tag-feed">
                     <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                     <ul>
-                        {{ range where .Site.RegularPages "Section" "event"}}
-                        {{ range .Params.tag }}
-                        <a href="{{ . | relURL }}">
+                        {{ range (where .Site.RegularPages "Section" "event" | first 1)}}
+                        {{ range .Params.tag_en }}
+                        <!-- <a href=""> -->
                             <li class="related-tag-item"> #{{ . }}</li>
-                        </a>
+                        <!-- </a> -->
                         {{ end }}
                         {{end }}
                     </ul>
                 </div>
             </div>
         <div class="eventlist-wrap">
+                {{ range where .Site.RegularPages "Section" "event"}}
             <div class="eventlist-item">
+                    <a href=" {{ .Permalink }}">   
                 <div class="eventlist-image">
-                    <img src="{{ "/img/dummy2.jpg" | relURL }}">
-                    <span class="eventlist-date">Sep. 30</span>
+                    
+                    <img src=" {{ .Params.ogp_image }} ">
+                    <!-- <span class="eventlist-date">Sep. 30</span> -->
                 </div>
                 <div class="eventlist-info">
-                    <h5 class="eventlist-title">「泉岳寺と禅の文化」レポート</h5>
-                    <p class="eventlist-abs">堀川貴司は、日本の国文学者、慶應義塾大学教授。大阪府生まれ。東京学芸大学教育学部附属高等学校卒、</p>
+                    <h5 class="eventlist-title"> {{.Params.title_eng}}</h5>
+                
+                    <p class="eventlist-abs">[Date]：{{ .Params.event_date }}</br>
+                         [Place]：{{ .Params.event_place_en }}</p>
                     <div class="itemtag-row">
-                        <a href=""><p class="event-tag">#曹洞宗</p></a>
-                        <p>#曹洞宗</p>
-                        <p>#禅</p>
-                        <p>#曹洞宗</p>
-                        <p>#曹洞宗</p>
-                        <p>#禅</p>
-                        <p>#禅</p>
+                            {{ range .Params.tag_en }}
+                            <a>
+                                <p>#{{ . }}</p>
+                            </a>
+                            {{ end }}
                     </div>
                 </div>
             </div>
-
+            {{ end }}
+        </a>
         </div>
     </div>
-    {{ partial "footer.html" . }}
+    {{ partial "footer-en.html" . }}
 </body>
 
 </html>

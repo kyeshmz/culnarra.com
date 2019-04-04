@@ -22,8 +22,7 @@
         <div class="info-item card-item card-author">
                 <p class="item-title">奥付</p>
                 {{ with .Params.meta_author  }}<p> カード作成者: {{ . }}</p> {{ end }}
-                {{ with .Params.modified_date  }}<p> 改訂履歴（日付、編者）: {{ . }}</p> {{ end }}
-                {{ with .Params.meta_place  }}<p> 日付・場所: {{ . }}</p> {{ end }}
+                {{ with .Params.modified_date  }}<p> 改訂履歴: {{ . }}</p> {{ end }}
         </div>
         <div class="info-content card-content">
         

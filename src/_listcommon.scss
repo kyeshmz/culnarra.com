@@ -18,6 +18,7 @@
     border-width: 1px;
     border-style: solid;
     align-items: center;
+    padding-bottom: 20px;
     .eventlist-info {
       padding-left: 25px;
       padding-right: 25px;
@@ -57,6 +58,7 @@
     }
     .eventlist-abs {
       max-height: 200px;
+      padding-bottom: 20px;
   
       // &:before {
       //   // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
@@ -251,7 +253,7 @@
 .projectlist-wrap {
   display: grid;
   grid-template-columns: 327.5px 327.5px 327.5px 327.5px;
-  grid-template-rows: 909px 909px 909px;
+  grid-template-rows: minmax(909px,auto) minmax(909px,auto) minmax(909px,auto);
   grid-column-gap: 20px;
   grid-row-gap: 56px;
   overflow: hidden;
@@ -346,7 +348,7 @@
 .notelist-wrap {
   display: grid;
   grid-template-columns: 676px 676px;
-  grid-template-rows: 286.5px 286.5px 286.5px 286.5px 286.5px 286.5px;
+  grid-template-rows: minmax(286.5px,auto) minmax(286.5px,auto) minmax(286.5px,auto) minmax(286.5px,auto) minmax(286.5px,auto) minmax(286.5px,auto);
   grid-column-gap: 20px;
   grid-row-gap: 24px;
   overflow: hidden;
@@ -391,6 +393,26 @@
   }
   .notelist-title {
     padding-bottom: 2em;
+    white-space: nowrap;
+    &:before {
+      // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+      content: "\200C";
+      display: block;
+      position: absolute;
+      right: 0em;
+      //bottom: 1.85em;
+      top: 2.2em;
+      width: 50%;
+      // right: 1em;
+      text-align: center;
+      height: 1.2em;
+
+      background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+    }
   }
   .notelist-abs {
     max-height: 100px;

@@ -14,15 +14,11 @@
             <div class="related-tag-feed">
                 <!-- need to range so that first 5 or so get layed out then add a linebreak -->
                 <ul>
-                    {{range (where .Site.RegularPages "Section" "project")}}
-                    {{ $slice := slice }}
-                    {{ range  .Params.tag }}
-                    {{ $slice = $slice | append . | uniq}}
-                    {{ end }}
-                    {{ range $uniqueTags := $slice | uniq }}
-                    <a href="{{ . | relURL }}">
-                        <li class="related-tag-item"> # {{ $uniqueTags }}</li>
-                    </a>
+                        {{ range (where .Site.RegularPages "Section" "project" | first 1)}}
+                        {{ range .Params.tag_en }}
+                        <!-- <a href=""> -->
+                            <li class="related-tag-item"> #{{ . }}</li>
+                        <!-- </a> -->
                     {{ end }}
                     {{ end }}
 
@@ -39,11 +35,11 @@
                     </div>
 
                     <div class="projectlist-info">
-                        <h5 class="projectlist-title">{{ .Params.title_jp }}</h5>
-                        <p class="projectlist-abs">{{ .Params.abstract_content_short }}</p>
+                        <h5 class="projectlist-title">{{ .Params.title_eng }}</h5>
+                        <p class="projectlist-abs">{{ .Params.abstract_content_short_en }}</p>
                         <div class="projectitemtag-row">
-                            {{ range .Params.tag }}
-                            <a href=" {{  .  | relURL}}">
+                            {{ range .Params.tag_en }}
+                            <a href="">
                                 <p>#{{ . }}</p>
                             </a>
                             {{ end }}
@@ -87,7 +83,7 @@
         </div>
     </div>
 
-    {{ partial "footer.html" . }}
+    {{ partial "footer-en.html" . }}
 </body>
 
 </html>

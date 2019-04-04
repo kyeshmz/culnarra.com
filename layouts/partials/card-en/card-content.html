@@ -1,0 +1,49 @@
+<div class="content card-contentwrap">
+        <div class="info-item card-item card-approach">
+                <p class="item-title">Card Type</p>
+                {{ with delimit .Params.meta_cardtype_en ", " }}<p> {{ . }}</p> {{ end }}
+        </div>
+        <div class="info-item card-item card-topic">
+                <p class="item-title">Method</p>
+                {{ with delimit .Params.meta_giho_en ", " }}<p> {{ . }}</p> {{ end }}
+        </div>
+        <div class="info-item card-item card-tag">
+                <p class="item-title">Subject</p>
+                {{ with delimit .Params.meta_topic_category_en ", " }}<p> {{ . }}</p> {{ end }}
+        </div>
+        <div class="info-item card-item card-producer">
+                <p class="item-title">Tag</p>
+                {{ with delimit .Params.tag_en ", " }}<p> {{ . }}</p> {{ end }}
+        </div>
+        <div class="info-item card-item card-contact">
+                <p class="item-title">Jurisdiction</p>
+                {{ with .Params.meta_jurisdiction_en }}<p> {{ . }}</p> {{ end }}
+        </div>
+        <div class="info-item card-item card-author">
+                <p class="item-title">Imprint</p>
+                {{ with .Params.meta_author_en  }}<p> Creator: {{ . }}</p> {{ end }}
+                {{ with .Params.modified_date  }}<p> Revision: {{ . }}</p> {{ end }}
+                
+        </div>
+        <div class="info-content card-content">
+        
+                <h5 class="info-title card-title">About the Card</h5>
+                <hr>
+                {{ with .Params.abstract_content_en  }}
+                <p>
+                        {{ . | markdownify}}
+                </p>
+                {{ end }}
+                <div class="info-reference">
+                        <h5> Reference</h5>
+                        {{ with .Params.card_reference_en  }}
+                        <ul>
+                                <li>
+                                        {{ . | markdownify }}
+                                </li>
+                        </ul>
+                        {{ end }}
+                </div>
+        </div>
+        {{ .Content }}
+</div>

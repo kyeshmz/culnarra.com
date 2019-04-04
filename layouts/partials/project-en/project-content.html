@@ -1,0 +1,40 @@
+<div class="content project-contentwrap">
+        <div class="info-item project-item project-approach">
+                <p class="item-title">Method</p>
+                {{ with delimit .Params.meta_giho_en ", " }}
+                <p>{{ .  }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item project-item project-topic">
+                <p class="item-title">Subject</p>
+                {{ with delimit .Params.meta_topic_category_en ", " }}
+                <p>{{ . }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item project-item project-tag">
+                <p class="item-title">Tag</p>
+                {{ with delimit .Params.tag_en ", " }}
+                <p>{{ . }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item project-item project-producer">
+                <p class="item-title">Production</p>
+                {{ with .Params.meta_credit_en }}
+                <p>{{ . | markdownify }}</p>
+                {{ end }}
+        </div>
+        <div class="info-item project-item project-contact">
+                <p class="item-title">Imprint</p>
+                <p>Creator :</p>
+                {{ with .Params.meta_author_en }}<p>{{ . }}</p>{{ end }}
+                {{ with .Params.modified_date }}<p>{{ . }}</p>{{ end }}
+                {{ with .Date.Format "January 2, 2006" }}<p>{{ . }}</p>{{ end }}
+        </div>
+        <div class="project-content">
+                <h3 class="project-title">About the project</h3>
+                <hr>
+                {{ with .Params.main_content_en }}
+                <p>{{ . | markdownify}}</p>
+                {{ end }}
+        </div>
+</div>

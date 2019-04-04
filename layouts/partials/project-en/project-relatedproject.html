@@ -1,13 +1,13 @@
 <div class="relation card-related-project glide">
         <div data-glide-el="track" class="glide__track">
-            <h3>関連する<span class="project-color">プロジェクト</span></h3>
+            <h3>Related <span class="project-color">Projects</span></h3>
             <ul class="relatedprj-feed glide__slides">
                     {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 4 }}
                     {{ range $randomPosts }}
                 <div class="prjfeed-item">
                     <a href=" {{ .Permalink }}">
                         <li class="glide__slide">
-                            <h5>{{ .Params.title_jp }}</h5>
+                            <h5>{{ .Params.title_eng }}</h5>
                             <img src="{{ .Params.ogp_image }}">
                         </li>
                     </a>

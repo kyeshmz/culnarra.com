@@ -1,0 +1,7 @@
+<ul class="img-slider abstract-slider">
+                {{ range $.Params.image_credit }}
+                <li class="img-item">
+                    <img src="{{ .project_image | relURL }}" alt="image">
+                    <div class="abstract-caption"><p>{{ .credit_text_en  | markdownify}}</p></div>
+                </li>{{ end }}
+            </ul>

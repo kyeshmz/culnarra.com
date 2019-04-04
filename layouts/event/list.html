@@ -16,9 +16,9 @@
                     <ul>
                         {{ range (where .Site.RegularPages "Section" "event" | first 2)}}
                         {{ range .Params.tag }}
-                        <!-- <a href=""> -->
+                 
                             <li class="related-tag-item"> #{{ . }}</li>
-                        <!-- </a> -->
+                 
                         {{ end }}
                         {{end }}
                     </ul>

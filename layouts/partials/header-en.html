@@ -1,0 +1,32 @@
+<div class="body-wrap">
+    <header class="english">
+        <div class="nav-menu row">
+            <div class="row black-btm row-item nav-grow" id="nav-title">
+                <h1 class="title"><a href="{{ .Site.BaseURL }}">Cultural Narrative of a City</a></h1>
+            </div>
+            <nav>
+                <ul class="row-item row">
+                    <a href="{{ "/card/" | relLangURL }}">
+                        <li class="brdr-btm card-btm">Card</li>
+                    </a>
+                    <a href="{{ "/project/" | relLangURL }}">
+                        <li class="brdr-btm project-btm">Project</li>
+                    </a>
+                    <a href="{{ "/note/" | relLangURL }}">
+                        <li class="brdr-btm note-btm">Note</li>
+                    </a>
+                    <a href="{{ "/event/" | relLangURL }}">
+                        <li class="brdr-btm event-btm">Event</li>
+                    </a>
+                </ul>
+            </nav>
+            <nav class="nav-grow">
+                <ul class="row-item row languages ">
+                    <li class=""><a href="{{ .Site.BaseURL }}">About this website</a></li>
+                    <li class=""><a href="{{ .Site.BaseURL }}en/">English</a> / <a
+                            href="{{ .Site.BaseURL }}jp/">Japanese</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+</div>

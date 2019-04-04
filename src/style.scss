@@ -150,7 +150,7 @@ hr {
   white-space: nowrap;
   &.languages {
     @include flexbox();
-    @include justify-content(space-between);
+    @include justify-content(space-evenly);
     @include flex-direction(row);
     text-align: center;
     border-bottom: 4px solid $black;
@@ -179,7 +179,8 @@ h1.title {
   @include flex-grow(0);
 }
 .nav-grow {
-  @include flex-grow(1);
+  //max-width: 100px;
+ @include flex-grow(1);
 }
 .brdr-btm {
   // @include flex(flex-grow);
@@ -879,7 +880,35 @@ h1.title {
   }
 }
 
+.glide__slide {
+  display: relative;
+  h5 {
+    white-space: nowrap;
+    position: relative;
+    &:before {
+      // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+      content: "\200C";
+      display: block;
+      position: absolute;
+      // right: 2.1em;
+      top: 1em;
+      height: 1.5em;
+      // right: 0;
+      //top: 8.5em;
+      width: 2%;
+      text-align: center;
 
+      background-image: -webkit-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -moz-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -ms-linear-gradient(right, rgba(243, 243, 243, 1), rgba(255, 255, 255, 0));
+      background-image: -o-linear-gradient(right, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+      background-image: linear-gradient(to left, rgba(243, 243, 243, 20), rgba(255, 255, 255, 0));
+    }
+  }
+  img{
+    height: 100%;
+  }
+}
 .slider-arrow {
   position: absolute;
   display: block;
@@ -892,5 +921,17 @@ h1.title {
   .glide__arrow--left {
     bottom: 50%;
     left: 30px;
+  }
+}
+.english {
+  .row{
+    li.brdr-btm{
+      padding-bottom: 6px;
+    }
+    &.languages {
+      li{
+        padding-bottom: 1px;
+      }
+    }
   }
 }

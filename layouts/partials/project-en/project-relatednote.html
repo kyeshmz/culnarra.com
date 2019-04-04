@@ -1,14 +1,14 @@
 <div class="relation related-notes">
-        <h3>関連する<span class="note-color">ノート</span></h3>
+        <h3>Related<span class="note-color"> Notes</span></h3>
         <ul class="relatednote-feed">
                 {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "note") | first 4 }}
                 {{ range $randomPosts }}
             <div class="notefeed-item">
                 <a href=" {{ .Permalink }}">
                     <li>
-                        <h5>{{ .Params.title_jp }}</h5>
+                        <h5>{{ .Params.title_eng }}</h5>
                         <p>
-                            {{ .Params.abstract_content_short}}
+                            {{ .Params.abstract_content_short_en }}
                         </p>
                     </li>
                 </a>
