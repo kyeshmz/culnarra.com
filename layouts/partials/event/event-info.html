@@ -4,34 +4,34 @@
             <div class="event-infoitem">
                 <div class="event-infoitem-child">
                     <h5>［日時］</h5>
-                    <p>{{ .Params.event_date }}</p>
+                    <p>{{ .Params.event_date | markdownify}}</p>
                 </div>
                 <div class="event-infoitem-child">
                     <h5>［場所］</h5>
-                    <p> {{ .Params.event_place }} </p>
+                    <p> {{ .Params.event_place | markdownify}} </p>
                 </div>
                 
                 <div class="event-infoitem-child">
                     <h5>[対象]</h5>
-                    <p>{{ .Params.event_audience }}</p>
+                    <p>{{ .Params.event_audience | markdownify}}</p>
                 </div>
                 <div class="event-infoitem-child">
                     <h5>［費用］</h5>
-                    <p>{{ .Params.event_fee }}</p>
+                    <p>{{ .Params.event_fee | markdownify}}</p>
                 </div>
             </div>
             <div class="event-infoitem">
                 <div class="event-infoitem-child">
                     <h5>［申し込み方法］</h5>
-                    <p>{{ .Params.event_participate }}</p>
+                    <p>{{ .Params.event_participate | markdownify}}</p>
                 </div>
                 <div class="event-infoitem-child">
                     <h5>［問い合わせ］</h5>
-                    <p> {{ .Params.event_contact }}</p>
+                    <p> {{ .Params.event_contact | markdownify}}</p>
                 </div>
                 <div class="event-infoitem-child">
                     <h5>［製作］</h5>
-                    <p> {{ .Params.event_organizer }}/p>
+                    <p> {{ .Params.event_organizer | markdownify}}/p>
                 </div>
             </div>
         </div>

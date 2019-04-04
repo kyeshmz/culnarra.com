@@ -1,18 +1,20 @@
 <div class="relation related-notes">
-        <h3>レファレンス<span class="note-color">ノート</span></h3>
+        <h3>Related<span class="note-color"> Notes</span></h3>
         <ul class="relatednote-feed">
+                {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "note") | first 4 }}
+                {{ range $randomPosts }}
             <div class="notefeed-item">
-                <a href="">
+                <a href=" {{ .Permalink }}">
                     <li>
-                        <h5>1970年代アートの記録―Video Information Center を中心に</h5>
+                        <h5>{{ .Params.title_eng }}</h5>
                         <p>
-                            VIC（Video Information
-                            Center）のビデオライブラリーのアーカイヴ構築と、VICの活動に関する調査研究を行うプロジェクト。VICのライブラリーは、1970-80年代のパフォーマンス・展覧会・シンポジウムなどを記録した約1,200本のテープによって構成され、「高松次郎のアトリエインタビュー」、「ナムジュン・パイクの制作現場でのインタビュー」、「菅木志雄イベント（1975）」などを含んでいます。
+                            {{ .Params.abstract_content_short_en }}
                         </p>
                     </li>
                 </a>
             </div>
-            <div class="notefeed-item">
+            {{ end }}
+            <!-- <div class="notefeed-item">
                     <a href="">
                         <li>
                             <h5>1970年代アートの記録―Video Information Center を中心に</h5>
@@ -22,6 +24,6 @@
                             </p>
                         </li>
                     </a>
-                </div>
+                </div> -->
         </ul>
     </div>

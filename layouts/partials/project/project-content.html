@@ -31,10 +31,9 @@
         </div>
         <div class="info-item project-item project-author">
                 <p class="item-title">奥付</p>
-                <p>作成者</p>
+                <p>作成者: </p>
                 {{ with .Params.meta_author }}<p>{{ . }}</p>{{ end }}
                 {{ with .Params.modified_date }}<p>{{ . }}</p>{{ end }}
-                {{ with .Date.Format "January 2, 2006" }}<p>{{ . }}</p>{{ end }}
         </div>
         <div class="project-content">
             <h3 class="project-title">プロジェクトについて</h3>
