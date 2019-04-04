@@ -13,19 +13,19 @@
         <div class="index-wrap">
             {{ partial "blkbox-logo.html" . }}
             <div class="index-items index-about">
-                <h4>都市のカルチュラル・ナラティヴ</h4>
-                <p>今昔の文化資源や、文化を巡る学術的な成果を相互に連結し、多様な文化の物語（カルチュラル・ナラティヴ）を形づくるプロジェクト。このウェブサイトは、文化の物語を紡いでゆくための情報を集めた、カード型レファレンス集です。
-                    カード：地域の文化機関や文化資源の情報
-                    プロジェクト＆イベント：文化資源を活用したイベントや活動の情報
-                    ノート：カードやプロジェクトの解説
-
+                <h4>Cultural Narrative of a City</h4>
+                <p>This project is presenting various Cultural Narratives of an urban city, by connecting cultural resources past and present, and scholarly research on culture. This website collects and shares references for everyone to create their own narratives.
+                        Cards share overviews of local cultural institutions and resources.
+                        Projects and events introduce events and activities based on cultural resources.
+                        Notes further explain the contents of Cards and Projects.
+                        
                 </p>
             </div>
             <div class="index-history">
-                <h4>更新履歴</h4>
+                <h4>Revision History</h4>
                 <ul>
                     <li>
-                        <a href="https://medium.com/@culnarra/about-website-9e7756926282">■ウェブサイト（プロトタイプ版）について</a>
+                        <a href="https://medium.com/@culnarra/about-website-9e7756926282">■Introducing the website (prototype)</a>
                     </li>
                     <li>
                         <a href="https://medium.com/@culnarra/intern-blog-93ae3c2e0500">■カルナラ！インターン生ブログを始めました</a>
@@ -37,7 +37,7 @@
             <div class="index-card-1 index-mod">
                 {{ with .Site.GetPage "page" "/card/zojoji"}}
                 <a href="{{ .Permalink }}">
-                    <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                    <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                     <img src="{{ .Params.ogp_image }}">
                 </a>
                 {{ end }}
@@ -45,7 +45,7 @@
             <div class="index-card-2 index-mod">
                 {{ with .Site.GetPage "page" "/event/architecture-forum"}}
                 <a href="{{ .Permalink }}">
-                    <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                    <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                     <img src="{{ .Params.ogp_image }}">
                 </a>
                 {{ end }}
@@ -57,14 +57,12 @@
                         <ul>
                             {{ $randomPosts := shuffle (where .Site.RegularPages "Section" "card") | first 3 }}
                             {{ range $randomPosts }}
-                            <!-- {{ range .Params.tag_en }} -->
-                            <!-- <a href="{{ . | relLangURL }}"> -->
-                            <!-- {{ end }} -->
-                            {{range .Params.tag}}
+                            
+                            {{range .Params.tag_en}}
                             <li class="related-tag-item"> #{{ . }}</li>
                             <!-- </a>-->
                             {{ end }} 
-                            {{ end }}
+                            {{end }}
                         </ul>
                     </div>
                 </div>
@@ -72,7 +70,7 @@
             <div class="index-card-3 index-mod">
                 {{ with .Site.GetPage "page" "/card/Sogetsu"}}
                 <a href="{{ .Permalink }}">
-                    <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                    <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                     <img src="{{ .Params.ogp_image }}">
                 </a>
                 {{ end }}
@@ -81,7 +79,7 @@
             <div class="index-card-4 index-mod">
                 {{ with .Site.GetPage "page" "/card/toraya-archives"}}
                 <a href="{{ .Permalink }}">
-                    <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                    <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                     <img src="{{ .Params.ogp_image }}">
                 </a>
                 {{ end }}
@@ -89,7 +87,7 @@
             <div class="index-card-5 index-mod">
                 {{ with .Site.GetPage "page" "/event/ryugenji"}}
                 <a href="{{ .Permalink }}">
-                    <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                    <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                     <img src="{{ .Params.ogp_image }}">
                 </a>
                 {{ end }}
@@ -98,9 +96,9 @@
                 <div class="index-note">
                     {{ with .Site.GetPage "page" "/note/scholarship-zen"}}
                     <a href="{{ .Permalink }}">
-                        <h5 class="index-notetitle">{{ .Params.title_jp }}</h5>
+                        <h5 class="index-notetitle">{{ .Params.title_eng }}</h5>
                         <p class="index-notebody">
-                            {{ .Params.abstract_content_short }}
+                            {{ .Params.abstract_content_short_en }}
                         </p>
                     </a>
                     {{ end }}
@@ -123,7 +121,7 @@
         <div class="snd-card-1 index-projmod">
             {{ with .Site.GetPage "page" "/project/ARTEFACT02"}}
             <a href="{{ .Permalink }}">
-                <h5> {{ .Params.title_jp }}</h5>
+                <h5> {{ .Params.title_eng }}</h5>
                 <img src="{{ .Params.ogp_image }}">
             </a>
             {{ end }}
@@ -133,10 +131,10 @@
                     {{ with .Site.GetPage "page" "/note/realization-zen"}}
                 <a href="{{ .Permalink }}">
                     <!-- 2 -->
-                    <h5 class="index-notetitle">{{ .Params.title_jp }}
+                    <h5 class="index-notetitle">{{ .Params.title_eng }}
                     </h5>
                     <p class="index-notebody">
-                        {{ .Params.abstract_content_short}}
+                        {{ .Params.abstract_content_short_en}}
 
                     </p>
                 </a>
@@ -147,7 +145,7 @@
         <div class="snd-card-3 index-mod">
             {{ with .Site.GetPage "page" "/card/KUAC"}}
             <a href="{{ .Permalink }}">
-                <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                 <img src="{{ .Params.ogp_image }}">
             </a>
             {{ end }}
@@ -155,7 +153,7 @@
         <div class="snd-card-4 index-mod">
             {{ with .Site.GetPage "page" "/card/ajinomotofoundation"}}
             <a href="{{ .Permalink }}">
-                <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                 <img src="{{ .Params.ogp_image }}">
             </a>
             {{ end }}
@@ -167,7 +165,7 @@
         <div class="snd-card-5 index-mod">
             {{ with .Site.GetPage "page" "/card/JCRI"}}
             <a href="{{ .Permalink }}">
-                <h5 class="index-notetitle"> {{ .Params.title_jp }}</h5>
+                <h5 class="index-notetitle"> {{ .Params.title_eng }}</h5>
                 <img src="{{ .Params.ogp_image }}">
             </a>
             {{ end }}
@@ -178,10 +176,10 @@
                 <a href="{{ .Permalink }}">
                     <div class="note-bar"></div>
                     <!-- 1 -->
-                    <h5 class="index-notetitle"> {{ .Params.title_jp }}
+                    <h5 class="index-notetitle"> {{ .Params.title_eng }}
                     </h5>
                     <p class="index-notebody">
-                        {{ .Params.abstract_content_short }}
+                        {{ .Params.abstract_content_short_en }}
                     </p>
                 </a>
                 {{end }}
@@ -190,7 +188,7 @@
     </div>
 
     <!-- for body wrap -->
-    {{ partial "footer.html" . }}
+    {{ partial "footer-en.html" . }}
 </body>
 
 </html>

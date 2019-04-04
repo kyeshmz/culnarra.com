@@ -40,7 +40,7 @@ meta_place = "35.637757, 139.736292"
 meta_topic_category = ["美術", "寺院", "歴史"]
 meta_topic_category_en = ["Temple", "History", "Art"]
 modified_date = "2019.03.30 YH"
-ogp_image = ""
+ogp_image = "/img/event/ogp/event1-1-ogp.jpg"
 reference_card = ""
 reference_cards = ["泉岳寺", "斯道文庫", "赤穂義士記念館"]
 reference_cards_en = ["Sengakuji", "Ako-Gishi Memorial "]
@@ -50,6 +50,7 @@ tag = ["泉岳寺", "赤穂義士", "禅", "学寮", "塔頭", "曹洞宗", "臨
 tag_en = ["Sengakuji", "Ako-Gishi", "Zen", "Buddhist Colleges", "Gakuryo", "Tatchu", "Soto-sect", "Rinzai-sect", "Gozan"]
 title_eng = "Temple as a Scholarship and Cultural Platform: Sengakuji and Zen in Japanese Culture"
 title_jp = "学問・文化プラットフォームとしての寺院：泉岳寺と禅の文化　"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

@@ -40,14 +40,16 @@ meta_place = "35.647638, 139.742585"
 meta_topic_category = ["美術"]
 meta_topic_category_en = ["Art"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card5-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "慶應義塾大学アート・センター"
 related_ptag_en = "Keio University Art Center"
 tag = ["現代美術,", "アーカイヴ", "大学ミュージアム", "三田"]
 tag_en = ["Contemporary Art", "Archive", "University Museum", "Mita"]
 title_eng = "Keio University Art Center"
 title_jp = "慶應義塾大学アート・センター"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

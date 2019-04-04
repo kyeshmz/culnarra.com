@@ -13,6 +13,29 @@
   overflow: hidden;
   .index-items {
   }
+  h5.index-notetitle {
+    font-size: 13px;
+    line-height: 20px;
+    font-family: $culnarra-go;
+    padding-bottom: 15px;
+    white-space: nowrap;
+    position: relative;
+    &:before {
+      content: "\200C";
+      display: block;
+      position: absolute;
+      right: 0em;
+      // top: 3em;
+      width: 50%;
+      text-align: center;
+      height: 1.5em;
+      background-image: -webkit-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+      background-image: -moz-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+      background-image: -ms-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+      background-image: -o-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+      background-image: linear-gradient(to left, #f3f3f3, rgba(255, 255, 255, 0));
+    }
+  }
   .blkbox-logo {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -28,6 +51,7 @@
     border-width: 1pt;
     border-style: solid;
     padding: 30px;
+    overflow: hidden;
     h4 {
       font-family: $culnarra-go;
       font-size: 24px;
@@ -39,6 +63,7 @@
       font-family: $culnarra-go;
       font-size: 16px;
       line-height: 30px;
+      overflow: hidden;
     }
   }
   .index-history {
@@ -170,6 +195,7 @@
 
       .index-notetitle {
         padding-bottom: 2em;
+        white-space: nowrap;
         &:before {
           content: "\200C";
           display: block;
@@ -202,7 +228,7 @@
 .secondary-index-wrap {
   display: grid;
   grid-template-columns: 1fr 327px 327px 327px 327px 1fr;
-  grid-template-rows: minmax(286px, auto) 330px 330px 330px 330px 250px 1fr;
+  grid-template-rows: minmax(286px, auto) 330px 270px 330px 330px 330px 1fr;
   // grid-template-columns: 325px 325px 325px 325px 325px 325px;
   // grid-template-rows: 309px 309px 309px 309px 309px 309px;
   grid-column-gap: 20.5px;
@@ -235,13 +261,18 @@
     padding-right: 20px;
     padding-bottom: 30px;
     padding-top: 30px;
+    
     h5 {
       font-size: 22px;
       line-height: 30px;
       font-family: $culnarra-go;
+      padding-bottom: 20px;
     }
     p{
 
+    }
+    img {
+      width: 100%;
     }
   }
   .snd-index-img {
@@ -280,7 +311,7 @@
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 2;
     border-color: black;
     border-width: 1pt;
     border-style: solid;
@@ -355,12 +386,13 @@
       position: relative;
       .index-notetitle {
         padding-bottom: 2em;
+        white-space: nowrap;
         &:before {
           content: "\200C";
           display: block;
           position: absolute;
-          right: 1em;
-          bottom: 3em;
+          right: 0;
+          top: 2em;
           width: 50%;
           text-align: center;
           height: 1.8em;
@@ -372,9 +404,24 @@
         }
       }
       .index-notebody {
+        &:before {
+          content: "\200C";
+          display: block;
+          position: absolute;
+          right: 1em;
+          bottom: 2.6em;
+          width: 50%;
+          text-align: center;
+          height: 1.8em;
+          background-image: -webkit-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: -moz-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: -ms-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: -o-linear-gradient(right, #f3f3f3, rgba(255, 255, 255, 0));
+          background-image: linear-gradient(to left, #f3f3f3, rgba(255, 255, 255, 0));
+        }
         // padding-bottom: 44px;
         // margin-bottom: 20px;
-        max-height: 200px;
+        max-height: 150px;
         font-size: 1em;
         line-height: 2em;
         font-family: $yu-min;

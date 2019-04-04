@@ -40,14 +40,16 @@ meta_place = "35.675530, 139.732547"
 meta_topic_category = ["和菓子", "歴史"]
 meta_topic_category_en = ["Wagashi", "History"]
 modified_date = "2019-03-31　YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card11-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "虎屋文庫"
 related_ptag_en = "Toraya Archives"
 tag = ["食文化", "和菓子", "アーカイヴ", "赤坂"]
 tag_en = ["Food Culture", "Wagashi", "Edo", "Archive", "Akasaka"]
 title_eng = "Toraya Archives"
 title_jp = "虎屋文庫"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

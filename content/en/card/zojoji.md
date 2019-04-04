@@ -1,8 +1,8 @@
 +++
 abstract_content = "浄土宗の七大本山の一つ。明徳4年（1393）に、酉誉聖聰（ゆうよしょうそう）上人によって、現在の千代田区平河町付近の地に創建された。徳川家の菩提寺となり、慶長3年（1598）現在の芝の地へ移転、徳川幕府の手厚い保護のもと、隆盛を極めた。境内には、徳川将軍家の墓所や、江戸時代初期の面影を残す三解脱門がある。さらに、徳川家ゆかりの文化財や狩野一信筆の五百羅漢図などを所蔵しており、それらの一部を宝物展示室で公開している。"
-abstract_content_en = ""
-abstract_content_short = "Zojoji is a chief temple of the Jodo-Buddhist sect founded in 1393. The family temple of the Tokugawa shogunate was relocated to Shiba in 1598. Its Treasury Gallery houses important cultural heritages. Sangedatsumon (Main Gate) is designated Important Cultural Property."
-abstract_content_short_en = ""
+abstract_content_en = "Zojoji is a chief temple of the Jodo-Buddhist sect founded in 1393. The family temple of the Tokugawa shogunate was relocated to Shiba in 1598. Its Treasury Gallery houses important cultural heritages. Sangedatsumon (Main Gate) is designated Important Cultural Property."
+abstract_content_short = "浄土宗の七大本山の一つ。明徳4年（1393）に、酉誉聖聰（ゆうよしょうそう）上人によって、現在の千代田区平河町付近の地に創建された。徳川家の菩提寺となり、慶長3年（1598）現在の芝の地へ移転、徳川幕府の手厚い保護のもと、隆盛を極めた。境内には、徳川将軍家の墓所や、江戸時代初期の面影を残す三解脱門がある。さらに、徳川家ゆかりの文化財や狩野一信筆の五百羅漢図などを所蔵しており、それらの一部を宝物展示室で公開している。"
+abstract_content_short_en = "Zojoji is a chief temple of the Jodo-Buddhist sect founded in 1393. The family temple of the Tokugawa shogunate was relocated to Shiba in 1598. Its Treasury Gallery houses important cultural heritages. Sangedatsumon (Main Gate) is designated Important Cultural Property."
 card_reference = "* 増上寺 ウェブサイト [http://www.zojoji.or.jp/](http://www.zojoji.or.jp/ \"http://www.zojoji.or.jp/\")"
 card_reference_en = "* Zojoji website [http://www.zojoji.or.jp/en/](http://www.zojoji.or.jp/en/ \"http://www.zojoji.or.jp/en/\")"
 date = "2019-03-30T15:00:00+00:00"
@@ -40,14 +40,16 @@ meta_place = "35.656389, 139.748333"
 meta_topic_category = ["寺院"]
 meta_topic_category_en = ["Temple"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card4-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "増上寺"
 related_ptag_en = "Zojoji"
 tag = ["浄土宗", "江戸時代", "徳川幕府", "霊廟", "芝公園"]
 tag_en = ["Jodo-sect", "Edo period", "Tokugawa shogunate", "Mausoleum", "Shiba Park"]
 title_eng = "Zojoji"
 title_jp = "増上寺"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

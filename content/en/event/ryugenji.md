@@ -40,7 +40,7 @@ meta_place = "35.646565, 139.737043"
 meta_topic_category = ["寺院", "歴史"]
 meta_topic_category_en = ["Temple", "History"]
 modified_date = "2019.03.31 YH"
-ogp_image = ""
+ogp_image = "/img/event/ogp/event4-ogp.jpg"
 reference_cards = ["龍源寺"]
 reference_cards_en = ["Ryugenji Temple"]
 related_ptag = "龍源寺"
@@ -49,6 +49,7 @@ tag = ["龍源寺", "古川", "坐禅", "三田"]
 tag_en = ["Ryugenji", "Furukawa", "Zazen", "Mita"]
 title_eng = "Lecture and Zazen Workshop at Ryugenji Temple"
 title_jp = "レクチャー＆坐禅ワークショップ「古川のほとり・龍源寺からのまなざし：寺院文化の現在」"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

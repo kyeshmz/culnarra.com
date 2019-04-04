@@ -184,7 +184,7 @@
       font-family: "游明朝体", "Yu Mincho Medium", "Yu Mincho", "YuMincho", "MinionPro-Regular", serif;
     }
     .cardlist-abs {
-      max-height: 200px;
+      max-height: 100px;
       margin-bottom: 35px;
       overflow: hidden;
       &:before {
@@ -194,7 +194,7 @@
         position: absolute;
         right: 1em;
         //bottom: 1.85em;
-        top: 16.1em;
+        top: 10.1em;
         width: 50%;
         // right: 1em;
         text-align: center;
@@ -215,6 +215,7 @@
       @include align-items(center);
       @include justify-content(space-evenly);
       text-align: center;
+      height: 70px;
       p {
         // @include flex (4);
         white-space: nowrap;

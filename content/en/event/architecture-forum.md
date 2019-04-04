@@ -40,7 +40,7 @@ meta_place = "35.649107, 139.742936"
 meta_topic_category = ["建築", "歴史", "大学"]
 meta_topic_category_en = ["Architecture", "History", "University"]
 modified_date = "2019.03.31 YH"
-ogp_image = ""
+ogp_image = "/img/event/ogp/event2-ogp.jpg"
 reference_cards = ["旧ノグチ・ルーム", "明治学院礼拝堂", "明治学院インブリー館", "明治学院記念館"]
 reference_cards_en = []
 related_ptag = "大学の建築"
@@ -49,6 +49,7 @@ tag = ["建築", "大学の建築", "アーカイヴ", "保存", "修復", "公�
 tag_en = ["Architecture", "Architecture of Universities", "Archive", "Conservation", "Preservation", "Opening Cultural Properties to Public"]
 title_eng = "Forum for Architecture of Universities: Archive and Outreach"
 title_jp = "大学の建築フォーラム：アーカイヴとアウトリーチ"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]

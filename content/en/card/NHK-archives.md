@@ -40,14 +40,16 @@ meta_place = "35.664039, 139.748302"
 meta_topic_category = ["放送", "歴史"]
 meta_topic_category_en = ["Broadcasting", "History"]
 modified_date = "2019-03-31 YH"
-ogp_image = ""
+ogp_image = "/img/card/ogp/card10-ogp.jpg"
 reference_cards = []
+reference_cards_en = []
 related_ptag = "NHK放送博物館"
 related_ptag_en = "NHK Museum of Broadcasting"
 tag = ["放送", "テレビ", "ラジオ", "愛宕山"]
 tag_en = ["Broadcasting", "TV", "Radio", "Atagoyama"]
 title_eng = "NHK Archives"
 title_jp = "NHK放送博物館・NHK放送文化研究所"
+type = ""
 vimeo_videourl = ""
 yt_videourl = ""
 [[image_credit]]
